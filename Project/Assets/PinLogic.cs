@@ -50,7 +50,7 @@ public class PinLogic : MonoBehaviour {
 				transform.position = new Vector3(transform.position.x,HeightMin+0.01f,transform.position.z);
 			}
 		}
-		else if((transform.position.y+rigidbody.velocity.y <= HeightMin)&&(guistatus.BarSize<10))
+		else if((transform.position.y <= HeightMin)&&(guistatus.BarSize<10))
 		{
 			if(rigidbody.velocity.y < 0)
 			{
