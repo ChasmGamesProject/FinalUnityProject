@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PuzzleLogic : MonoBehaviour {
 	public PinLogic[] Pins;
+	public GUIscriptlockpicking guibehaviour;
 	int lockstatus;
 	bool UnlockBeenPlayed;
 	public AudioClip UnlockSound;
@@ -26,6 +27,7 @@ public class PuzzleLogic : MonoBehaviour {
 			if(!UnlockBeenPlayed)
 			{
 			AudioSource.PlayClipAtPoint(UnlockSound, transform.position);
+			guibehaviour.gamewon = true;	
 			UnlockBeenPlayed = true;
 			}
 		}

@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GUIscriptlockpicking.cs" />
      <Compile Include="Assets\PickLogic.cs" />
      <Compile Include="Assets\PinLogic.cs" />
      <Compile Include="Assets\PuzzleLogic.cs" />
