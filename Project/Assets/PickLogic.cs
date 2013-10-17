@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class PickLogic : MonoBehaviour {
+	
 	public Vector3 angle; 
 	Quaternion deltarotation;
 	bool moving;

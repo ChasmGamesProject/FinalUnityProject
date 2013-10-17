@@ -30,27 +30,27 @@ public class PuzzleLogic : MonoBehaviour {
 			Pins[i].enabled = false;
 		}
 		guibehaviour.enabled = false;
-	lockstatus = 0;
-	UnlockBeenPlayed = false;
+		lockstatus = 0;
+		UnlockBeenPlayed = false;
 		this.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	lockstatus = 0;
-	for(int i = 0; i < Pins.Length; i++)
-		{
-			if(Pins[i].unlocked)
-				lockstatus++;
-		}
-	if(lockstatus == Pins.Length)
-		{
-			if(!UnlockBeenPlayed)
+		lockstatus = 0;
+		for(int i = 0; i < Pins.Length; i++)
 			{
-			AudioSource.PlayClipAtPoint(UnlockSound, transform.position);
-			guibehaviour.gamewon = true;	
-			UnlockBeenPlayed = true;
+				if(Pins[i].unlocked)
+					lockstatus++;
 			}
-		}
+		if(lockstatus == Pins.Length)
+			{
+				if(!UnlockBeenPlayed)
+				{
+					AudioSource.PlayClipAtPoint(UnlockSound, transform.position);
+					guibehaviour.gamewon = true;	
+					UnlockBeenPlayed = true;
+				}
+			}
 	}
 }

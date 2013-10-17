@@ -17,6 +17,7 @@ public class GUIscriptlockpicking : MonoBehaviour {
 	float TooltipHeight;
 	float TooltipWidth;
 	public bool gamewon;
+	
 	void Start()
 	{
 		
@@ -41,7 +42,7 @@ public class GUIscriptlockpicking : MonoBehaviour {
 	{
 		if(Input.GetMouseButtonDown(1))
 		{
-			Debug.Log("test");
+			//Debug.Log("test");
 			if(BarSize<300)
 			{
 			BarSize+=5;
@@ -54,12 +55,7 @@ public class GUIscriptlockpicking : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		
-		
-		// Make a background box
-		
-		
-		
+				
 		if(gamewon)
 		{
 			GUI.Box (ExitScreen, "Well Done!");
@@ -68,16 +64,15 @@ public class GUIscriptlockpicking : MonoBehaviour {
 			{
 				
 			}
-			//win screen;
+			
 		}
-		else{
+		else
+		{
 			if(!Hide)
 		{
 			
-		//GUI.DrawTexture()
-		GUI.Box(Tooltip, "How to play");
-
-		// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
+		
+		GUI.Box(Tooltip, "How to play");		
 		if(GUI.Button(TooltipClose, "Close window")) {
 			Hide = true;
 		}

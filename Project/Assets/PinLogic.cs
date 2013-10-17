@@ -9,12 +9,10 @@ public class PinLogic : MonoBehaviour {
 	public float HeightMax;
 	public float HeightMin;
 
-	// Use this for initialization
+	
 	void Start () {
 		unlocked = false;
 		UpwardsPush = new Vector3(0,1.5f,0);
-		//HeightMax = 100;
-		//HeightMin = 98;
 		DefaultPos.x =transform.position.x;
 		DefaultPos.y =transform.position.y;
 		DefaultPos.z =transform.position.z;
@@ -22,13 +20,14 @@ public class PinLogic : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
+		
 		unlocked = false;
 		rigidbody.mass = 1;
 		if((transform.position.y < HeightMax))
 		{
-		rigidbody.velocity += UpwardsPush * Time.deltaTime;
+			rigidbody.velocity += UpwardsPush * Time.deltaTime;
 		}
 		
 		if(transform.position.y > HeightMax)
@@ -54,7 +53,7 @@ public class PinLogic : MonoBehaviour {
 		{
 			if(rigidbody.velocity.y < 0)
 			{
-			rigidbody.velocity = Vector3.zero;
+				rigidbody.velocity = Vector3.zero;
 			}
 		}
 		else
