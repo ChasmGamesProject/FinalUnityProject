@@ -53,6 +53,61 @@ public class AstarAI : MonoBehaviour {
 		}
 	}
 	
+	float Zget(Vector3 pos)
+	{
+		if((pos.z>115)&&(pos.z<117))
+			{
+				return 116.0f;
+			}
+			if((pos.z>117)&&(pos.z<119))
+			{
+				return 118.0f;
+			}
+			if((pos.z>119)&&(pos.z<121))
+			{
+				return 120.0f;
+			}
+			if((pos.z>121)&&(pos.z<123))
+			{
+				return 122.0f;
+			}
+			if((pos.z>123)&&(pos.z<125))
+			{
+				return 124.0f;
+			}
+		return 0;
+	}
+	
+	void TargetGet(Vector3 pos)
+	{
+		if((pos.x>145)&&(pos.x<147))
+		{
+			targetPosition = new Vector3(146.0f,101.08f,Zget(pos));
+			
+		}
+		if((pos.x>147)&&(pos.x<149))
+		{
+			targetPosition = new Vector3(148.0f,101.08f,Zget(pos));
+			
+		}
+		if((pos.x>149)&&(pos.x<151))
+		{
+			
+			targetPosition = new Vector3(150.0f,101.08f,Zget(pos));
+		}
+		if((pos.x>151)&&(pos.x<153))
+		{
+			
+			targetPosition = new Vector3(152.0f,101.08f,Zget(pos));
+		}
+		if((pos.x>153)&&(pos.x<155))
+		{
+			
+			targetPosition = new Vector3(154.0f,101.08f,Zget(pos));
+		}
+	
+	}
+	
 	void Update()
 	{
 		if(Time.time - time > 1)
@@ -74,8 +129,9 @@ public class AstarAI : MonoBehaviour {
 					{
 						if(okay)
 						{
+								
 				okay = false;
-				targetPosition = hit.point;
+				TargetGet(hit.point);
 				LastPath = targetPosition;
 				targetPosition.y = yheight;//1.08f;
 				Scanner();
@@ -141,16 +197,16 @@ public class AstarAI : MonoBehaviour {
 		//This function makes the object move the final distance to the target postion
         if (currentWaypoint >= path.vectorPath.Count) {
             //Debug.Log ("End Of Path Reached");
-			if((Vector3.Distance(transform.position,targetPosition2)>0.3f))
+			if((Vector3.Distance(transform.position,targetPosition)>0.1f)&&(path != null))
 			{
 				//targetPosition2 = path.vectorPath[path.vectorPath.Count];
-			dir = (targetPosition2-transform.position).normalized;
+			dir = (targetPosition-transform.position).normalized;
         	dir *= speed * Time.fixedDeltaTime;
         	controller.SimpleMove (dir);
 			}
 			else
 			{
-				
+				transform.position = targetPosition;
 				//dir = Vector3.zero;
 			}
             return;
