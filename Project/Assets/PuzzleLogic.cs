@@ -13,13 +13,13 @@ public class PuzzleLogic : MonoBehaviour {
 	
 	public void StartLockPuzzle()
 	{
-		/*this.enabled = true;
+		this.enabled = true;
 		picklogic.enabled = true;
 		for(int i = 0; i < Pins.Length; i++)
 		{
 			Pins[i].enabled = true;
 		}
-		guibehaviour.enabled = true;*/
+		guibehaviour.enabled = true;
 	}
 	
 	void Start () {
@@ -33,6 +33,7 @@ public class PuzzleLogic : MonoBehaviour {
 		lockstatus = 0;
 		UnlockBeenPlayed = false;
 		this.enabled = false;
+		StartLockPuzzle();
 	}
 	
 	// Update is called once per frame

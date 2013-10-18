@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PickLogic : MonoBehaviour {
 	
+	bool LeapEnabled;
 	public Vector3 angle; 
 	Quaternion deltarotation;
 	bool moving;
@@ -19,9 +20,16 @@ public class PickLogic : MonoBehaviour {
 	public Vector3 CenterOfMass;
 	public Vector3 Mouse;
 	public Camera MyCam;
+	public float LeapHandPos;
+	float Leapx;
+	float Leapy;
+	float LeapRotation;
 	//Ray ray;
 	// Use this for initialization
+	
+	
 	void Start () {
+		LeapEnabled = false;
 		CenterOfMass = new Vector3(2, 0, 0);
 		rigidbody.centerOfMass = CenterOfMass;
 		ExtraSpeed = 1;
@@ -39,9 +47,17 @@ public class PickLogic : MonoBehaviour {
 	
 	}
 	
+	void leaping()
+	{
+		Leapx = pxsLeapInput.GetHandAxis("Horizontal");
+		Leapy = pxsLeapInput.GetHandAxis("Mouse Y");
+		LeapRotation = pxsLeapInput.GetHandAxis("Rotation");
+		
+	}
 	// Update is called once per frame
 	void Update () {
 		
+		//leaping ();
 		rigidbody.constraints = RigidbodyConstraints.None;
 		rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationZ;
 		rigidbody.velocity = Vector3.zero;
@@ -49,6 +65,12 @@ public class PickLogic : MonoBehaviour {
 		
 		
 		deltarotation = Quaternion.Euler(angle*Time.deltaTime);
+		
+		if(LeapEnabled)
+		{
+			leaping();
+		}
+		else
 		if(Input.GetMouseButtonDown(0))
 		{
 			direction = 0;

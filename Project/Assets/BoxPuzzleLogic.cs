@@ -45,12 +45,15 @@ void SetXZ()
 
 void OnMouseOver()
 {
+		renderer.material.color = Color.red;
+		
+		if(Vector2.Distance(new Vector2(Player.position.x,Player.position.z),new Vector2(transform.position.x,transform.position.z))<=2)
 		renderer.material.color = Color.green;
 		if(AI.canmove)
 		{
 		if(Input.GetMouseButtonDown(0))
 		{
-			AstarPath.active.Scan();
+			
 			SetXZ();
 			Boxmanage.CheckFloor();
 			
@@ -135,7 +138,7 @@ void OnMouseOver()
 		else if(Input.GetMouseButtonDown(1))
 		{
 				target = Vector3.zero;
-			AstarPath.active.Scan();
+			
 			SetXZ();
 			Boxmanage.CheckFloor();
 			if(Vector2.Distance(new Vector2(Player.position.x,Player.position.z),new Vector2(transform.position.x,transform.position.z))<=2)
@@ -210,13 +213,13 @@ void OnMouseOver()
 }
 void OnMouseExit()
 {
-   renderer.material.color = initialColor;
+   this.renderer.material.color = initialColor;
 }
 	
 	// Update is called once per frame
 	void Update () {
 		Boxmanage.temp1 =rigidbody.position;
-		if((Vector3.Distance(Boxmanage.temp1, Boxmanage.temp2)<0.01)&&(AI.canmove==false))
+		if((Vector3.Distance(Boxmanage.temp1, Boxmanage.temp2)<0.1)&&(AI.canmove==false))
 		{
 			AstarPath.active.Scan();
 			Debug.Log(rigidbody.position);

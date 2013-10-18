@@ -68,6 +68,9 @@
  <Reference Include="JsonFx.Json">
  <HintPath>Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
  </Reference>
+ <Reference Include="LeapCSharp.NET3.5">
+ <HintPath>Assets\Plugins\LeapCSharp.NET3.5.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

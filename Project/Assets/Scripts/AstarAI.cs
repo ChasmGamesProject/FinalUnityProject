@@ -21,6 +21,7 @@ public class AstarAI : MonoBehaviour {
 	bool okay;
 	float time;
 	public float yheight;
+	int f;
     
     //The max distance from the AI to a waypoint for it to continue to the next waypoint
     public float nextWaypointDistance = 1;
@@ -32,6 +33,11 @@ public class AstarAI : MonoBehaviour {
 	{canmove = true;
 		bool okay = true;
 		time = Time.time;
+		f=30;
+		LastPath.Set(0,0,0);
+		
+        seeker = GetComponent<Seeker>();
+        controller = GetComponent<CharacterController>();
 		//GlobalVars.player_transform = gameObject.transform;
 		
 	}
@@ -110,7 +116,7 @@ public class AstarAI : MonoBehaviour {
 	
 	void Update()
 	{
-		if(Time.time - time > 1)
+		if(Time.time - time > 0.5)
 		if(canmove)
 		if(Input.GetMouseButton(0))
         {
@@ -132,9 +138,18 @@ public class AstarAI : MonoBehaviour {
 								
 				okay = false;
 				TargetGet(hit.point);
+				
 				LastPath = targetPosition;
 				targetPosition.y = yheight;//1.08f;
-				Scanner();
+				if(targetPosition != transform.position)
+								{
+									Scanner();
+								}
+								else
+								{
+									okay = true;
+								}
+									
 							Debug.Log("Hello");
 						}
 					}
@@ -150,10 +165,7 @@ public class AstarAI : MonoBehaviour {
     public void Start () {
 		
 		
-		LastPath.Set(0,0,0);
 		
-        seeker = GetComponent<Seeker>();
-        controller = GetComponent<CharacterController>();
 		//LastPos = gameObject.transform.position;
 		//seeker.StartPath (transform.position,targetPosition, OnPathComplete);
         
@@ -177,6 +189,8 @@ public class AstarAI : MonoBehaviour {
             currentWaypoint = 0;
 			targetPosition2 = targetPosition;
 			okay = true;
+			
+			LastPos = transform.position;
         }
 		else
 		{
@@ -202,12 +216,21 @@ public class AstarAI : MonoBehaviour {
 				//targetPosition2 = path.vectorPath[path.vectorPath.Count];
 			dir = (targetPosition-transform.position).normalized;
         	dir *= speed * Time.fixedDeltaTime;
+				dir = new Vector3(dir.x,0,dir.z);
         	controller.SimpleMove (dir);
+			}
+			else if((Vector3.Distance(transform.position,targetPosition)>0.01f)&&(path != null))
+			{
+				
+				
+				
+				
+				transform.position = Vector3.Lerp(transform.position,targetPosition,0.1f);
+				//dir = Vector3.zero;
 			}
 			else
 			{
 				transform.position = targetPosition;
-				//dir = Vector3.zero;
 			}
             return;
         }
@@ -221,6 +244,7 @@ public class AstarAI : MonoBehaviour {
         transform.position = targetPosition;
 		}
 		else	*/
+		dir = new Vector3(dir.x,0,dir.z);
 		controller.SimpleMove (dir);
        
         //Check if we are close enough to the next waypoint

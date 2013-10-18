@@ -92,6 +92,9 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>A:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="LeapCSharp.NET3.5">
+ <HintPath>Assets\Plugins\LeapCSharp.NET3.5.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
