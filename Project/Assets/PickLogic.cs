@@ -13,6 +13,7 @@ public class PickLogic : MonoBehaviour {
 	Vector3 Right;
 	Vector3 Up;
 	Vector3 Down;
+	public GUIscriptlockpicking gui;
 	public float speed;
 	public float offset;
 	public float offsety;
@@ -21,15 +22,16 @@ public class PickLogic : MonoBehaviour {
 	public Vector3 Mouse;
 	public Camera MyCam;
 	public float LeapHandPos;
-	float Leapx;
-	float Leapy;
-	float LeapRotation;
+	public float Leapx;
+	public float Leapy;
+	public bool LeapRotation;
+	float LeapActionTimer;
 	//Ray ray;
 	// Use this for initialization
 	
 	
 	void Start () {
-		LeapEnabled = false;
+		LeapEnabled = true;
 		CenterOfMass = new Vector3(2, 0, 0);
 		rigidbody.centerOfMass = CenterOfMass;
 		ExtraSpeed = 1;
@@ -43,15 +45,18 @@ public class PickLogic : MonoBehaviour {
 		Right = new Vector3(1,0,0);
 		Up = new Vector3(0,1,0);
 		Down = new Vector3(0,-1,0);
+		LeapActionTimer = Time.time;
 		
 	
 	}
 	
 	void leaping()
 	{
+		gui.BarSize = 100;
 		Leapx = pxsLeapInput.GetHandAxis("Horizontal");
-		Leapy = pxsLeapInput.GetHandAxis("Mouse Y");
-		LeapRotation = pxsLeapInput.GetHandAxis("Rotation");
+		Leapy = pxsLeapInput.GetHandAxis("Sphere");
+		LeapRotation = pxsLeapInput.GetHandGesture("Fire1");
+		
 		
 	}
 	// Update is called once per frame
@@ -69,6 +74,12 @@ public class PickLogic : MonoBehaviour {
 		if(LeapEnabled)
 		{
 			leaping();
+			if((LeapRotation)&&(Time.time - LeapActionTimer>1))
+			{
+				LeapActionTimer = Time.time;
+				direction = 0;
+				moving = true;
+			}
 		}
 		else
 		if(Input.GetMouseButtonDown(0))
@@ -142,7 +153,7 @@ public class PickLogic : MonoBehaviour {
 		
 		
 		
-		if(Physics.Raycast(ray, out hit, 100))
+		if((Physics.Raycast(ray, out hit, 100))&&(!LeapEnabled))
 		{
 			Mouse = hit.point;
 			if((hit.point.x < transform.position.x + offset)&&(transform.position.x + offset - hit.point.x > 0.01))
@@ -173,6 +184,33 @@ public class PickLogic : MonoBehaviour {
 			
 			
 		}
+			else if((LeapEnabled)&&(!moving)&&(!LeapRotation))
+			{
+				rigidbody.velocity = Vector3.zero;
+				if(Leapx > 20.0f)
+				{
+					rigidbody.velocity = new Vector3(0.2f,rigidbody.velocity.y,0);
+				}
+					
+				if(Leapx < -20.0f)
+				{
+					rigidbody.velocity = new Vector3(-0.2f,rigidbody.velocity.y,0);
+				}
+					
+				if(Leapy > 160.0f)
+				{
+					rigidbody.velocity = new Vector3(rigidbody.velocity.x,0.1f,0);
+				}
+				if(Leapy < 110.0f)
+				{
+					rigidbody.velocity = new Vector3(rigidbody.velocity.x,-0.1f,0);
+				}
+				
+				if((rigidbody.position.x>103)&&(rigidbody.velocity.x>0))
+				{
+					rigidbody.velocity = new Vector3(0,rigidbody.velocity.y,0);
+				}
+			}
 	}
 	}
 }

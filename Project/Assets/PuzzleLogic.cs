@@ -33,7 +33,7 @@ public class PuzzleLogic : MonoBehaviour {
 		lockstatus = 0;
 		UnlockBeenPlayed = false;
 		this.enabled = false;
-		//StartLockPuzzle();
+		StartLockPuzzle();
 	}
 	
 	// Update is called once per frame

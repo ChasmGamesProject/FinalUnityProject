@@ -150,7 +150,7 @@ public static class pxsLeapInput
 			switch (gestureName)
 			{
 			case "Fire1":
-				ret =  m_FingersCount > 2; 
+				ret =  m_FingersCount < 3; 
 				break;
 			case "Fire2":
 				ret =  (PalmNormal.x > 0.5) ; 
@@ -167,6 +167,7 @@ public static class pxsLeapInput
 	
 	private static float GetHandAxisPrivate(string axisName, bool scaled)
 	{
+		scaled = false;
 		// Call Update so you can get the latest frame and hand
 		Update();
 		float ret = 0.0F;
@@ -177,6 +178,7 @@ public static class pxsLeapInput
 			Vector3 PalmDirection = new Vector3(0,0,0);
 			if (scaled == true)
 			{
+				
 				PalmPosition = m_Hand.PalmPosition.ToUnityTranslated();
 				PalmNormal = m_Hand.PalmNormal.ToUnity();				
 				PalmDirection = m_Hand.Direction.ToUnity();
@@ -214,7 +216,7 @@ public static class pxsLeapInput
 				ret =  PalmPosition.z;
 				break;
 			case "Rotation":
-				ret = -2 * PalmNormal.x ;
+				ret = PalmNormal.x ;
 				break;
 			case "Tilt":
 				ret = PalmNormal.z ;
@@ -225,14 +227,17 @@ public static class pxsLeapInput
 			case "VericalDirection":
 				ret = PalmDirection.y ;
 				break;
+			case "Sphere":
+				ret = m_Hand.StabilizedPalmPosition.ToUnity().y;
+				break;
 			default:
 				break;
 			}
-			if (scaled == true)
+			/*if (axisName == "Rotation")
 				{
 					if (ret > 1) {ret = 1;}
 					if (ret < -1) {ret = -1;}
-				}
+				}*/
 	
 		}
 		else
