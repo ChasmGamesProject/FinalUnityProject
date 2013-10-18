@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PickLogic.cs">
     <Files>
-      <File FileName="Assets\BoxCamera.cs" Line="16" Column="1" />
-      <File FileName="Assets\PuzzleLogic.cs" Line="36" Column="20" />
+      <File FileName="Assets\PuzzleLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets\BoxCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\PickLogic.cs" Line="79" Column="4" />
-      <File FileName="Assets\Plugins\pxsLeapInput.cs" Line="197" Column="20" />
+      <File FileName="Assets\Plugins\pxsLeapInput.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
