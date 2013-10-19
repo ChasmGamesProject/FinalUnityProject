@@ -3,8 +3,6 @@
 	desc=It's empty.
 	collectable=true
 	icon=box
-	combinable=true
-	combines_with=4
 }
 {
 	name=Ball
