@@ -1,0 +1,37 @@
+{
+	name=You
+}
+{
+	name=Joker
+	bio=Always trying to liven things up with his jokes
+	sprite=joker/happy
+	sprite=joker/angry
+}
+{
+	name=Nice
+	bio=Your ever-smiling childhood friend 
+	mood=50
+	topic_list=nice_topiclist.txt
+	available_topics=0
+	sprite=nice/happy
+	sprite=nice/sad
+	sprite=nice/determined
+}
+{
+	name=Quiet
+	bio=Quiet girl, who's even quiter given the present state of affairs
+	sprite=quiet/neutral
+}
+{
+	name=Serious
+	bio=A realist
+	sprite=serious/neutral
+	sprite=serious/angry
+}
+{
+	name=Stranger
+	bio=A neighbour who was invited to the party, don't really know much about him
+	sprite=stranger/thinking
+	sprite=stranger/revelation
+}
+

@@ -1,0 +1,38 @@
+{
+	name=Box
+	desc=It's empty.
+	collectable=true
+	icon=box
+	combinable=true
+	combines_with=4
+}
+{
+	name=Ball
+	desc=If I drilled a few holes in it, I could use it to bowl.
+}
+{
+	name=Pringles Packet
+	desc=Unfortunally empty.
+}
+{
+	name=Golf Ball
+	desc=Now, if only I had a club...
+	collectable=true
+	icon=golf_ball
+}
+{
+	name=Cardboard Box A
+	desc=Contains various articles of clothing, all quite tacky.
+}
+{
+	name=Cardboard Box B
+	desc=Contains someones p*rn collection, the owner seems to be quite fond of blondes.
+}
+{
+	name=Cardboard Box C
+	desc=It's empty.
+}
+{
+	name=Cardboard Box D
+	desc=Contains various domestic goods including a toilet brush. Wait... does that mean...
+}
