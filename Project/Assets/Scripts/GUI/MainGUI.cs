@@ -42,7 +42,7 @@ public class MainGUI : MonoBehaviour
         MenuButton = new Rect(0, 0, 200, 50); //Create a default menu button size
         InventoryBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - (Screen.width / 10)*2, Screen.height - (Screen.height / 10)*2);
 		
-		Inventoryicon = (Texture2D)Resources.Load ("textures/GUI/icons/inventory");
+		Inventoryicon = (Texture2D)Resources.Load ("/textures/GUI/icons/inventory");
     }
 
     void OnGUI()
