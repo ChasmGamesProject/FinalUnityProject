@@ -1,0 +1,3 @@
+lamp_head.png is the texture for lamp_style1.FBX
+lamp_head2.png is the teaxture for lamp_style2.FBX
+lamp_style3.png is the texture for lamp_style3.FBX
