@@ -37,6 +37,7 @@ public class MainCharacterPathing : MonoBehaviour {
 		
         seeker = GetComponent<Seeker>();
         controller = GetComponent<CharacterController>();
+		
 		//GlobalVars.player_transform = gameObject.transform;
 		
 	}
@@ -61,6 +62,12 @@ public class MainCharacterPathing : MonoBehaviour {
 		
 	void Update()
 	{
+		
+		
+		
+
+
+		
 		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
 		if(Time.time - time > 0.5)
 		if(canmove)
@@ -79,7 +86,7 @@ public class MainCharacterPathing : MonoBehaviour {
 				if((hit.point != LastPath))//&&(hit.point.y==100))
 				{
 							
-				if(true)//CheckIfPathIsPossible(controller.transform.position,hit.point))
+				if(CheckIfPathIsPossible(controller.transform.position,hit.point))
 					{
 							
 						if(true)//okay
@@ -189,6 +196,8 @@ public class MainCharacterPathing : MonoBehaviour {
 		}
 		else	*/
 		dir = new Vector3(dir.x,0,dir.z);
+		transform.localRotation = Quaternion.LookRotation(dir);
+		//transform.Rotate(Vector3.up*270);
 		controller.SimpleMove (dir);
        
         //Check if we are close enough to the next waypoint
