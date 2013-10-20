@@ -10,11 +10,7 @@
       <File FileName="Assets\AstarPathfindingProject\Utilities\PathUtilities.cs" Line="1" Column="1" />
       <File FileName="Assets\Plugins\pxsLeapInput.cs" Line="1" Column="1" />
       <File FileName="Assets\MainCharacterPathing.cs" Line="64" Column="87" />
-<<<<<<< HEAD
 >>>>>>> refs/heads/recoverhead
-=======
->>>>>>> refs/heads/reccover
->>>>>>> b944b83338aa1b1b128e91cdd7c4080825711912
       <File FileName="Assets\PickLogic.cs" Line="1" Column="1" />
       <File FileName="Assets\BoxCamera.cs" Line="1" Column="1" />
       <File FileName="Assets\PuzzleLogic.cs" Line="1" Column="1" />
