@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>A:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>A:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +114,7 @@
      <Compile Include="Assets\PinLogic.cs" />
      <Compile Include="Assets\PuzzleLogic.cs" />
      <Compile Include="Assets\Scripts\AstarAI.cs" />
+     <Compile Include="Assets\Scripts\CharacterPlotBehaviour.cs" />
      <Compile Include="Assets\Scripts\Dialogue\CharacterData.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueNode.cs" />
@@ -131,12 +132,11 @@
      <Compile Include="Assets\Scripts\InteractMode.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\MyPhysics.cs" />
+     <Compile Include="Assets\Scripts\ObjectPlotBehaviour.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Plot\CharacterPlotBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Plot\ObjectPlotBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Plot\PlotBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Plot\PlotSystem.cs" />
+     <Compile Include="Assets\Scripts\PlotBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlotSystem.cs" />
      <Compile Include="Assets\Scripts\RoomManager.cs" />
      <Compile Include="Assets\Scripts\SaveManager.cs" />
      <Compile Include="Assets\Scripts\StopRotate.cs" />
@@ -149,8 +149,10 @@
      <Compile Include="Assets\Scripts\loading\LoadFromFile.cs" />
      <Compile Include="Assets\Scripts\loading\LoadTopic.cs" />
      <Compile Include="Assets\boxpuzzlegui.cs" />
+     <None Include="Assets\text\topic_cookies.txt" />
      <None Include="Assets\Models\Lamps and textures\lamp.txt" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\text\joker_topiclist.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\text\PickUpFailMessages.txt" />

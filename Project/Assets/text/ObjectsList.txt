@@ -1,36 +1,30 @@
 {
-	name=Box
-	desc=It's empty.
+	name=TV
+	desc=It's just showing static right now.
+}
+{
+	name=Sofa Chair
+	desc=Looks comfy
+}
+{
+	name=Couch
+	desc=Now's not the time to be thinking about relaxing
+}
+{
+	name=Lamp
+	desc=Well at least the lights still work
+}
+{
+	name=Bookcase
+	desc=I guess they haven't got around to unpacking their books yet
+}
+{
+	name=Bookcase
+	desc=There seems to be something on one of the bottom shelves
+}
+{
+	name=Book
+	desc=It seems to be a book containing old fables and stories
 	collectable=true
-	icon=box
-}
-{
-	name=Ball
-	desc=If I drilled a few holes in it, I could use it to bowl.
-}
-{
-	name=Pringles Packet
-	desc=Unfortunally empty.
-}
-{
-	name=Golf Ball
-	desc=Now, if only I had a club...
-	collectable=true
-	icon=golf_ball
-}
-{
-	name=Cardboard Box A
-	desc=Contains various articles of clothing, all quite tacky.
-}
-{
-	name=Cardboard Box B
-	desc=Contains someones p*rn collection, the owner seems to be quite fond of blondes.
-}
-{
-	name=Cardboard Box C
-	desc=It's empty.
-}
-{
-	name=Cardboard Box D
-	desc=Contains various domestic goods including a toilet brush. Wait... does that mean...
+	icon=book
 }

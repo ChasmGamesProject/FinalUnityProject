@@ -12,7 +12,13 @@ public class PlayerInput : MonoBehaviour
 	private RoomManager rm;
 	private DescriptionUI dia;
 	private DialogueManager dm;
-	
+
+
+    void Awake()
+    {
+        GlobalVars.player_transform = gameObject.transform;
+    }
+
 	void Start ()
 	{
 		im = GlobalVars.interact_mode;

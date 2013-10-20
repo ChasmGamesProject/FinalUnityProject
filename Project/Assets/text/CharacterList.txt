@@ -4,12 +4,13 @@
 {
 	name=Joker
 	bio=Always trying to liven things up with his jokes
+	topic_list=joker_topiclist.txt
 	sprite=joker/happy
 	sprite=joker/angry
 }
 {
 	name=Nice
-	bio=Your ever-smiling childhood friend 
+	bio=Your usually happy, childhood friend, she looks a bit worse for the wear 
 	mood=50
 	topic_list=nice_topiclist.txt
 	available_topics=0

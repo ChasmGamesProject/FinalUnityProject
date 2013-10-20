@@ -18,7 +18,7 @@ public class CharacterPlotBehaviour : PlotBehaviour
         db = GlobalVars.database;
         myOwner = db.GetCharacter(CharacterID);
         ConversationTopics = new List<int>();
-        myOwner.AddAvaliableTopic(1);
+        //myOwner.AddAvaliableTopic(1);
 	}
 	
 	// Update is called once per frame
