@@ -109,6 +109,7 @@
      <Compile Include="Assets\BoxManager.cs" />
      <Compile Include="Assets\BoxPuzzleLogic.cs" />
      <Compile Include="Assets\GUIscriptlockpicking.cs" />
+     <Compile Include="Assets\MainCharacterPathing.cs" />
      <Compile Include="Assets\PickLogic.cs" />
      <Compile Include="Assets\PinLogic.cs" />
      <Compile Include="Assets\PuzzleLogic.cs" />
