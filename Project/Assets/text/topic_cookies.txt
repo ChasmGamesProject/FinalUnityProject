@@ -1,7 +1,7 @@
 info
 {
 	topic_name=Cookies
-	flag=SheKnows
+	flag=firstfreeroam
 }
 sprite
 {

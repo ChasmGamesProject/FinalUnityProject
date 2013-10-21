@@ -18,7 +18,8 @@ public class WorldDoor : MonoBehaviour
 	private ActionTextUI aui;
 	
 	private CursorUI cui;
-	
+
+    private BoxCollider boxCollider;
 	private bool MouseOver;
 	
 	void Start ()
@@ -36,8 +37,8 @@ public class WorldDoor : MonoBehaviour
 	{
 		if(MouseOver)
 		{
-			if(WorldHelper.isPlayerInRange(gameObject.transform))
-			{
+            if (WorldHelper.isPlayerInRange(gameObject.transform))
+            {
 				string actionText;
 				if(im.isUseWith())
 					actionText = "Use " + im.GetUseWithObject().name + " on Door";

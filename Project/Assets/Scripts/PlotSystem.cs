@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum PlotPointer { Begin, Argument, Key }; //flesh this out with all the plot points
+public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, Key }; //flesh this out with all the plot points
 
 public class PlotSystem : MonoBehaviour {
 
@@ -22,7 +22,8 @@ public class PlotSystem : MonoBehaviour {
     void Awake()
     {
         GlobalVars.plot_system = this;
-        InitialiseEnumConversion();        
+        InitialiseEnumConversion();
+        InitPlots();
     }
 
 	// Use this for initialization
@@ -30,8 +31,6 @@ public class PlotSystem : MonoBehaviour {
     {
 
         PlotObjects = new Dictionary<PlotPointer, List<PlotBehaviour>>();
-        Plots = new Dictionary<PlotPointer, bool>();
-
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
         foreach (object o in obj) //Used to populate the lists
@@ -42,12 +41,14 @@ public class PlotSystem : MonoBehaviour {
                 Temp = (PlotBehaviour)g.GetComponent(typeof(PlotBehaviour));
                 for (int i = 0; i < Temp.PlotLinks.Length; i++)
                 {
-                    if(!PlotObjects.ContainsKey((PlotPointer)i))
+                    if (!PlotObjects.ContainsKey(Temp.PlotLinks[i]))
                     {
+                        PlotObjects[Temp.PlotLinks[i]] = new List<PlotBehaviour>();
                         Debug.Log(i);
-                        PlotObjects[(PlotPointer)i] = new List<PlotBehaviour>();
+                        Debug.Log("Plot: " + (int)Temp.PlotLinks[i]);
                     }
-                    PlotObjects[(PlotPointer)i].Add(Temp);
+                    Debug.Log("Plot: " + (int)Temp.PlotLinks[i]);
+                    PlotObjects[Temp.PlotLinks[i]].Add(Temp);
                 }
             }
         }
@@ -60,6 +61,7 @@ public class PlotSystem : MonoBehaviour {
 
     public void ChangePlotStatus(PlotPointer PlotReached)
     {
+       
         Plots[PlotReached] = true;
         CurrentPlot = PlotReached;
         AdvancePlot();
@@ -77,18 +79,44 @@ public class PlotSystem : MonoBehaviour {
 
     private void AdvancePlot() //used to iterate through datastructure
     {
-        for(int i = 0; i < PlotObjects[CurrentPlot].Count; i++)
+        if(PlotObjects.ContainsKey(CurrentPlot))
         {
-            PlotObjects[CurrentPlot][i].ProgressPlot(CurrentPlot);
+            for(int i = 0; i < (PlotObjects[CurrentPlot]).Count; i++)
+            {
+
+                if (PlotObjects[CurrentPlot][i] != null)
+                {
+                    Debug.Log(PlotObjects[CurrentPlot].Count);
+                    PlotObjects[CurrentPlot][i].ProgressPlot(CurrentPlot);
+                }
+
+            }
         }
+    }
+
+    public PlotPointer GetEnum(string S)
+    {
+        return EnumConversion[S];
     }
 
     private void InitialiseEnumConversion()
     {
         EnumConversion = new Dictionary<string, PlotPointer>();
-        EnumConversion["begin"] = PlotPointer.Begin;
+        EnumConversion.Add("begin",PlotPointer.Begin);
         EnumConversion["argument"] = PlotPointer.Argument;
         EnumConversion["key"] = PlotPointer.Key;
+        EnumConversion["firstfreeroam"] = PlotPointer.FirstFreeRoam;
+        EnumConversion["intro"] = PlotPointer.Intro;
+    }
+
+    private void InitPlots()
+    {
+        Plots = new Dictionary<PlotPointer, bool>();
+        Plots[PlotPointer.Begin] = false;
+        Plots[PlotPointer.Intro] = false;
+        Plots[PlotPointer.FirstFreeRoam] = false;
+        Plots[PlotPointer.Argument] = false;
+        Plots[PlotPointer.Key] = false;
     }
  
 }

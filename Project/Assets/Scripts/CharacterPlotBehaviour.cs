@@ -14,11 +14,12 @@ public class CharacterPlotBehaviour : PlotBehaviour
 	void Start () 
     {
         C = (WorldCharacter)this.gameObject.GetComponent(typeof(WorldCharacter));
+
         CharacterID = C.CharacterId;
         db = GlobalVars.database;
         myOwner = db.GetCharacter(CharacterID);
         ConversationTopics = new List<int>();
-        //myOwner.AddAvaliableTopic(1);
+        //myOwner.AddAvaliableTopic(0);
 	}
 	
 	// Update is called once per frame
@@ -29,7 +30,11 @@ public class CharacterPlotBehaviour : PlotBehaviour
 
     public override void ProgressPlot(PlotPointer PlotToProgress)
     {
-        ConversationTopics = myOwner.GetPlotTopics(PlotToProgress);
+        Debug.Log("ID:" + CharacterID);
+        if(myOwner.CheckPlotTopics(PlotToProgress))
+        {
+            ConversationTopics = myOwner.GetPlotTopics(PlotToProgress);
+        }
 
         for (int i = 0; i < ConversationTopics.Count; i++)
         {

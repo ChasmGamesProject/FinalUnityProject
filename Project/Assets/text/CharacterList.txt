@@ -26,12 +26,14 @@
 {
 	name=Serious
 	bio=A realist
+	topic_list=serious_topiclist.txt
 	sprite=serious/neutral
 	sprite=serious/angry
 }
 {
 	name=Stranger
 	bio=A neighbour who was invited to the party, don't really know much about him
+	topic_list=stranger_topiclist.txt
 	sprite=stranger/thinking
 	sprite=stranger/revelation
 }

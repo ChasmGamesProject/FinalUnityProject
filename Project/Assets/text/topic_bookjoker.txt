@@ -1,0 +1,54 @@
+info
+{
+	topic_name=Book
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=1
+	text=hello, did you manage to find the pick?
+}
+line
+{
+	speaker_id=0
+	text=Yeah! I also managed to unlock the library door.
+}
+line
+{
+	speaker_id=1
+	text=Excellent! Thanks very much, I owe you one.
+}
+line
+{
+	speaker_id=0
+	text=Now, would you happen to know anything regarding this book?
+}
+line
+{
+	speaker_id=0
+	text=There is a passage here that refers to house disaperences.
+}
+line
+{
+	speaker_id=1
+	text=Sorry man, to be honest I don't really read that much.
+}
+line
+{
+	speaker_id=1
+	text=And I pay even less attention to fables.
+}
+line
+{
+	speaker_id=1
+	text=Maybe you should go ask ____ since it is her book.
+}
+line
+{
+	speaker_id=0
+	text=Ok, Thanks
+}

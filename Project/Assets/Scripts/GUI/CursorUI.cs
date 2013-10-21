@@ -24,8 +24,8 @@ public class CursorUI : MonoBehaviour
 	
 	private int cursor_index;
 	
-	int cursor_x = 64; // size
-	int cursor_y = 64;
+	int cursor_x = 48; // size
+	int cursor_y = 48;
 	
 	void Awake()
 	{

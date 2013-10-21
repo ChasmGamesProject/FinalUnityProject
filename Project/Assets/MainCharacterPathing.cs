@@ -83,7 +83,7 @@ public class MainCharacterPathing : MonoBehaviour {
 			
 			if(Physics.Raycast(ray,out hit, 1000))
 			{
-				Debug.Log(hit.point);	
+				//Debug.Log(hit.point);	--hamish
 				if((hit.point != LastPath))//&&(hit.point.y==100))
 				{
 							
@@ -92,7 +92,7 @@ public class MainCharacterPathing : MonoBehaviour {
 							
 						if(true)//okay
 						{
-						Debug.Log("this far");	
+						//Debug.Log("this far");	--hamish
 				okay = false;
 				
 				
@@ -108,7 +108,7 @@ public class MainCharacterPathing : MonoBehaviour {
 									okay = true;
 								}
 									
-							Debug.Log("Hello");
+							//Debug.Log("Hello"); --hamish
 						}
 					}
 				}
@@ -133,7 +133,7 @@ public class MainCharacterPathing : MonoBehaviour {
     
     public void OnPathComplete (Path p) 
 	{
-        Debug.Log ("Yey, we got a path back. Did it have an error? "+p.error);
+        //Debug.Log ("Yey, we got a path back. Did it have an error? "+p.error); --hamish
         if (!p.error) {
             path = p;
             //Reset the waypoint counter

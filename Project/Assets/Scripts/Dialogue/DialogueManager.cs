@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
 	private Database db;
 	private InteractMode im;
 	private FailUI fui;
+    private PlotSystem ps;
 	
 	private DialogueState State;
 	private TopicData TopicCurrent;
@@ -55,7 +56,8 @@ public class DialogueManager : MonoBehaviour
 		inv = GlobalVars.inventory;
 		db = GlobalVars.database;
 		im = GlobalVars.interact_mode;
-		
+        ps = GlobalVars.plot_system;
+
 		fui = gameObject.GetComponent<FailUI>();
 	}
 	
@@ -229,6 +231,14 @@ public class DialogueManager : MonoBehaviour
 	
 	private void ReturnToTopicList()
 	{
+        if (TopicCurrent.GetFlag() == "")
+        {
+            //do nothing
+        }
+        else
+        {
+            ps.ChangePlotStatus(ps.GetEnum(TopicCurrent.GetFlag()));
+        }
 		ConversationPartner.RemoveAvaliableTopic(CurrentTopicId);
 		State = DialogueState.PICK_TOPIC;
 		UpdateGUI();

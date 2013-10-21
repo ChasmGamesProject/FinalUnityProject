@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class CharacterData
 {
@@ -155,13 +156,25 @@ public class CharacterData
         {
             PS = GlobalVars.plot_system;
             PlotTopics = new Dictionary<PlotPointer, List<int>>();
-            PlotTopics[PS.EnumConversion[PlotID]] = new List<int>();
+            PlotTopics[PS.GetEnum(PlotID)] = new List<int>();
         }
-        PlotTopics[(PS.EnumConversion[PlotID])].Add(TD); //.Add(TD);
+        PlotTopics[(PS.GetEnum(PlotID))].Add(TD); //.Add(TD);
     }
 
     public List<int> GetPlotTopics(PlotPointer ID)
     {
         return PlotTopics[ID];
+    }
+
+    public bool CheckPlotTopics(PlotPointer ID)
+    {
+        if (PlotTopics.ContainsKey(ID))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
