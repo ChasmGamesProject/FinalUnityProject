@@ -16,8 +16,8 @@ public class BoxPuzzleLogic : MonoBehaviour {
 		// Use this for initialization
 	void Start () {
 		target = Vector3.zero;
-		AI.targetPosition2 = new Vector3(146.0f,101.08f,116.0f);
-		AI.targetPosition = new Vector3(146.0f,101.08f,116.0f);
+		AI.targetPosition2 = new Vector3(146.0f,100.08f,116.0f);
+		AI.targetPosition = new Vector3(146.0f,100.08f,116.0f);
 		AI.Scanner();
 	moving = false;
 	initialColor = renderer.material.color;
@@ -219,7 +219,7 @@ void OnMouseExit()
 	// Update is called once per frame
 	void Update () {
 		Boxmanage.temp1 =rigidbody.position;
-		if((Vector3.Distance(Boxmanage.temp1, Boxmanage.temp2)<0.1)&&(AI.canmove==false))
+		if((Vector3.Distance(Boxmanage.temp1, Boxmanage.temp2)<0.05)&&(AI.canmove==false))
 		{
 			AstarPath.active.Scan();
 			Debug.Log(rigidbody.position);
@@ -245,12 +245,12 @@ void OnMouseExit()
 			
 			if(Player.position.x<transform.position.x)
 			{
-				AI.targetPosition2 = new Vector3((146+transform.localPosition.x)-4,101.08f,transform.position.z);
-				AI.targetPosition = new Vector3((146+transform.localPosition.x)-4,101.08f,transform.position.z);
+				AI.targetPosition2 = new Vector3((146+transform.localPosition.x)-4,100.08f,transform.position.z);
+				AI.targetPosition = new Vector3((146+transform.localPosition.x)-4,100.08f,transform.position.z);
 			}
 			else{
-				AI.targetPosition2 = new Vector3((146+transform.localPosition.x),101.08f,transform.position.z);
-				AI.targetPosition = new Vector3((146+transform.localPosition.x),101.08f,transform.position.z);
+				AI.targetPosition2 = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
+				AI.targetPosition = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
 			}
 			rigidbody.velocity = new Vector3(-0.9f,0,0);
 			AI.canmove = false;
@@ -269,12 +269,12 @@ void OnMouseExit()
 			target = new Vector3(rigidbody.position.x+2,rigidbody.position.y,rigidbody.position.z);
 			if(Player.position.x > transform.position.x)
 			{
-				AI.targetPosition2 = new Vector3((146+transform.localPosition.x)+4,101.08f,transform.position.z);
-				AI.targetPosition = new Vector3((146+transform.localPosition.x)+4,101.08f,transform.position.z);
+				AI.targetPosition2 = new Vector3((146+transform.localPosition.x)+4,100.08f,transform.position.z);
+				AI.targetPosition = new Vector3((146+transform.localPosition.x)+4,100.08f,transform.position.z);
 			}
 			else{
-				AI.targetPosition2 = new Vector3((146+transform.localPosition.x),101.08f,transform.position.z);
-				AI.targetPosition = new Vector3((146+transform.localPosition.x),101.08f,transform.position.z);
+				AI.targetPosition2 = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
+				AI.targetPosition = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
 			}
 			rigidbody.velocity = new Vector3(0.9f,0,0);
 			Debug.Log(rigidbody.position);
@@ -291,12 +291,12 @@ void OnMouseExit()
 			target = new Vector3(rigidbody.position.x,rigidbody.position.y,rigidbody.position.z+2);
 			if(Player.position.z>transform.position.z)
 			{
-				AI.targetPosition2 = new Vector3(transform.position.x,101.08f,(116+z*2)+4);
-				AI.targetPosition = new Vector3(transform.position.x,101.08f,(116+z*2)+4);
+				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2)+4);
+				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2)+4);
 			}
 			else{
-				AI.targetPosition2 = new Vector3(transform.position.x,101.08f,(116+z*2));
-				AI.targetPosition = new Vector3(transform.position.x,101.08f,(116+z*2));
+				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2));
+				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2));
 			}
 			rigidbody.velocity = new Vector3(0,0,0.9f);
 			AI.canmove = false;
@@ -310,12 +310,12 @@ void OnMouseExit()
 			target = new Vector3(rigidbody.position.x,rigidbody.position.y,rigidbody.position.z-2);
 			if(Player.position.z < transform.position.z)
 			{
-				AI.targetPosition2 = new Vector3(transform.position.x,101.08f,(116+z*2)-4);
-				AI.targetPosition = new Vector3(transform.position.x,101.08f,(116+z*2)-4);
+				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2)-4);
+				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2)-4);
 			}
 			else{
-				AI.targetPosition2 = new Vector3(transform.position.x,101.08f,(116+z*2));
-				AI.targetPosition = new Vector3(transform.position.x,101.08f,(116+z*2));
+				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2));
+				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2));
 				
 			}
 			rigidbody.velocity = new Vector3(0,0,-0.9f);

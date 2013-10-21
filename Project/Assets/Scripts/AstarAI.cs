@@ -88,28 +88,28 @@ public class AstarAI : MonoBehaviour {
 	{
 		if((pos.x>145)&&(pos.x<147))
 		{
-			targetPosition = new Vector3(146.0f,101.08f,Zget(pos));
+			targetPosition = new Vector3(146.0f,yheight,Zget(pos));
 			
 		}
 		if((pos.x>147)&&(pos.x<149))
 		{
-			targetPosition = new Vector3(148.0f,101.08f,Zget(pos));
+			targetPosition = new Vector3(148.0f,yheight,Zget(pos));
 			
 		}
 		if((pos.x>149)&&(pos.x<151))
 		{
 			
-			targetPosition = new Vector3(150.0f,101.08f,Zget(pos));
+			targetPosition = new Vector3(150.0f,yheight,Zget(pos));
 		}
 		if((pos.x>151)&&(pos.x<153))
 		{
 			
-			targetPosition = new Vector3(152.0f,101.08f,Zget(pos));
+			targetPosition = new Vector3(152.0f,yheight,Zget(pos));
 		}
 		if((pos.x>153)&&(pos.x<155))
 		{
 			
-			targetPosition = new Vector3(154.0f,101.08f,Zget(pos));
+			targetPosition = new Vector3(154.0f,yheight,Zget(pos));
 		}
 	
 	}
@@ -228,7 +228,8 @@ public class AstarAI : MonoBehaviour {
 				transform.position = Vector3.Lerp(transform.position,targetPosition,0.1f);
 				//dir = Vector3.zero;
 			}
-			else
+			//else
+			if(Vector3.Distance(transform.position,targetPosition)<0.05)
 			{
 				transform.position = targetPosition;
 			}
