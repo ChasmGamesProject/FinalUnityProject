@@ -97,7 +97,7 @@ public class MainCharacterPathing : MonoBehaviour {
 				
 				LastPath = targetPosition;
 				targetPosition = hit.point;
-				targetPosition.y = yheight;//1.08f;
+				//targetPosition.y = yheight;//1.08f;
 				if(targetPosition != transform.position)
 								{
 									Scanner();
@@ -196,7 +196,8 @@ public class MainCharacterPathing : MonoBehaviour {
 		}
 		else	*/
 		dir = new Vector3(dir.x,0,dir.z);
-		transform.localRotation = Quaternion.LookRotation(dir);
+		Quaternion rotation = Quaternion.LookRotation(dir);
+		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
 		//transform.Rotate(Vector3.up*270);
 		controller.SimpleMove (dir);
        
