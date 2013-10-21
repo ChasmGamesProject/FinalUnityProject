@@ -11,6 +11,8 @@ public class RoomManager : MonoBehaviour
 	public int room_cur = 0;
 	
 	public GameObject[] rooms;
+	//Pather = get
+	public MainCharacterPathing Pather;
 	
 	private Camera[] room_cams;
 	private AudioListener[] room_lis; // wiretaps
@@ -146,6 +148,11 @@ public class RoomManager : MonoBehaviour
 	{
 		//enable room render components?
 		PlayerTF.position = room_spawn_points[id];
+		Pather.targetPosition = room_spawn_points[id];
+		Pather.targetPosition2 = room_spawn_points[id];
+		Pather.yheight = Pather.targetPosition.y;
+		Pather.Scanner();
+		Pather.cam = room_cams[id];
 		
 		if(room_cams[id])
 			room_cams[id].enabled = true; // enable the rooms camera

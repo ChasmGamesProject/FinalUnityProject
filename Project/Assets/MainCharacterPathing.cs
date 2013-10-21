@@ -20,6 +20,7 @@ public class MainCharacterPathing : MonoBehaviour {
 	bool okay;
 	float time;
 	public float yheight;
+	public Camera cam;
 	int f;
     
     //The max distance from the AI to a waypoint for it to continue to the next waypoint
@@ -77,7 +78,7 @@ public class MainCharacterPathing : MonoBehaviour {
 			//AstarPath.active.Scan();
 		//Debug.Log("Clicking");
 			
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+			Ray ray = cam.ScreenPointToRay (Input.mousePosition);
 		    RaycastHit hit;
 			
 			if(Physics.Raycast(ray,out hit, 1000))
@@ -167,7 +168,7 @@ public class MainCharacterPathing : MonoBehaviour {
 				//targetPosition2 = path.vectorPath[path.vectorPath.Count];
 			dir = (targetPosition-transform.position).normalized;
         	dir *= speed * Time.fixedDeltaTime;
-				dir = new Vector3(dir.x,0,dir.z);
+				//dir = new Vector3(dir.x,0,dir.z);
         	//controller.SimpleMove (dir);
 			}
 			else if((Vector3.Distance(transform.position,targetPosition)>0.01f)&&(path != null))
@@ -181,7 +182,7 @@ public class MainCharacterPathing : MonoBehaviour {
 			}
 			else
 			{
-				transform.position = targetPosition;
+				//transform.position = targetPosition;
 			}
             return;
         }
@@ -208,6 +209,6 @@ public class MainCharacterPathing : MonoBehaviour {
             return;
         }
 			LastPos = transform.position;
-		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
+		//transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
     }
 }
