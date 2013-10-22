@@ -155,10 +155,14 @@ public class CharacterData
         if (PlotTopics == null)
         {
             PS = GlobalVars.plot_system;
-            PlotTopics = new Dictionary<PlotPointer, List<int>>();
+            PlotTopics = new Dictionary<PlotPointer, List<int>>();        
+        }
+        if (!PlotTopics.ContainsKey(PS.GetEnum(PlotID)))
+        {
             PlotTopics[PS.GetEnum(PlotID)] = new List<int>();
         }
         PlotTopics[(PS.GetEnum(PlotID))].Add(TD); //.Add(TD);
+
     }
 
     public List<int> GetPlotTopics(PlotPointer ID)

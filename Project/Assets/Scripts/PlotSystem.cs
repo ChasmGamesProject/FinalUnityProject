@@ -32,7 +32,6 @@ public class PlotSystem : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        Debug.Log("TestPlot");
         PlotObjects = new Dictionary<PlotPointer, List<PlotBehaviour>>();
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
