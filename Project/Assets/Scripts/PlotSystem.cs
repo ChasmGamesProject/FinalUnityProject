@@ -48,7 +48,6 @@ public class PlotSystem : MonoBehaviour {
                     {
                         PlotObjects[Temp.PlotLinks[i]] = new List<PlotBehaviour>();
                     }
-                    Debug.Log("Plot: " + (int)Temp.PlotLinks[i]);
                     PlotObjects[Temp.PlotLinks[i]].Add(Temp);
                 }
             }
@@ -123,9 +122,7 @@ public class PlotSystem : MonoBehaviour {
                     {
                         if (PlotObjects[QueuedPlots[i]][k] != null)
                         {
-                            Debug.Log("Test5");
                             PlotObjects[QueuedPlots[i]][k].ProgressPlot(QueuedPlots[i]);
-                            Debug.Log("Test6");
                         }
                     }
                 }

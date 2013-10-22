@@ -31,7 +31,6 @@ public class CharacterPlotBehaviour : PlotBehaviour
 
     public override void ProgressPlot(PlotPointer PlotToProgress)
     {
-        Debug.Log("CharacterID:" + CharacterID);
         if(myOwner.CheckPlotTopics(PlotToProgress))
         {
             ConversationTopics = myOwner.GetPlotTopics(PlotToProgress);
