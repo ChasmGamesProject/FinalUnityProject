@@ -30,7 +30,9 @@ public class MainCharacterPathing : MonoBehaviour {
     private int currentWaypoint = 0;
  
 	void Awake()
-	{canmove = true;
+	{
+		//this.enabled = false;
+		canmove = true;
 		bool okay = true;
 		time = Time.time;
 		f=30;
@@ -38,9 +40,7 @@ public class MainCharacterPathing : MonoBehaviour {
 		
         seeker = GetComponent<Seeker>();
         controller = GetComponent<CharacterController>();
-		
-		//GlobalVars.player_transform = gameObject.transform;
-		
+						
 	}
 	
 	//Gets mouse click location and builds a a path to that location
@@ -72,7 +72,7 @@ public class MainCharacterPathing : MonoBehaviour {
 		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
 		if(Time.time - time > 0.5)
 		if(canmove)
-		if(Input.GetMouseButton(0))
+		if(Input.GetMouseButton(1))
         {
 			time = Time.time;
 			//AstarPath.active.Scan();
