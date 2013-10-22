@@ -53,6 +53,7 @@
      <None Include="Assets\Models\Lamps and textures\lamp.txt" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\text\Argument.txt" />
+     <None Include="Assets\text\topic_firstroamingquiet.txt" />
      <None Include="Assets\text\joker_topiclist.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
@@ -69,6 +70,7 @@
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\text\topic_firstroamingstranger.txt" />
+     <None Include="Assets\text\quiet_topiclist.txt" />
      <None Include="Assets\text\topic_bookjoker.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
      <None Include="Assets\text\CharacterList.txt" />

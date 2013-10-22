@@ -21,6 +21,7 @@
 {
 	name=Catrina
 	bio=Quiet girl, who's even quiter given the present state of affairs
+	topic_list=quiet_topiclist.txt
 	sprite=quiet/neutral
 }
 {

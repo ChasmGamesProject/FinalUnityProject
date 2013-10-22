@@ -1,0 +1,28 @@
+info
+{
+	topic_name=firstroamingquiet
+}
+sprite
+{
+	character_id=3
+	sprite=neutral
+}
+line
+{
+	jump_label=0
+	speaker_id=3
+	text=... ... ...
+}
+choice
+{
+	option
+	{
+		text=How are you holding up?
+		outcome=Jump(0)
+	}
+	option
+	{
+		text=Do you know anything about what is going on?
+		outcome=Jump(0)
+	}
+}
