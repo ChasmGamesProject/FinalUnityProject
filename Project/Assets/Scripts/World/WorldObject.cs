@@ -80,7 +80,7 @@ public class WorldObject : MonoBehaviour
 	
 	void OnMouseEnter()
 	{
-		if(im.GetMode() == InteractMode.gMode.GM_WORLD)
+			if(im.GetMode() == InteractMode.gMode.GM_WORLD)
 			MouseOver = true;
 	}
 	

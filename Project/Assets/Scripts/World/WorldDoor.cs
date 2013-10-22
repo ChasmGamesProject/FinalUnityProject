@@ -37,7 +37,7 @@ public class WorldDoor : MonoBehaviour
 	{
 		if(MouseOver)
 		{
-            if (WorldHelper.isPlayerInRange(gameObject.transform))
+			if (WorldHelper.isPlayerInRange(gameObject.transform))
             {
 				string actionText;
 				if(im.isUseWith())
