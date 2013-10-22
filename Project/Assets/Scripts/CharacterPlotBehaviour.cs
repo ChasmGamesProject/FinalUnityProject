@@ -10,6 +10,7 @@ public class CharacterPlotBehaviour : PlotBehaviour
    // private Database db;
     private CharacterData myOwner;
     private List<int> ConversationTopics;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -30,7 +31,7 @@ public class CharacterPlotBehaviour : PlotBehaviour
 
     public override void ProgressPlot(PlotPointer PlotToProgress)
     {
-        Debug.Log("ID:" + CharacterID);
+        Debug.Log("CharacterID:" + CharacterID);
         if(myOwner.CheckPlotTopics(PlotToProgress))
         {
             ConversationTopics = myOwner.GetPlotTopics(PlotToProgress);

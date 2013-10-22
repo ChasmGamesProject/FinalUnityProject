@@ -1,7 +1,6 @@
 info
 {
-	topic_name=firstroamingnice
-	flag=firstfreeroam
+	topic_name=Greetings
 }
 sprite
 {

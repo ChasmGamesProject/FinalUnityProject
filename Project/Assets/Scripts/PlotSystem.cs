@@ -33,6 +33,7 @@ public class PlotSystem : MonoBehaviour {
 	void Start () 
     {
         PlotObjects = new Dictionary<PlotPointer, List<PlotBehaviour>>();
+        QueuedPlots = new List<PlotPointer>();
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
         foreach (object o in obj) //Used to populate the lists
@@ -81,9 +82,10 @@ public class PlotSystem : MonoBehaviour {
     private void AdvancePlot() //used to iterate through datastructure
     {
         bool flag;
-        
-        for (int i = 0; i < QueuedPlots.Count; i++)
+        int x = QueuedPlots.Count;
+        for (int i = 0; i < x; i++)
         {
+
             flag = true;
             if (PlotDependancies.ContainsKey(QueuedPlots[i]))
             {
@@ -101,18 +103,34 @@ public class PlotSystem : MonoBehaviour {
                     {
                         for (int k = 0; k < (PlotObjects[QueuedPlots[i]]).Count; k++)
                         {
-
                             if (PlotObjects[QueuedPlots[i]][k] != null)
                             {
                                 Debug.Log(PlotObjects[QueuedPlots[i]].Count);
                                 PlotObjects[QueuedPlots[i]][k].ProgressPlot(QueuedPlots[i]);
-                                QueuedPlots.Remove(QueuedPlots[i]);
+                                //QueuedPlots.Remove(QueuedPlots[i]);
                             }
                         }
+
                     }
                     //---
                 }
             }
+            else //No dependancies
+            {
+                if (PlotObjects.ContainsKey(QueuedPlots[i]))
+                {
+                    for (int k = 0; k < (PlotObjects[QueuedPlots[i]]).Count; k++)
+                    {
+                        if (PlotObjects[QueuedPlots[i]][k] != null)
+                        {
+                            Debug.Log("Test5");
+                            PlotObjects[QueuedPlots[i]][k].ProgressPlot(QueuedPlots[i]);
+                            Debug.Log("Test6");
+                        }
+                    }
+                }
+            }
+            QueuedPlots.Remove(QueuedPlots[i]);
         }
     }
 
@@ -148,7 +166,7 @@ public class PlotSystem : MonoBehaviour {
     private void InitDependancies()
     {
         PlotDependancies = new Dictionary<PlotPointer, List<PlotPointer>>();
-        //PlotDependancies[
+        //PlotDependancies[PlotPointer.FirstFreeRoam] = 
     }
  
 }

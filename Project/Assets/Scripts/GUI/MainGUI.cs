@@ -26,6 +26,7 @@ public class MainGUI : MonoBehaviour
     private Inventory inv;
     private Database db;
 	private InteractMode im;
+    private PlotSystem ps;
 	
 	private int SelectedSlot = -1;
 
@@ -34,6 +35,7 @@ public class MainGUI : MonoBehaviour
 		inv = GlobalVars.inventory;
 		db = GlobalVars.database;
 		im = GlobalVars.interact_mode;
+        ps = GlobalVars.plot_system;
 
         Icon50 = new Rect(0, 0, 50, 50); // Create a default rectangle of 50x50 pixels, simply specify later where to locate it
         Icon45 = new Rect(0, 0, 45, 30); //Create a default rectangle of 45x30 pixels
@@ -43,6 +45,7 @@ public class MainGUI : MonoBehaviour
         InventoryBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - (Screen.width / 10)*2, Screen.height - (Screen.height / 10)*2);
 		
 		Inventoryicon = (Texture2D)Resources.Load ("textures/GUI/icons/inventory");
+        ps.ChangePlotStatus(PlotPointer.FirstFreeRoam);
     }
 
     void OnGUI()
