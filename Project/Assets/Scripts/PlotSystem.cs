@@ -26,12 +26,13 @@ public class PlotSystem : MonoBehaviour {
         GlobalVars.plot_system = this;
         InitialiseEnumConversion();
         InitPlots();
+        InitDependancies();
     }
 
 	// Use this for initialization
 	void Start () 
     {
-
+        Debug.Log("TestPlot");
         PlotObjects = new Dictionary<PlotPointer, List<PlotBehaviour>>();
 
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
@@ -46,8 +47,6 @@ public class PlotSystem : MonoBehaviour {
                     if (!PlotObjects.ContainsKey(Temp.PlotLinks[i]))
                     {
                         PlotObjects[Temp.PlotLinks[i]] = new List<PlotBehaviour>();
-                        Debug.Log(i);
-                        Debug.Log("Plot: " + (int)Temp.PlotLinks[i]);
                     }
                     Debug.Log("Plot: " + (int)Temp.PlotLinks[i]);
                     PlotObjects[Temp.PlotLinks[i]].Add(Temp);
@@ -83,34 +82,37 @@ public class PlotSystem : MonoBehaviour {
     private void AdvancePlot() //used to iterate through datastructure
     {
         bool flag;
-
-        for (int i = 0; i < QueuedPlots.Count(); i++)
+        
+        for (int i = 0; i < QueuedPlots.Count; i++)
         {
             flag = true;
-            for (int j = 0; j < PlotDependancies[QueuedPlots[i]].Count(); j++)
+            if (PlotDependancies.ContainsKey(QueuedPlots[i]))
             {
-                if (PlotDependancies[QueuedPlots[i]][j] == false)
+                for (int j = 0; j < PlotDependancies[QueuedPlots[i]].Count; j++)
                 {
-                    flag = false;
-                }
-            }
-            if (flag == true)
-            {
-                //----
-                if (PlotObjects.ContainsKey(QueuedPlot[i]))
-                {
-                    for (int i = 0; i < (PlotObjects[QueuedPlot[i]]).Count; i++)
+                    if (Plots[PlotDependancies[QueuedPlots[i]][j]] == false)
                     {
-
-                        if (PlotObjects[QueuedPlot[i]][i] != null)
-                        {
-                            Debug.Log(PlotObjects[QueuedPlot[i]].Count);
-                            PlotObjects[QueuedPlot[i]][i].ProgressPlot(QueuedPlot[i]);
-                            QueuedPlots.Remove(QueuedPlot[i]);
-                        }
+                        flag = false;
                     }
                 }
-                //---
+                if (flag == true)
+                {
+                    //----
+                    if (PlotObjects.ContainsKey(QueuedPlots[i]))
+                    {
+                        for (int k = 0; k < (PlotObjects[QueuedPlots[i]]).Count; k++)
+                        {
+
+                            if (PlotObjects[QueuedPlots[i]][k] != null)
+                            {
+                                Debug.Log(PlotObjects[QueuedPlots[i]].Count);
+                                PlotObjects[QueuedPlots[i]][k].ProgressPlot(QueuedPlots[i]);
+                                QueuedPlots.Remove(QueuedPlots[i]);
+                            }
+                        }
+                    }
+                    //---
+                }
             }
         }
     }
@@ -142,6 +144,12 @@ public class PlotSystem : MonoBehaviour {
         Plots[PlotPointer.Key] = false;
         Plots[PlotPointer.ConflictResolved] = false;
         Plots[PlotPointer.NiceLesson] = false;
+    }
+
+    private void InitDependancies()
+    {
+        PlotDependancies = new Dictionary<PlotPointer, List<PlotPointer>>();
+        //PlotDependancies[
     }
  
 }
