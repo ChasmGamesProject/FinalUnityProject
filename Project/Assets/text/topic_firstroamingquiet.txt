@@ -1,6 +1,6 @@
 info
 {
-	topic_name=firstroamingquiet
+	topic_name=Question
 }
 sprite
 {
@@ -25,4 +25,14 @@ choice
 		text=Do you know anything about what is going on?
 		outcome=Jump(0)
 	}
+	option
+	{
+		text=Alright, i'll uh be back later.
+	}
+}
+
+line
+{
+	speaker_id=3
+	text=... ... ...
 }
