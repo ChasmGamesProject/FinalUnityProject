@@ -2,14 +2,14 @@
 	name=You
 }
 {
-	name=Joker
+	name=Jack
 	bio=Always trying to liven things up with his jokes
 	topic_list=joker_topiclist.txt
 	sprite=joker/happy
 	sprite=joker/angry
 }
 {
-	name=Nice
+	name=Jane
 	bio=Your usually happy, childhood friend, she looks a bit worse for the wear 
 	mood=50
 	topic_list=nice_topiclist.txt
@@ -19,19 +19,19 @@
 	sprite=nice/determined
 }
 {
-	name=Quiet
+	name=Catrina
 	bio=Quiet girl, who's even quiter given the present state of affairs
 	sprite=quiet/neutral
 }
 {
-	name=Serious
+	name=Michael
 	bio=A realist
 	topic_list=serious_topiclist.txt
 	sprite=serious/neutral
 	sprite=serious/angry
 }
 {
-	name=Stranger
+	name=Leo
 	bio=A neighbour who was invited to the party, don't really know much about him
 	topic_list=stranger_topiclist.txt
 	sprite=stranger/thinking

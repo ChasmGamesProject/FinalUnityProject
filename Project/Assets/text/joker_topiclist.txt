@@ -1,4 +1,6 @@
 {
-plot_marker=begin
-topic_bookjoker.txt
+plot_marker=firstfreeroam
+Argument.txt
+plot_marker=conflictresolved
+topic_conflictsolvedjoker.txt
 }

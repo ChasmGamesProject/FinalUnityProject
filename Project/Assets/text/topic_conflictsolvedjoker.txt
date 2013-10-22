@@ -1,0 +1,29 @@
+info
+{
+	topic_name=conflictsolved
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=1
+	text=Well, its good to have that mess solved aye?
+}
+line
+{
+	speaker_id=0
+	text=Yes I think it is.
+}
+line
+{
+	speaker_id=0
+	text=Would you happen to know anything about this town's history?
+}
+line
+{
+	speaker_id=1
+	text=History? Nahh I don't really pay attention to that sort of stuff.
+}

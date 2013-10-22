@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, Key }; //flesh this out with all the plot points
+public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, NiceLesson, ConflictResolved, Key }; //flesh this out with all the plot points
 
 public class PlotSystem : MonoBehaviour {
 
@@ -17,7 +17,9 @@ public class PlotSystem : MonoBehaviour {
 
     private Dictionary<PlotPointer, List<PlotBehaviour>> PlotObjects;
 
+    private Dictionary<PlotPointer, List<PlotPointer>> PlotDependancies;
 
+    private List<PlotPointer> QueuedPlots;
 
     void Awake()
     {
@@ -64,6 +66,7 @@ public class PlotSystem : MonoBehaviour {
        
         Plots[PlotReached] = true;
         CurrentPlot = PlotReached;
+        QueuedPlots.Add(PlotReached);
         AdvancePlot();
     }
 
@@ -79,17 +82,35 @@ public class PlotSystem : MonoBehaviour {
 
     private void AdvancePlot() //used to iterate through datastructure
     {
-        if(PlotObjects.ContainsKey(CurrentPlot))
+        bool flag;
+
+        for (int i = 0; i < QueuedPlots.Count(); i++)
         {
-            for(int i = 0; i < (PlotObjects[CurrentPlot]).Count; i++)
+            flag = true;
+            for (int j = 0; j < PlotDependancies[QueuedPlots[i]].Count(); j++)
             {
-
-                if (PlotObjects[CurrentPlot][i] != null)
+                if (PlotDependancies[QueuedPlots[i]][j] == false)
                 {
-                    Debug.Log(PlotObjects[CurrentPlot].Count);
-                    PlotObjects[CurrentPlot][i].ProgressPlot(CurrentPlot);
+                    flag = false;
                 }
+            }
+            if (flag == true)
+            {
+                //----
+                if (PlotObjects.ContainsKey(QueuedPlot[i]))
+                {
+                    for (int i = 0; i < (PlotObjects[QueuedPlot[i]]).Count; i++)
+                    {
 
+                        if (PlotObjects[QueuedPlot[i]][i] != null)
+                        {
+                            Debug.Log(PlotObjects[QueuedPlot[i]].Count);
+                            PlotObjects[QueuedPlot[i]][i].ProgressPlot(QueuedPlot[i]);
+                            QueuedPlots.Remove(QueuedPlot[i]);
+                        }
+                    }
+                }
+                //---
             }
         }
     }
@@ -107,6 +128,8 @@ public class PlotSystem : MonoBehaviour {
         EnumConversion["key"] = PlotPointer.Key;
         EnumConversion["firstfreeroam"] = PlotPointer.FirstFreeRoam;
         EnumConversion["intro"] = PlotPointer.Intro;
+        EnumConversion["nicelesson"] = PlotPointer.NiceLesson;
+        EnumConversion["conflictresolved"] = PlotPointer.ConflictResolved;
     }
 
     private void InitPlots()
@@ -117,6 +140,8 @@ public class PlotSystem : MonoBehaviour {
         Plots[PlotPointer.FirstFreeRoam] = false;
         Plots[PlotPointer.Argument] = false;
         Plots[PlotPointer.Key] = false;
+        Plots[PlotPointer.ConflictResolved] = false;
+        Plots[PlotPointer.NiceLesson] = false;
     }
  
 }

@@ -1,0 +1,80 @@
+info
+{
+	topic_name=Listen in
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=4
+	text=... no, it is all your fault Jack. If you hadn't of distracted me maybe i would have been able to stop the door from closing!
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=Hey man, don't blame this on me. I didn't make you walk away from the door, that was entirely your own decision.
+}
+line
+{
+	speaker_id=4
+	text=WHAT? You were the one making jokes about me! You expect me to just sit still and totally ignore you?
+
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+} 
+line
+{
+	speaker_id=2
+	text=Come on guys, lets not start start blaming each other here.
+}
+line
+{
+	speaker_id=4
+	text=... you're going to take his side in this?! You are always helping him weasel his way out of stuff like this. 
+
+}
+line
+{
+	speaker_id=2
+	text=Michael, that's not what i meant.. I..
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=Oh, now you're both just going to blame me for this?
+}
+{
+	speaker_id=2
+	text=Guys please, i wasn't trying to take anyone's side here.
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=4
+	text=...
+}
+line
+{
+	speaker_id=1
+	text=...
+}

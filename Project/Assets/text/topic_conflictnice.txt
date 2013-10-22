@@ -1,0 +1,128 @@
+info
+{
+	topic_name=conflictnice
+}
+sprite
+{
+	character_id=2
+	sprite=sad
+}
+line
+{
+	speaker_id=0
+	text=Hey there, I saw what happened.. Are you ok? Do you know what caused that blowup?
+}
+line
+{
+	speaker_id=2
+	text=Oh, its nothing.. Usually they would laugh at something like that, but i guess in the current situation, their nerves are fraying a bit.
+}
+line
+{
+	speaker_id=2
+	text=I guess i should go and cheer them up and make sure they are feeling ok again..
+}
+line
+{
+	speaker_id=0
+	text=Actually.. I don't think that is a good idea.. Have you ever considered that you might be being too nice?
+}
+line
+{
+	speaker_id=2
+	text= Too nice? I.. I'm not sure i follow..
+}
+line
+{
+	speaker_id=0
+	text=Well, looking from an outside perspective, those two are just walking all over you.
+}
+line
+{
+	speaker_id=0
+	text=They know that you aren't going to stand up for yourself and so they just take everyhing out on you.
+}
+line
+{
+	speaker_id=2
+	text=I see, well, what would you do to change this situation?
+}
+choice
+{
+	option
+	{
+		text=Run over, yelling, screaming and throwing things at them
+		outcome=Mood(1,-25)
+	}
+	option
+	{
+		text=Try talking to them one on one, and see if you can get across your point of feeling overwhelmed and bullied
+		outcome=mood(1,0)
+	}
+	option
+	{
+		text=Apologize to both of them and agree to their demands.
+		outcome=Mood(1,-25)
+}
+line
+{
+	speaker_id=2
+	text=Hmm, well, I'll do my best.. 
+}
+line
+{
+	speaker_id=0
+	text=Just make sure that you don't cave in and start agreeing with their demands
+}
+line
+{
+	speaker_id=0
+	text=This relies completely on your own self confidence, being too nice to everyone does not work!
+}
+line
+{
+	speaker_id=0
+	text=If people sense that you are not going to stick up for yourself, they will just completely take advantage of you
+}
+sprite
+{
+	character_id=2
+	sprite=determined
+}
+line
+{
+	speaker_id=2
+	text=Ok i think i am starting to understand. How are some ways for me to change my attitude?
+}
+choice
+{
+	option
+	{
+		text=You need to assert your opinion to others whilst still maintaining a care for their view
+		outcome=Mood(1,0)
+	}
+	option
+	{
+		text=You need to change so that you are completely dominating everyone else's oppinion
+		outcome=mood(1,-25)
+	}
+	option
+	{
+		text=Rather than agreeing with everyone, just close yourself off. Let them sort out everything
+		outcome=Mood(1,-25)
+}
+line
+{
+	speaker_id=2
+	text=Wow, i completely understand now! Thank you so much for your help!
+}
+line
+{
+	speaker_id=2
+	text=I'm going to go over and see if i can sort everything with the other two out.
+}
+line
+{
+	speaker_id=0
+	text=No worries, you go girl!
+}

@@ -1,0 +1,20 @@
+info
+{
+	topic_name=firstroamingnice
+	flag=firstfreeroam
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Hello
+}
+line
+{
+	speaker_id=2
+	text=Hi!
+}
