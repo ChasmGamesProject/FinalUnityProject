@@ -28,3 +28,9 @@
 	collectable=true
 	icon=book
 }
+{
+	name=LockPick
+	desc=A small thin piece of metal designed to pick a lock
+	Collectable=true
+	icon=lock_pick_icon
+}

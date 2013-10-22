@@ -155,7 +155,10 @@ public class RoomManager : MonoBehaviour
 		Pather.cam = room_cams[id];
 		
 		if(room_cams[id])
-			room_cams[id].enabled = true; // enable the rooms camera
+			{
+				Debug.Log(id);
+				room_cams[id].enabled = true; // enable the rooms camera
+			}
 		if(room_lis[id])
 			room_lis[id].enabled = true;
 		

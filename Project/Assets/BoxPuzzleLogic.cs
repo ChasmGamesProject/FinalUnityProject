@@ -230,6 +230,7 @@ void OnMouseExit()
 			rigidbody.position =target;
 			AI.canmove = true;
 			caseSwitch = "something";
+			AI.rotatingbool = false;
 		}
 		
 		
@@ -245,10 +246,14 @@ void OnMouseExit()
 			
 			if(Player.position.x<transform.position.x)
 			{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3((146+transform.localPosition.x)-4,100.08f,transform.position.z);
 				AI.targetPosition = new Vector3((146+transform.localPosition.x)-4,100.08f,transform.position.z);
 			}
 			else{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
 				AI.targetPosition = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
 			}
@@ -269,10 +274,14 @@ void OnMouseExit()
 			target = new Vector3(rigidbody.position.x+2,rigidbody.position.y,rigidbody.position.z);
 			if(Player.position.x > transform.position.x)
 			{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3((146+transform.localPosition.x)+4,100.08f,transform.position.z);
 				AI.targetPosition = new Vector3((146+transform.localPosition.x)+4,100.08f,transform.position.z);
 			}
 			else{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
 				AI.targetPosition = new Vector3((146+transform.localPosition.x),100.08f,transform.position.z);
 			}
@@ -291,10 +300,14 @@ void OnMouseExit()
 			target = new Vector3(rigidbody.position.x,rigidbody.position.y,rigidbody.position.z+2);
 			if(Player.position.z>transform.position.z)
 			{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2)+4);
 				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2)+4);
 			}
 			else{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2));
 				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2));
 			}
@@ -310,10 +323,14 @@ void OnMouseExit()
 			target = new Vector3(rigidbody.position.x,rigidbody.position.y,rigidbody.position.z-2);
 			if(Player.position.z < transform.position.z)
 			{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2)-4);
 				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2)-4);
 			}
 			else{
+				AI.rotatingbool = true;
+				AI.boxpos=transform.position;
 				AI.targetPosition2 = new Vector3(transform.position.x,100.08f,(116+z*2));
 				AI.targetPosition = new Vector3(transform.position.x,100.08f,(116+z*2));
 				

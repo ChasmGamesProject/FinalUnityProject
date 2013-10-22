@@ -20,7 +20,7 @@ public class boxpuzzlegui : MonoBehaviour {
 	
 	void Start()
 	{
-		
+		//
 		BarSize = 0;
 		gamewon = false;	
 		TooltipHeight = Screen.height/2-Screen.height/6;
@@ -55,7 +55,8 @@ public class boxpuzzlegui : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-				
+		GUI.skin.label.fontSize = 15;		
+		GUI.skin.box.fontSize = 15;
 		if(gamewon)
 		{
 			GUI.Box (ExitScreen, "Well Done!");
@@ -78,8 +79,9 @@ public class boxpuzzlegui : MonoBehaviour {
 		}
 
 		// Make the second button.
-		GUI.Label(Tooltiptext,"To pick the lock use the mouse to position the tip of the pick with a pin and then press the left button on your mouse to push down the pin." +
-		"while doing this press the right mouse button to fill the tension bar, if the bar gets too low the pins will not lock in place." +" Once all pins are pushed down the lock will open");
+			
+		GUI.Label(Tooltiptext,"To complete this puzzle, you must reach the box containing the Lock Pick at the oppisite corner of the room."
+					+" To do this left click near the box you wish to move and then left click the box to push it or right click the box to pull it.");
 		}
 			GUI.Box(TensionBackGround, "");
 			//GUI.DrawTexture(TensionBar, Bar);

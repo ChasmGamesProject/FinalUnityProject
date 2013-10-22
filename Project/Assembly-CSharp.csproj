@@ -107,8 +107,10 @@
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
      <Compile Include="Assets\BoxCamera.cs" />
      <Compile Include="Assets\BoxManager.cs" />
+     <Compile Include="Assets\BoxPuzzleActivator.cs" />
      <Compile Include="Assets\BoxPuzzleLogic.cs" />
      <Compile Include="Assets\GUIscriptlockpicking.cs" />
+     <Compile Include="Assets\LockPickActivater.cs" />
      <Compile Include="Assets\MainCharacterPathing.cs" />
      <Compile Include="Assets\PickLogic.cs" />
      <Compile Include="Assets\PinLogic.cs" />

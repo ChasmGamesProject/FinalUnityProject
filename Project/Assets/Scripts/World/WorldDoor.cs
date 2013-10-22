@@ -123,6 +123,6 @@ public class WorldDoor : MonoBehaviour
 		GlobalVars.inventory.Remove(lockPickId);
 		
 		// Start lock picking puzzle
-		Unlock (); // << remove when it actually starts up lock picking puzzle
+		//Unlock (); // << remove when it actually starts up lock picking puzzle
 	}
 }

@@ -16,7 +16,7 @@ public class PlayerInput : MonoBehaviour
 
     void Awake()
     {
-        GlobalVars.player_transform = gameObject.transform;
+       // GlobalVars.player_transform = gameObject.transform;
     }
 
 	void Start ()

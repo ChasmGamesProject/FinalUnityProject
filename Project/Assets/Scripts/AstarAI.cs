@@ -5,6 +5,8 @@ using System.Collections;
 using Pathfinding;
 public class AstarAI : MonoBehaviour {
     //The point to move to
+	public Vector3 boxpos;
+	public bool rotatingbool;
     public Vector3 targetPosition;
 	public Vector3 targetPosition2;
 	public bool canmove;
@@ -29,8 +31,18 @@ public class AstarAI : MonoBehaviour {
     //The waypoint we are currently moving towards
     private int currentWaypoint = 0;
  
+	public void rotatetowards(Vector3 pos)
+	{
+		boxpos.y = transform.position.y;
+		Quaternion rotation = Quaternion.LookRotation(boxpos-transform.position);
+		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
+	}
+	
 	void Awake()
-	{canmove = true;
+	{
+		animation["Take 001"].speed = 3.0f;
+		rotatingbool = false;
+		canmove = true;
 		bool okay = true;
 		time = Time.time;
 		f=30;
@@ -116,6 +128,7 @@ public class AstarAI : MonoBehaviour {
 	
 	void Update()
 	{
+		
 		if(Time.time - time > 0.5)
 		if(canmove)
 		if(Input.GetMouseButton(0))
@@ -202,6 +215,10 @@ public class AstarAI : MonoBehaviour {
     }
  
     public void FixedUpdate () {
+		if(rotatingbool)
+		{
+			rotatetowards(boxpos);
+		}
 		
         if (path == null) {
             //We have no path to move after yet
@@ -246,6 +263,8 @@ public class AstarAI : MonoBehaviour {
 		}
 		else	*/
 		dir = new Vector3(dir.x,0,dir.z);
+		Quaternion rotation = Quaternion.LookRotation(dir);
+		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
 		controller.SimpleMove (dir);
        
         //Check if we are close enough to the next waypoint
@@ -254,6 +273,15 @@ public class AstarAI : MonoBehaviour {
             currentWaypoint++;
             return;
         }
+		if(!animation.IsPlaying("Take 001"))
+				animation.Play();
+		
+		if(Vector3.Distance(LastPos,transform.position)<0.001)
+		{
+			targetPosition = transform.position;
+			targetPosition2 = transform.position;
+			animation.Stop();
+		}
 			LastPos = transform.position;
 		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
     }

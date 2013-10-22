@@ -31,6 +31,8 @@ public class MainCharacterPathing : MonoBehaviour {
  
 	void Awake()
 	{
+		animation["Take 001"].speed = 3.0f;
+		GlobalVars.player_transform = gameObject.transform;
 		//this.enabled = false;
 		canmove = true;
 		bool okay = true;
@@ -165,6 +167,7 @@ public class MainCharacterPathing : MonoBehaviour {
             //Debug.Log ("End Of Path Reached");
 			if((Vector3.Distance(transform.position,targetPosition)>0.1f)&&(path != null))
 			{
+				
 				//targetPosition2 = path.vectorPath[path.vectorPath.Count];
 			dir = (targetPosition-transform.position).normalized;
         	dir *= speed * Time.fixedDeltaTime;
@@ -182,7 +185,7 @@ public class MainCharacterPathing : MonoBehaviour {
 			}
 			else
 			{
-				//transform.position = targetPosition;
+				transform.position = targetPosition;
 			}
             return;
         }
@@ -190,17 +193,21 @@ public class MainCharacterPathing : MonoBehaviour {
         //Direction to the next waypoint
         dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
         dir *= speed * Time.fixedDeltaTime;
-		/*if((Vector3.Distance(transform.position,targetPosition)<1.0f))
-		{
-			Debug.Log("WTF");
-        transform.position = targetPosition;
-		}
-		else	*/
+		
 		dir = new Vector3(dir.x,0,dir.z);
 		Quaternion rotation = Quaternion.LookRotation(dir);
 		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
 		//transform.Rotate(Vector3.up*270);
 		controller.SimpleMove (dir);
+		if(!animation.IsPlaying("Take 001"))
+				animation.Play();
+		
+		if(Vector3.Distance(LastPos,transform.position)<0.001)
+		{
+			targetPosition = transform.position;
+			targetPosition2 = transform.position;
+			animation.Stop();
+		}
        
         //Check if we are close enough to the next waypoint
         //If we are, proceed to follow the next waypoint

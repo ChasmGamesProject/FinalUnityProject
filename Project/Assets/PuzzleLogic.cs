@@ -8,11 +8,30 @@ public class PuzzleLogic : MonoBehaviour {
 	int lockstatus;
 	bool UnlockBeenPlayed;
 	public AudioClip UnlockSound;
+	public GameObject DoorToPick;
+	private WorldDoor DoorToPickScript;
+	
 	
 	// Use this for initialization
+	public void EndLockPuzzle()
+	{
+		GlobalVars.interact_mode.SetMode(InteractMode.gMode.GM_WORLD);
+		GlobalVars.room_manager.ToggleRoom();
+		DoorToPickScript.Unlock();
+
+		picklogic.enabled = true;
+		for(int i = 0; i < Pins.Length; i++)
+		{
+			Pins[i].enabled = true;
+		}
+		guibehaviour.enabled = true;
+		this.enabled = true;
+	}
 	
 	public void StartLockPuzzle()
 	{
+		GlobalVars.interact_mode.SetMode(InteractMode.gMode.GM_PUZZLE);
+		GlobalVars.room_manager.ToggleRoom();
 		this.enabled = true;
 		picklogic.enabled = true;
 		for(int i = 0; i < Pins.Length; i++)
@@ -22,8 +41,11 @@ public class PuzzleLogic : MonoBehaviour {
 		guibehaviour.enabled = true;
 	}
 	
+	
+	
 	void Start () {
 		
+		DoorToPickScript = DoorToPick.GetComponent<WorldDoor>();
 		picklogic.enabled = false;
 		for(int i = 0; i < Pins.Length; i++)
 		{
