@@ -1,6 +1,6 @@
 {
 plot_marker=firstfreeroam
 topic_firstroamingnice.txt
-plot_marker=Argument
+plot_marker=argument
 topic_conflictnice.txt
 }
