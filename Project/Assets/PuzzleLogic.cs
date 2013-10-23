@@ -19,13 +19,13 @@ public class PuzzleLogic : MonoBehaviour {
 		GlobalVars.room_manager.ToggleRoom();
 		DoorToPickScript.Unlock();
 
-		picklogic.enabled = true;
+		picklogic.enabled = false;
 		for(int i = 0; i < Pins.Length; i++)
 		{
-			Pins[i].enabled = true;
+			Pins[i].enabled = false;
 		}
-		guibehaviour.enabled = true;
-		this.enabled = true;
+		guibehaviour.enabled = false;
+		this.enabled = false;
 	}
 	
 	public void StartLockPuzzle()
