@@ -251,27 +251,65 @@ public class DialogueManager : MonoBehaviour
 		
 		im.SetMode(InteractMode.gMode.GM_WORLD);
 	}
-	
-	private void UpdateGUI()
-	{
-		if(State == DialogueState.PICK_TOPIC)
-		{
-			List<string> ls = new List<string>();
-			List<int> li = ConversationPartner.GetAvaliableTopics();
-			for(int i = 0; i < li.Count; i++)
-			{
-				ls.Add(ConversationPartner.GetTopic(li[i]).GetName());
-			}
-			ls.Add ("Goodbye.");
-			
-			dui.Display(DialogueNode.NodeType.Choice, ls);
-			
-			//dui.SetSprite(0, (db.GetCharacter(0)).GetSpriteDefault());
-			dui.SetSprite(ConversationPartner.GetSpriteDefault());//(1, ConversationPartner.GetSpriteDefault());
-		}
-		else if(State == DialogueState.IN_TOPIC)
-		{
-			dui.Display(NodeCurrent);
-		}
-	}
+
+    private void UpdateGUI()
+    {
+        if (State == DialogueState.PICK_TOPIC)
+        {
+            List<string> ls = new List<string>();
+            List<int> li = ConversationPartner.GetAvaliableTopics();
+            string s = "";
+            for (int i = 0; i < li.Count; i++)
+            {
+                s = AddNames(ConversationPartner.GetTopic(li[i]).GetName());
+                ls.Add(s);
+            }
+            ls.Add("Goodbye.");
+
+            dui.Display(DialogueNode.NodeType.Choice, ls);
+
+            //dui.SetSprite(0, (db.GetCharacter(0)).GetSpriteDefault());
+            dui.SetSprite(ConversationPartner.GetSpriteDefault());//(1, ConversationPartner.GetSpriteDefault());
+        }
+        else if (State == DialogueState.IN_TOPIC)
+        {
+            dui.Display(NodeCurrent);
+        }
+    }
+
+    public string AddNames(string str)
+    {
+        string final = "";
+        int i = 0;
+
+        // Example; str="Hello {0}, nice to meet you"
+        while (i < str.Length)
+        {
+            if (str[i] == '{') // When we reach first '{'
+            {
+                final += str.Substring(0, i); // Put "Hello " in output string
+                str = str.Remove(0, i + 1); // Remove "Hello {"
+                int numEndPos = str.IndexOf('}'); // Get index of '}'
+                if (numEndPos != -1) // Make sure it was found
+                {
+                    CharacterData cd = db.GetCharacter(int.Parse(str.Substring(0, numEndPos))); // turn "0" into int
+                    if (cd != null)
+                        final += cd.GetName(); // Add name to output string
+                    else
+                        final += "you"; // Add "you" to output string
+                    str = str.Remove(0, numEndPos + 1);
+                    i = 0;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else
+                i++;
+        }
+        final += str; // add whatever is left over
+
+        return final;
+    }
 }

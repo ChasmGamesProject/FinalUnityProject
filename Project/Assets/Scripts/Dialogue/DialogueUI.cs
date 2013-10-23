@@ -127,13 +127,17 @@ public class DialogueUI : MonoBehaviour
 		if(Type == DialogueNode.NodeType.Line)
 		{
 			DialogueLine dl = (DialogueLine)dn;
-			DisplayText.Add(db.GetCharacter(dl.GetSpeakerId()).GetName() + ":\n\"" + dl.GetText() + "\"");
+			string s = db.GetCharacter(dl.GetSpeakerId()).GetName();
+			if(dl.GetSpeakerId() == 0)
+				s += " (You)";
+			s += ":\n\"" + dm.AddNames(dl.GetText()) + "\"";
+			DisplayText.Add(s);
 		}
 		else if(Type == DialogueNode.NodeType.Choice)
 		{
 			List<Choice> lc = ((DialogueChoice)dn).GetChoices();
 			for(int i = 0; i < lc.Count; i++)
-				DisplayText.Add(lc[i].GetText());
+				DisplayText.Add(dm.AddNames(lc[i].GetText()));
 		}
 	}
 	
