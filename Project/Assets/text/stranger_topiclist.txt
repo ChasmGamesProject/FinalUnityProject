@@ -3,4 +3,6 @@ plot_marker=firstfreeroam
 topic_firstroamingstranger.txt
 plot_marker=argument
 topic_knowledgestranger.txt
+plot_marker=book
+topic_bookserious.txt
 }

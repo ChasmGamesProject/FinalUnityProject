@@ -7,4 +7,6 @@ plot_marker=nicelesson
 topic_conflictsolvednice.txt
 plot_marker=townhistory
 topic_townhistorynice.txt
+plot_marker=book
+topic_booknice.txt
 }

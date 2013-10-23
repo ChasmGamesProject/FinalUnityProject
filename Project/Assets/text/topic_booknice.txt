@@ -1,0 +1,39 @@
+info
+{
+	topic_name=Book
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Hello, I managed to get that book you told me about from inside the library.
+}
+line
+{
+	speaker_id=2
+	text=Oh, excellent!
+}
+line
+{
+	speaker_id=0
+	text=Is there anything you can tell me about it?
+}
+line
+{
+	speaker_id=2
+	text=Unfortunately, I never got to read it properly, so i know only as much as you.
+}
+line
+{
+	speaker_id=2
+	text=Maybe you should go ask {5} since he seems to know about this sort of stuff.
+}
+line
+{
+	speaker_id=0
+	text=OK, ill give him a try. Thank you.
+}

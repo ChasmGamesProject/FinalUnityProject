@@ -5,4 +5,6 @@ plot_marker=argument
 topic_conflictjoker.txt
 plot_marker=key
 topic_lockpickjoker.txt
+plot_marker=book
+topic_bookjoker.txt
 }
