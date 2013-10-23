@@ -10,7 +10,7 @@ sprite
 line
 {
 	speaker_id=0
-	text=Hello, I managed to get that book you told me about from inside the library.
+	text=Hello, I managed to get that book you mentioned from inside the library.
 }
 line
 {

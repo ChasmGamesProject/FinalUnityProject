@@ -1,6 +1,6 @@
 info
 {
-	topic_name=conflictnice
+	topic_name=Inquire about the argument.
 	flag=nicelesson
 }
 sprite
@@ -41,12 +41,12 @@ line
 line
 {
 	speaker_id=0
-	text=They know that you aren't going to stand up for yourself and so they just take everyhing out on you.
+	text=They know that you aren't going to stand up for yourself and so they just take everything out on you.
 }
 line
 {
 	speaker_id=2
-	text=I see, well, what would you do to change this situation?
+	text=I think i see what you mean, so what do you think i should do about it? 
 }
 choice
 {
@@ -75,6 +75,11 @@ line
 	speaker_id=0
 	text=If it were me i'd just go over there and give them a piece of their own medicine
 }
+line
+{
+	speaker_id=2
+	text=really!?...I'm not so sure i could do something like that.
+}
 action
 {
 	action=Jump(4)
@@ -85,6 +90,11 @@ line
 	speaker_id=0
 	text=You should try talking it out with them each individually, let them know how they are making you feel
 }
+line
+{
+	speaker_id=2
+	text=I guess that doesn't sound too bad
+}
 action
 {
 	action=Jump(4)
@@ -94,6 +104,11 @@ line
 	jump_label=3
 	speaker_id=0
 	text=I think it's best to avoid confrontation, just tell them you are sorry and hope it blows over 
+}
+line
+{
+	speaker_id=2
+	text=I'm not sure what i'd be apologising for? but i guess i could give it a go
 }
 action
 {
@@ -107,6 +122,7 @@ line
 }
 line
 {
+	jump_label(4)
 	speaker_id=0
 	text=Just make sure that you don't cave in and start agreeing with their demands
 }
@@ -134,23 +150,88 @@ choice
 {
 	option
 	{
-		text=You need to assert your opinion to others whilst still maintaining a care for their view
+		text=You should assert yourself.
 		outcome=Mood(1,0)
+		outcome=Jump(5)
 	}
 	option
 	{
-		text=You need to change so that you are completely dominating everyone else's oppinion
+		text=You should be a lot more forceful.
 		outcome=mood(1,-25)
+		outcome=Jump(6)
 	}
 	option
 	{
-		text=Rather than agreeing with everyone, just close yourself off. Let them sort out everything
+		text=You should just ignore them.
 		outcome=Mood(1,-25)
+		outcome=Jump(7)
+}
+
+line
+{
+	jump_label=5
+	speaker_id=0
+	text=You need to assert your opinion to others whilst still maintaining a care for their view
+}
+sprite
+{
+	character_id=2
+	sprite=happy
 }
 line
 {
 	speaker_id=2
 	text=Wow, i completely understand now! Thank you so much for your help!
+}
+action
+{
+	action=Jump(8)
+}
+line
+{
+	jump_label=6
+	speaker_id=0
+	text=You need to change so that you are completely dominating everyone else's opinion
+}
+sprite
+{
+	character_id=2
+	sprite=determined
+}
+line
+{
+	speaker_id=2
+	text=I'm not so sure i'm cut out for that, but i'll try if you think it's best...
+}
+action
+{
+	action=Jump(8)
+}
+line
+{
+	jump_label=7
+	speaker_id=0
+	text=Rather than agreeing with everyone, just close yourself off. Let them sort out everything
+}
+sprite
+{
+	character_id=2
+	sprite=determined
+}
+line
+{
+	speaker_id=2
+	text=I'm not sure i see how that will solve anything, but i'll give it a try...
+}
+action
+{
+	action=Jump(8)
+}
+sprite
+{
+	jump_label=8
+	character_id=2
+	sprite=happy
 }
 line
 {
@@ -160,5 +241,5 @@ line
 line
 {
 	speaker_id=0
-	text=No worries, you go girl!
+	text=No worries, good luck!
 }

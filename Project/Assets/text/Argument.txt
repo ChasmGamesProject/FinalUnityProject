@@ -11,7 +11,7 @@ sprite
 line
 {
 	speaker_id=4
-	text=... no, it is all your fault Jack. If you hadn't of distracted me maybe i would have been able to stop the door from closing!
+	text=... no, it's all your fault Jack. If you hadn't of distracted me i would have been able to stop the door from closing!
 }
 sprite
 {
@@ -21,7 +21,7 @@ sprite
 line
 {
 	speaker_id=1
-	text=Hey man, don't blame this on me. I didn't make you walk away from the door, that was entirely your own decision.
+	text=Hey don't blame this on me. I didn't make you walk away from the door, you made that genius move all on your own.
 }
 sprite
 {
@@ -31,7 +31,7 @@ sprite
 line
 {
 	speaker_id=4
-	text=WHAT? You were the one making jokes about me! You expect me to just sit still and totally ignore you?
+	text=WHAT? You were the one making jokes about me! I'm not just going to stand around and let you insult me!
 
 }
 sprite
