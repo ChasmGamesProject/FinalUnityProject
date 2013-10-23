@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, NiceLesson, ConflictResolved, Key }; //flesh this out with all the plot points
+public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, NiceLesson, ConflictResolved, Key, Book }; //flesh this out with all the plot points
 
 public class PlotSystem : MonoBehaviour {
 
@@ -116,6 +116,7 @@ public class PlotSystem : MonoBehaviour {
             }
             else //No dependancies
             {
+
                 if (PlotObjects.ContainsKey(QueuedPlots[i]))
                 {
                     for (int k = 0; k < (PlotObjects[QueuedPlots[i]]).Count; k++)
@@ -146,6 +147,7 @@ public class PlotSystem : MonoBehaviour {
         EnumConversion["intro"] = PlotPointer.Intro;
         EnumConversion["nicelesson"] = PlotPointer.NiceLesson;
         EnumConversion["conflictresolved"] = PlotPointer.ConflictResolved;
+        EnumConversion["book"] = PlotPointer.Book;
     }
 
     private void InitPlots()
@@ -158,6 +160,7 @@ public class PlotSystem : MonoBehaviour {
         Plots[PlotPointer.Key] = false;
         Plots[PlotPointer.ConflictResolved] = false;
         Plots[PlotPointer.NiceLesson] = false;
+        Plots[PlotPointer.Book] = false;
     }
 
     private void InitDependancies()

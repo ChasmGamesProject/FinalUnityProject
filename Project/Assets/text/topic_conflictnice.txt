@@ -51,21 +51,46 @@ choice
 {
 	option
 	{
-		text=Run over, yelling, screaming and throwing things at them
+		text=Let them have it
 		outcome=Mood(1,-25)
+		outcome=Jump(1)
 	}
 	option
 	{
-		text=Try talking to them one on one, and see if you can get across your point of feeling overwhelmed and bullied
+		text=Try talking it out
 		outcome=mood(1,0)
+		outcome=Jump(2)
 	}
 	option
 	{
-		text=Apologize to both of them and agree to their demands.
+		text=Apologize
 		outcome=Mood(1,-25)
+		outcome=Jump(3)
 }
 line
 {
+	jump_label=1
+	speaker_id=0
+	text=If it were me i'd just go over there and give them a piece of their own medicine
+	outcome=Jump(3)
+}
+line
+{
+	jump_label=2
+	speaker_id=0
+	text=You should try talking it out with them each individually, let them know how they are making you feel
+	outcome=Jump(3)
+}
+line
+{
+	jump_label=3
+	speaker_id=0
+	text=I think it's best to avoid confrontation, just tell them you are sorry and hope it blows over 
+	outcome=Jump(3)
+}
+line
+{
+	jump_label=4
 	speaker_id=2
 	text=Hmm, well, I'll do my best.. 
 }

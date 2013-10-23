@@ -1,6 +1,6 @@
 info
 {
-	topic_name=Greetings
+	topic_name=Question
 }
 sprite
 {
@@ -16,4 +16,64 @@ line
 {
 	speaker_id=2
 	text=Hi!
+}
+line
+{
+	speaker_id=0
+	text=How is everyone holding up?
+}
+line
+{
+	speaker_id=2
+	text=Well, considering the circomstances that we are in, everyone is doing about as well as you would expect.
+}
+line
+{
+	speaker_id=2
+	text={1} and {4} are constantly bickering and fighting, it's getting quite tedious.
+}
+line
+{
+	speaker_id=2
+	text={5} doesn't seem to grasp the reality of the situation.. It just looks like he is having a good time.
+}
+line
+{
+	speaker_id=2
+	text=and {3} well.. ever since she found out we were trapped, her claustrophobia kicked in and she hasn't spoken to anyone.
+}
+line
+{
+	speaker_id=2
+	text=So yeah, considering the situation.. I think everyone is ok so far.
+}
+line
+{
+	speaker_id=0
+	text=What are your thoughts on the situation?
+}
+line
+{
+	speaker_id=2
+	text=Well, to be completely honest with you, i am getting a little bit worried, but i'm sure we'll be fine!
+}
+line
+{
+	speaker_id=2
+	text=We just aren't quite sure what to try next.
+}
+line
+{
+	speaker_id=0
+	text=Yeah, I understand the strain you must be under
+}
+line
+{
+	speaker_id=0
+	text=Let me have a look around, maybe a fresh perspective on the situation is what is needed right now.
+}
+line
+{
+	speaker_id=2
+	text=OK!!
 }

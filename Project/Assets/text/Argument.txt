@@ -1,6 +1,7 @@
 info
 {
 	topic_name=Listen in
+	flag=argument
 }
 sprite
 {
@@ -22,6 +23,11 @@ line
 	speaker_id=1
 	text=Hey man, don't blame this on me. I didn't make you walk away from the door, that was entirely your own decision.
 }
+sprite
+{
+	character_id=4
+	sprite=angry
+}
 line
 {
 	speaker_id=4
@@ -38,12 +44,22 @@ line
 	speaker_id=2
 	text=Come on guys, lets not start start blaming each other here.
 }
+sprite
+{
+	character_id=4
+	sprite=angry
+}
 line
 {
 	speaker_id=4
 	text=... you're going to take his side in this?! You are always helping him weasel his way out of stuff like this. 
 
 }
+sprite
+{
+	character_id=2
+	sprite=happy
+} 
 line
 {
 	speaker_id=2
@@ -59,6 +75,12 @@ line
 	speaker_id=1
 	text=Oh, now you're both just going to blame me for this?
 }
+sprite
+{
+	character_id=2
+	sprite=sad
+}
+line 
 {
 	speaker_id=2
 	text=Guys please, i wasn't trying to take anyone's side here.
@@ -72,6 +94,11 @@ line
 {
 	speaker_id=4
 	text=...
+}
+sprite
+{
+	character_id=1
+	sprite=angry
 }
 line
 {

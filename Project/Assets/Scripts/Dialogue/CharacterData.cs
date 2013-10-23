@@ -159,8 +159,10 @@ public class CharacterData
         }
         if (!PlotTopics.ContainsKey(PS.GetEnum(PlotID)))
         {
+            Debug.Log("Topic: " +PlotID);
             PlotTopics[PS.GetEnum(PlotID)] = new List<int>();
         }
+        Debug.Log(TD);
         PlotTopics[(PS.GetEnum(PlotID))].Add(TD); //.Add(TD);
 
     }

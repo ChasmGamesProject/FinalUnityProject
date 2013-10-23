@@ -1,6 +1,4 @@
 {
-plot_marker=firstfreeroam
-Argument.txt
 plot_marker=conflictresolved
 topic_conflictsolvedjoker.txt
 }

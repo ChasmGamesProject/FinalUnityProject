@@ -34,11 +34,15 @@ public class CharacterPlotBehaviour : PlotBehaviour
         if(myOwner.CheckPlotTopics(PlotToProgress))
         {
             ConversationTopics = myOwner.GetPlotTopics(PlotToProgress);
+            //myOwner.ClearAllAvaliableTopics();
         }
 
         for (int i = 0; i < ConversationTopics.Count; i++)
         {
-            myOwner.AddAvaliableTopic(i);
+            Debug.Log("Test");
+            Debug.Log(CharacterID);
+            myOwner.AddAvaliableTopic(ConversationTopics[i]);
+            ConversationTopics.Clear();
         }
     }
 }
