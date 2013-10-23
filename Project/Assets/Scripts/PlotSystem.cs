@@ -21,6 +21,7 @@ public class PlotSystem : MonoBehaviour {
 
     private List<PlotPointer> QueuedPlots;
 
+    private List<PlotPointer> tempRemoval;
     void Awake()
     {
         GlobalVars.plot_system = this;
@@ -34,7 +35,7 @@ public class PlotSystem : MonoBehaviour {
     {
         PlotObjects = new Dictionary<PlotPointer, List<PlotBehaviour>>();
         QueuedPlots = new List<PlotPointer>();
-
+        tempRemoval = new List<PlotPointer>();
         object[] obj = GameObject.FindObjectsOfType(typeof(GameObject));
         foreach (object o in obj) //Used to populate the lists
         {
@@ -81,38 +82,51 @@ public class PlotSystem : MonoBehaviour {
     private void AdvancePlot() //used to iterate through datastructure
     {
         bool flag;
+        bool queueRemoval = false;
+        tempRemoval.Clear();
         int x = QueuedPlots.Count;
+        Debug.Log(x);
         for (int i = 0; i < x; i++)
         {
-
+            Debug.Log(i);
             flag = true;
             if (PlotDependancies.ContainsKey(QueuedPlots[i]))
             {
+                Debug.Log("Test");
+
                 for (int j = 0; j < PlotDependancies[QueuedPlots[i]].Count; j++)
                 {
                     if (Plots[PlotDependancies[QueuedPlots[i]][j]] == false)
                     {
                         flag = false;
+                        Debug.Log("Test1");
                     }
                 }
                 if (flag == true)
                 {
                     //----
+                    Debug.Log("Test2");
                     if (PlotObjects.ContainsKey(QueuedPlots[i]))
                     {
+                        Debug.Log("Test3");
                         for (int k = 0; k < (PlotObjects[QueuedPlots[i]]).Count; k++)
                         {
                             if (PlotObjects[QueuedPlots[i]][k] != null)
                             {
+                                Debug.Log("Test4");
                                 Debug.Log(PlotObjects[QueuedPlots[i]].Count);
                                 PlotObjects[QueuedPlots[i]][k].ProgressPlot(QueuedPlots[i]);
-                                //QueuedPlots.Remove(QueuedPlots[i]);
+                                Debug.Log("Test5");
+
                             }
                         }
 
                     }
                     //---
+                    queueRemoval = true;
+                    tempRemoval.Add(QueuedPlots[i]);
                 }
+
             }
             else //No dependancies
             {
@@ -124,12 +138,22 @@ public class PlotSystem : MonoBehaviour {
                         if (PlotObjects[QueuedPlots[i]][k] != null)
                         {
                             PlotObjects[QueuedPlots[i]][k].ProgressPlot(QueuedPlots[i]);
+
                         }
                     }
                 }
+                queueRemoval = true;
+                tempRemoval.Add(QueuedPlots[i]);
+ 
             }
-            QueuedPlots.Remove(QueuedPlots[i]);
+
         }
+        int y = tempRemoval.Count;
+        for (int g = 0; g < y; g++)
+        {
+            QueuedPlots.Remove(tempRemoval[g]);
+        }
+        Debug.Log("Test6");
     }
 
     public PlotPointer GetEnum(string S)
@@ -148,7 +172,7 @@ public class PlotSystem : MonoBehaviour {
         EnumConversion["nicelesson"] = PlotPointer.NiceLesson;
         EnumConversion["conflictresolved"] = PlotPointer.ConflictResolved;
         EnumConversion["book"] = PlotPointer.Book;
-        EnumConversion["townhistory"] = PlotPointer.Book;
+        EnumConversion["townhistory"] = PlotPointer.TownHistory;
     }
 
     private void InitPlots()
@@ -168,7 +192,10 @@ public class PlotSystem : MonoBehaviour {
     private void InitDependancies()
     {
         PlotDependancies = new Dictionary<PlotPointer, List<PlotPointer>>();
-        //PlotDependancies[PlotPointer.FirstFreeRoam] = 
+        List<PlotPointer> Temp = new List<PlotPointer>();
+        Temp.Add(PlotPointer.Argument);
+        Temp.Add(PlotPointer.NiceLesson);
+        PlotDependancies[PlotPointer.TownHistory] = Temp;
     }
  
 }

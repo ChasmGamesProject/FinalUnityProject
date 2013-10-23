@@ -39,8 +39,6 @@ public class CharacterPlotBehaviour : PlotBehaviour
 
         for (int i = 0; i < ConversationTopics.Count; i++)
         {
-            Debug.Log("Test");
-            Debug.Log(CharacterID);
             myOwner.AddAvaliableTopic(ConversationTopics[i]);
             ConversationTopics.Clear();
         }
