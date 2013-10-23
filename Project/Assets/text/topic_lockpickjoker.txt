@@ -25,12 +25,12 @@ line
 line
 {
 	speaker_id=0
-	text=Do you know of a way into the library?
+	text=Any ideas on how we could get into the library? i don't see any of us breaking the door down.
 }
 line
 {
 	speaker_id=1
-	text=Uhh.. yeah about the library, don't tell anyone but that was me.
+	text=Uhh.. yeah about the library, don't tell anyone... but that's kinda... a bit... completely my fault.
 }
 line
 {
@@ -45,10 +45,10 @@ line
 line
 {
 	speaker_id=0
-	text=Hmm, if you don't mind, I think ill go try and get it, the book might help us get out of here.
+	text=Hmm, if you don't mind, I think ill go try and get it, the book might give us some kind of clue as to what on earth is going on here.
 }
 line
 {
 	speaker_id=1
-	text=No worries man, just make sure no one finds out who locked the door in the first place.
+	text=No worries man... just try not to go letting on about how the door got locked in the first place, no reason anybody needs to know, alright?.
 }

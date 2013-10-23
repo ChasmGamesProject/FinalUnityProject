@@ -35,17 +35,12 @@ line
 line
 {
 	speaker_id=1
-	text=Sorry man, to be honest I don't really read that much.
+	text=Sorry man, fairy tales aren't really my thing.
 }
 line
 {
 	speaker_id=1
-	text=And I pay even less attention to fables.
-}
-line
-{
-	speaker_id=1
-	text=Maybe you should go ask ____ since it is her book.
+	text=Maybe you should go ask Jane, she did buy the book after all.
 }
 line
 {
