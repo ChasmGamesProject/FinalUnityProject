@@ -14,12 +14,12 @@ public class LockStatusChecker : MonoBehaviour {
 	
 	}
 	
-	void onMouseOver()
+	void OnMouseOver()
 	{
-		
+				
 			if(GlobalVars.plot_system.CheckPlotStatus(PlotPointer.Key))
 			{
-				door.locked = false;
+				door.Unlock();
 			}
 		
 	}
