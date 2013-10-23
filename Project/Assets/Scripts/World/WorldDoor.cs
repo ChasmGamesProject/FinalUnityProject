@@ -8,6 +8,7 @@ using System.Collections;
 
 public class WorldDoor : MonoBehaviour
 {
+	public LockPickActivater activater;
 	public int room_opens_to = 0;
 	
 	public bool locked = false;
@@ -121,6 +122,7 @@ public class WorldDoor : MonoBehaviour
 		
 		// Remove lock pick from inventory
 		GlobalVars.inventory.Remove(lockPickId);
+		activater.ActivateLockPickPuzzle();
 		
 		// Start lock picking puzzle
 		//Unlock (); // << remove when it actually starts up lock picking puzzle

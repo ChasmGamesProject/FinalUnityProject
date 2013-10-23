@@ -131,7 +131,7 @@ public class AstarAI : MonoBehaviour {
 		
 		if(Time.time - time > 0.5)
 		if(canmove)
-		if(Input.GetMouseButton(0))
+		if(Input.GetMouseButton(1))
         {
 			time = Time.time;
 			//AstarPath.active.Scan();

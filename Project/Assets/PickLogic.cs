@@ -31,7 +31,7 @@ public class PickLogic : MonoBehaviour {
 	
 	
 	void Start () {
-		LeapEnabled = true;
+		LeapEnabled = false;
 		CenterOfMass = new Vector3(2, 0, 0);
 		rigidbody.centerOfMass = CenterOfMass;
 		ExtraSpeed = 1;
@@ -155,6 +155,7 @@ public class PickLogic : MonoBehaviour {
 		
 		if((Physics.Raycast(ray, out hit, 100))&&(!LeapEnabled))
 		{
+			Debug.Log(hit.point);
 			Mouse = hit.point;
 			if((hit.point.x < transform.position.x + offset)&&(transform.position.x + offset - hit.point.x > 0.01))
 			{

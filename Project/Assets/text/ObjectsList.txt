@@ -31,6 +31,6 @@
 {
 	name=LockPick
 	desc=A small thin piece of metal designed to pick a lock
-	Collectable=true
+	collectable=true
 	icon=lock_pick_icon
 }

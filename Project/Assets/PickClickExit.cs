@@ -15,7 +15,7 @@ public class PickClickExit : MonoBehaviour {
 	
 	void OnMouseOver()
 	{
-		if(Input.GetMouseButtonDown(0))
+		if((Input.GetMouseButtonDown(0))&&(GlobalVars.inventory.Contains(7)))
 		{
 			GlobalVars.room_manager.ChangeRoom(3);
 		}
