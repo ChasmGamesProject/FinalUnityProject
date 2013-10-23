@@ -1,0 +1,54 @@
+info
+{
+	topic_name=Objects
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=OK, i've managed to find an escape strategy.
+}
+line
+{
+	speaker_id=2
+	text=Really?! Thats so good!
+}
+line
+{
+	speaker_id=0
+	text=Yeah. So apparently {5} knows about a story of an insane man who claims he "escaped" from a situation like ours.
+}
+line
+{
+	speaker_id=2
+	text=Oooh wow! How did he do it?
+}
+line
+{
+	speaker_id=0
+	text=Apparently he created a sundial using specific materials which pointed to the exact time that he was first trapped.
+}
+line
+{
+	speaker_id=2
+	text=I see. Did he say what the materials are?
+}
+line
+{
+	speaker_id=0
+	text=Yeah, we need Some chalk, some paper and something small, yet pointy and thin. I think a penholder will suffice.
+}
+line
+{
+	speaker_id=2
+	text=I'm not sure about chalk, but the others can probably be found in the study which is accessed by the lift.
+}
+line
+{
+	speaker_id=0
+	text=OK, thanks for your help.
+}

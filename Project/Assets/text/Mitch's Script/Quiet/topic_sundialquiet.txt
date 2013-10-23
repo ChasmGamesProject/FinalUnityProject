@@ -1,0 +1,29 @@
+info
+{
+	topic_name=Sundial
+}
+sprite
+{
+	character_id=3
+	sprite=neutral
+}
+line
+{
+	speaker_id=0
+	text=Well, thanks to your help I have managed to finish the sundail!
+}
+line
+{
+	speaker_id=3
+	text=Ok, thank you very much.
+}
+line
+{
+	speaker_id=3
+	text=So, can we escape now?
+}
+line
+{
+	speaker_id=0
+	text=Yep I'm working on it.
+}

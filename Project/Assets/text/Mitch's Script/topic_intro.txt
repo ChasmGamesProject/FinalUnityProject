@@ -1,0 +1,38 @@
+info
+{
+	topic_name=Intro
+}
+line
+{
+	speaker_id=0
+	text=Hello? Anybody ho...
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=4
+	text=Stop! Don't shut the door!!!
+}
+line
+{
+	speaker_id=4
+	text=Oh no no no.. how could this happen!? Why did you close the door?
+}
+line
+{
+	speaker_id=0
+	text=What's the problem? I just thought i would shut the door on the way in..? i can open it again for you would like.
+}
+line
+{
+	speaker_id=4
+	text=No you can't, no one can.. we cannot escape here.. we are trapped..
+}
+line
+{
+	speaker_id=4
+	text=Come, i'll take you too the others and we can tell you about what's going on.
+}

@@ -1,0 +1,39 @@
+info
+{
+	topic_name=SolvedConflict
+}
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=4
+	text=I am glad things are more settled now.
+}
+line
+{
+	speaker_id=0
+	text=Yes, so am I.
+}
+line
+{
+	speaker_id=0
+	text=I was wondering if you would happen to know anything about this town's history?
+}
+line
+{
+	speaker_id=4
+	text=Ah, sorry, unfortunately I am not really interested in that sort of stuff.
+}
+line
+{
+	speaker_id=4
+	text=Maybe you should try talking to {2} I think she has some interest in history.
+}
+line
+{
+	speaker_id=0
+	text=OK thanks.
+}

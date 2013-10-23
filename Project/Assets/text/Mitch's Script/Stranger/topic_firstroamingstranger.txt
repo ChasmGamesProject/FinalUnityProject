@@ -1,0 +1,24 @@
+info
+{
+	topic_name=BusyStranger
+}
+sprite
+{
+	character_id=5
+	sprite=thinking
+}
+line
+{
+	speaker_id=0
+	text=Hey, I was wondering if you could give me any new information regarding our situation?
+}
+line
+{
+	speaker_id=5
+	text=Later man, later. Let me take it all in first! let me try and understand what is happening!
+}
+line
+{
+	speaker_id=0
+	text=ok, ok, sorry to bother you when you're so busy...
+}

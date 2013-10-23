@@ -1,0 +1,34 @@
+info
+{
+	topic_name=Book
+}
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=0
+	text=Hi
+}
+line
+{
+	speaker_id=4
+	text=Hello, thanks for finally opening the library.
+}
+line
+{
+	speaker_id=0
+	text=No worries, can you shed any light on this book of fables?
+}
+line
+{
+	speaker_id=4
+	text=Sorry, that sort of reading doesn't really interest me. I can't tell you anything new.
+}
+line
+{
+	speaker_id=0
+	text=Alright, thanks anyway
+}

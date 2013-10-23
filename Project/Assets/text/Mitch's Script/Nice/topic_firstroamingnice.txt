@@ -1,0 +1,79 @@
+info
+{
+	topic_name=Question{2}
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Hello
+}
+line
+{
+	speaker_id=2
+	text=Hi!
+}
+line
+{
+	speaker_id=0
+	text=How is everyone holding up?
+}
+line
+{
+	speaker_id=2
+	text=Well, considering the circomstances that we are in, everyone is doing about as well as you would expect.
+}
+line
+{
+	speaker_id=2
+	text={1} and {4} are constantly bickering and fighting, it's getting quite tedious.
+}
+line
+{
+	speaker_id=2
+	text={5} doesn't seem to grasp the reality of the situation.. It just looks like he is having a good time.
+}
+line
+{
+	speaker_id=2
+	text=and {3} well.. ever since she found out we were trapped, her claustrophobia kicked in and she hasn't spoken to anyone.
+}
+line
+{
+	speaker_id=2
+	text=So yeah, considering the situation.. I think everyone is ok so far.
+}
+line
+{
+	speaker_id=0
+	text=What are your thoughts on the situation?
+}
+line
+{
+	speaker_id=2
+	text=Well, to be completely honest with you, i am getting really worried, but i have to keep a straight face for the others!
+}
+line
+{
+	speaker_id=2
+	text=Unless someone is acting like a rock for them, they will just be swept away in the stream of madness.
+}
+line
+{
+	speaker_id=0
+	text=Yeah, I understand the strain you must be under
+}
+line
+{
+	speaker_id=0
+	text=Lets find a way to escape asap OK?
+}
+line
+{
+	speaker_id=2
+	text=OK!!
+}

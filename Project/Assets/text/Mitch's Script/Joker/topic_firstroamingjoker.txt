@@ -1,0 +1,64 @@
+info
+{
+	topic_name=ConflictStart
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=4
+	text=I can't believe we are completely stuck in this mess because of this guy..
+}
+line
+{
+	speaker_id=4
+	text=If he wasn't always cracking wise ones and disrupting the peace, we would have been waiting at the door and ready for you to arrive.
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=Well, excuse me if we aren't all as serious and dull as you! Someone needs to be able to keep spirits up here!
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+} 
+line
+{
+	speaker_id=2
+	text=Come on guys, since we are stuck here lets try to get along OK?
+}
+line
+{
+	speaker_id=2
+	text={4}, I understand his jokes can be a little bit grating given the current situation, but you can't take him so seriously..
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=Grating jokes eh?! Fine.. So that's what you really think..
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=4
+	text=Don't take him so seriously?! Now you're saying I'm too serious? Don't order me around!
+}

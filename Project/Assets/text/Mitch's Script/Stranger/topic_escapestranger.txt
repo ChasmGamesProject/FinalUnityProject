@@ -1,0 +1,34 @@
+info
+{
+	topic_name=Escape
+}
+sprite
+{
+	character_id=5
+	sprite=thinking
+}
+line
+{
+	speaker_id=0
+	text=Hey! I managed to create this makeshift sundial!
+}
+line
+{
+	speaker_id=5
+	text=Excellent! Excellent!
+}
+line
+{
+	speaker_id=5
+	text=Now tell me wise guy, how do you use a sundial at night?
+}
+line
+{
+	speaker_id=0
+	text=I....
+}
+line
+{
+	speaker_id=0
+	text=Oh...
+}

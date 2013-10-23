@@ -1,0 +1,64 @@
+info
+{
+	topic_name=Escape
+}
+sprite
+{
+	character_id=3
+	sprite=neutral
+}
+line
+{
+	speaker_id=0
+	text=Hello?
+}
+line
+{
+	speaker_id=0
+	text=Helloooo?
+}
+line
+{
+	speaker_id=0
+	text=Look, I know you're scared, but I think I have found an escape plan and I might need you're help.
+}
+line
+{
+	speaker_id=3
+	text=Escape....?
+}
+line
+{
+	speaker_id=3
+	text=Really....?
+}
+line
+{
+	speaker_id=0
+	text=Yes, according to {5} we may need to build a sundial which points to the exact same time you were trapped.
+}
+line
+{
+	speaker_id=3
+	text=OK, a sundial. What do you need to make it? I will try and help if I can.
+}
+line
+{
+	speaker_id=0
+	text=We need some chalk, some paper and a pen holder.
+}
+line
+{
+	speaker_id=3
+	text=Sorry, I dont know where to get a pen holder, but I never go anywhere without my sketchpad and chalk.
+}
+line
+{
+	speaker_id=3
+	text=So you can have these if you like.
+}
+line
+{
+	speaker_id=0
+	text=Wow, thanks so much! We will get out of here soon.
+}

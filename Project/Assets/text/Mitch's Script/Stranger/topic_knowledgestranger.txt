@@ -1,0 +1,83 @@
+info
+{
+	topic_name=Knowledge
+}
+sprite
+{
+	character_id=5
+	sprite=thinking
+}
+line
+{
+	speaker_id=0
+	text=Hello
+}
+line
+{
+	speaker_id=5
+	text=Why hello there!
+}
+line
+{
+	speaker_id=0
+	text=I was wondering if you had any more information regarding our situation?
+}
+line
+{
+	speaker_id=5
+	text=Ahh yes! Its fantastic isnt it?
+{
+line
+{
+	speaker_id=0
+	text=Yeah... sure...
+}
+sprite
+{
+	character_id=5
+	sprite=revelation
+line
+{
+	speaker_id=5
+	text=Well, I have deduced two probable causes for this otherworldly event.
+}
+line
+{
+	speaker_id=5
+	text=The first thing I am thinking, is that this house is built in the same place as an ancient tribes burial ground.
+}
+line
+{
+	speaker_id=0
+	text=Uh huh..
+}
+line
+{
+	speaker_id=5
+	text=And if its not that, then there must be some spirits around here that we have unwittingly angered.
+}
+line
+{
+	speaker_id=0
+	text=Yes... Must be...
+}
+line
+{
+	speaker_id=0
+	text=Well.. Have you had any ideas on how we might get free?
+}
+line
+{
+	speaker_id=5
+	text=Yes, in fact I have!
+}
+line
+{
+	speaker_id=5
+	text=I have a feeling there may be a link between this event and something that may have happened in this town in the past.
+}
+line
+{
+	speaker_id=0
+	text=Hmm, so look to the past? Ok ill see what i can find.
+}

@@ -1,0 +1,44 @@
+info
+{
+	topic_name=TownHistory
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Hello
+}
+line
+{
+	speaker_id=2
+	text=Hi
+}
+line
+{
+	speaker_id=0
+	text=I was wondering if you had any information regarding this town, that might be of help?
+}
+line
+{
+	speaker_id=2
+	text=The town? Actaully, now that you mention it.. when we were in town I bought a book that contained stories about supposed town fables
+}
+line
+{
+	speaker_id=2
+	text=If I can remember correctly, I think the book said something about a situation like this.
+}
+line
+{
+	speaker_id=2
+	text=Unfortunately, the book is in the library, and we can't get into the library because it seems to be locked from the inside.
+}
+line
+{
+	speaker_id=0
+	text=Hmm well, I will see if i can find a way to get into the library then.
+}

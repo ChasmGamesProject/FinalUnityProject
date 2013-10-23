@@ -1,0 +1,205 @@
+info
+{
+	topic_name=Conflict
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=0
+	text=I can see that both of you are pretty wound up here.
+}
+line
+{
+	speaker_id=0
+	text=I can work as a neutral party to a see if we can peacfully resolve any tensions that are running here.
+}
+line
+{
+	speaker_id=0
+	text=So, tell me what's going on.
+}
+line
+{
+	speaker_id=4
+	text=It's just that {1} doesn't seem to take this situation seriously. He doesn't even seem that keen on escape.
+}
+line
+{
+	speaker_id=4
+	text=Instead of trying different ways of getting out the house, he just sits there and makes unfunny jokes.
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=Hey! Hey! Hey!
+}
+line
+{
+	speaker_id=1
+	text=It's much better to have a lighter mood then depressing right?
+}
+line
+{
+	speaker_id=1
+	text=Anyway, we have already tried all the means of escape..Why waste even more energy?
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=0
+	text=Well, excuse me if I am not quite ready to roll over and give up just yet!
+}
+choice
+{		
+	option
+	{
+		text=Both of you need to chill out and listen to me before this goes any further!
+		outcome=Mood(1,-10)
+	}
+	option
+	{
+		text=You are absolutely right {4} don't listen to {1}
+		outcome=Mood(1,-100)
+	}
+	option
+	{
+		text=You are absolutely right {1} don't listen to {4}
+		outcome=Mood(1,-100)
+	}
+}
+line
+{
+	speaker_id=0
+	text=Look guys.. Conflict exists when one person has a need of another and that need isn't being met.
+}
+line
+{
+	speaker_id=0
+	text=So do you think either of you can tell me what you need from each other?
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=I just want this guy to lighten up a little bit..
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=4
+	text=And I want him to take this a bit more seriously.
+}
+line
+{
+	speaker_id=0
+	text=So it sounds like both of you want each other to come down from the extreme ends of the spectrum.
+}
+line
+{
+	speaker_id=0
+	text=Maybe you can both meet in the middle somewhere?
+}
+line
+{
+	speaker_id=0
+	text=Have you even tried talking to each other about how you feel regarding this?
+}
+line
+{
+	speaker_id=4
+	text=Well... not really..
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=No.. not really..
+}
+choice
+{		
+	option
+	{
+		text=Well, I think both of you need to follow exactly as I say from now on!
+		outcome=Mood(1,-100)
+	}
+	option
+	{
+		text=If you are both frustrated, maybe go and try taking your anger out on someone else, like {2}.
+		outcome=Mood(1,-100)
+	}
+	option
+	{
+		text=I think you both need to consider the other person and see if you can come to an arrangement that works for both.
+		outcome=Mood(1,-10)
+	}
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=1
+	text=Ok, I understand.
+}
+line
+{
+	speaker_id=1
+	text={4} I am sorry, I didn't realise how annoying my jokes were getting, I will try and be more considerate to you from now on.
+}
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=4
+	text=I am sorry as well.
+}
+line
+{
+	speaker_id=4
+	text=I should have been more appreciative of how you were attempting to keep spirits up.
+}
+line
+{
+	speaker_id=4
+	text=I'll try and keep more relaxed from now on.
+}
+line
+{
+	speaker_id=0
+	text=Well, I am glad that came to a peacefull conclusion.
+}
+line
+{
+	speaker_id=0
+	text=Now we can get onto escaping properly.
+}
