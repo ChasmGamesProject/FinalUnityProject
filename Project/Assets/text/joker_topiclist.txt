@@ -2,7 +2,7 @@
 plot_marker=conflictresolved
 topic_conflictsolvedjoker.txt
 plot_marker=argument
-topic_conflictjoker
+topic_conflictjoker.txt
 plot_marker=key
 topic_lockpickjoker.txt
 }
