@@ -1,6 +1,7 @@
 info
 {
 	topic_name=Knowledge
+	flag=townhistory
 }
 sprite
 {

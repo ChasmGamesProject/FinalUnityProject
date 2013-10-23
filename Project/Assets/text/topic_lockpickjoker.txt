@@ -1,0 +1,54 @@
+info
+{
+	topic_name=Lockpick
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Hello
+}
+line
+{
+	speaker_id=1
+	text=Yo!
+}
+line
+{
+	speaker_id=0
+	text={2} said she may have a book about the town's history that may help us escape, but it is locked in the library.
+}
+line
+{
+	speaker_id=0
+	text=Do you know of a way into the library?
+}
+line
+{
+	speaker_id=1
+	text=Uhh.. yeah about the library, don't tell anyone but that was me.
+}
+line
+{
+	speaker_id=1
+	text=Don't worry though, i think i have the solution!
+}
+line
+{
+	speaker_id=1
+	text=I actually own a lockpick, i was going to use it to try to unlock the door sometime. I just hadn't got around to unpacking it, if you want to give it a shot you can find it in the storage room.
+}
+line
+{
+	speaker_id=0
+	text=Hmm, if you don't mind, I think ill go try and get it, the book might help us get out of here.
+}
+line
+{
+	speaker_id=1
+	text=No worries man, just make sure no one finds out who locked the door in the first place.
+}

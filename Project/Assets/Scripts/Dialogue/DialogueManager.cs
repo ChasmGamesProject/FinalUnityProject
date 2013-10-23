@@ -213,7 +213,7 @@ public class DialogueManager : MonoBehaviour
         bool no_jump = true;
         foreach (ChoiceOutcome o in Outcomes)
         {
-            if (o.GetType() != ChoiceOutcome.OutcomeType.JumpToNode)
+            if (o.GetType() == ChoiceOutcome.OutcomeType.JumpToNode)
                 no_jump = false;
             DoDialogueAction(o);
         }

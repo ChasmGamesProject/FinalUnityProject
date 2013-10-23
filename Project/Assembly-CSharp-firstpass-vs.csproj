@@ -47,15 +47,19 @@
      <Compile Include="Assets\Plugins\LeapUnityExtensions.cs" />
      <Compile Include="Assets\Plugins\pxsLeapInput.cs" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <None Include="Assets\text\topic_conflictsolvednice.txt" />
      <None Include="Assets\text\topic_cookies.txt" />
      <None Include="Assets\Models\Lamps and textures\lamp.txt" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\text\Argument.txt" />
      <None Include="Assets\text\topic_firstroamingquiet.txt" />
      <None Include="Assets\text\joker_topiclist.txt" />
+     <None Include="Assets\text\topic_lockpickjoker.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\text\topic_knowledgestranger.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\text\topic_conflictnice.txt" />
+     <None Include="Assets\text\topic_conflictjoker.txt" />
      <None Include="Assets\text\topic_solvedconflictserious.txt" />
      <None Include="Assets\text\PickUpFailMessages.txt" />
      <None Include="Assets\text\serious_topiclist.txt" />
@@ -65,6 +69,7 @@
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\text\ObjectCombinationList.txt" />
      <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\text\topic_townhistorynice.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\text\topic_firstroamingstranger.txt" />
