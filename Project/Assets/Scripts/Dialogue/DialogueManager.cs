@@ -272,7 +272,7 @@ public class DialogueManager : MonoBehaviour
             }
             ls.Add("Goodbye.");
 
-            dui.Display(DialogueNode.NodeType.Choice, ls);
+            dui.DisplayTopicList(ls);
 
             //dui.SetSprite(0, (db.GetCharacter(0)).GetSpriteDefault());
             dui.SetSprite(ConversationPartner.GetSpriteDefault());//(1, ConversationPartner.GetSpriteDefault());

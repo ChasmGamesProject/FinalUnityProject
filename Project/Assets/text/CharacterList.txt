@@ -5,6 +5,7 @@
 	name=Jack
 	bio=Always trying to liven things up with his jokes
 	topic_list=joker_topiclist.txt
+	text_color=yellow
 	sprite=joker/happy
 	sprite=joker/angry
 }
@@ -14,6 +15,7 @@
 	mood=50
 	topic_list=nice_topiclist.txt
 	available_topics=0
+	text_color=magenta
 	sprite=nice/happy
 	sprite=nice/sad
 	sprite=nice/determined
@@ -22,12 +24,14 @@
 	name=Catrina
 	bio=Quiet girl, who's even quiter given the present state of affairs
 	topic_list=quiet_topiclist.txt
+	text_color=green
 	sprite=quiet/neutral
 }
 {
 	name=Michael
 	bio=A realist
 	topic_list=serious_topiclist.txt
+	text_color=cyan
 	sprite=serious/neutral
 	sprite=serious/angry
 }
@@ -35,6 +39,7 @@
 	name=Leo
 	bio=A neighbour who was invited to the party, don't really know much about him
 	topic_list=stranger_topiclist.txt
+	text_color=red
 	sprite=stranger/thinking
 	sprite=stranger/revelation
 }

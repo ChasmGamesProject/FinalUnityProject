@@ -8,6 +8,7 @@ public class CharacterData
 	private string Name;
 	private string Bio; // a breif desc of character ?
 	private int Mood;
+    private Color TextColor;
 	
 	private List<Texture2D> Sprites; //array of sprites eg sally_happy
 	
@@ -28,7 +29,8 @@ public class CharacterData
 		Mood = 100; // does not need to be the case though
 		TopicList = new List<TopicData>();
 		AvaliableTopicList = new List<int>();
-		
+        TextColor = Color.white;
+
 		Sprites = new List<Texture2D>();
 	}
 	
@@ -72,7 +74,17 @@ public class CharacterData
 	{
 		return Mood > 0;
 	}
-	
+
+    public void SetTextColor(Color c)
+    {
+        TextColor = c;
+    }
+
+    public Color GetTextColor()
+    {
+        return TextColor;
+    }
+
 	public void MoodMod(int mod)
 	{
 		Mood += mod;

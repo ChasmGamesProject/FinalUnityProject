@@ -16,6 +16,7 @@ public class DialogueUI : MonoBehaviour
 	
 	private DialogueNode.NodeType Type;
 	private List<string> DisplayText;
+	private Color TextColor;
 	
 	private Rect TextBox;
 	private Rect NextBox;
@@ -68,7 +69,9 @@ public class DialogueUI : MonoBehaviour
 				
 				if(Type == DialogueNode.NodeType.Line)
 				{
+					GUI.color = TextColor;
 					GUI.Label (TextBox, DisplayText[0]);
+					GUI.color = Color.white;
 					if(GUI.Button (NextBox, "Next"))
 					{
 						dm.Next();
@@ -127,7 +130,9 @@ public class DialogueUI : MonoBehaviour
 		if(Type == DialogueNode.NodeType.Line)
 		{
 			DialogueLine dl = (DialogueLine)dn;
-			string s = db.GetCharacter(dl.GetSpeakerId()).GetName();
+			CharacterData character = db.GetCharacter(dl.GetSpeakerId());
+			TextColor = character.GetTextColor();
+			string s = character.GetName();
 			if(dl.GetSpeakerId() == 0)
 				s += " (You)";
 			s += ":\n\"" + dm.AddNames(dl.GetText()) + "\"";
@@ -135,19 +140,20 @@ public class DialogueUI : MonoBehaviour
 		}
 		else if(Type == DialogueNode.NodeType.Choice)
 		{
+			TextColor = Color.white;
 			List<Choice> lc = ((DialogueChoice)dn).GetChoices();
 			for(int i = 0; i < lc.Count; i++)
 				DisplayText.Add(dm.AddNames(lc[i].GetText()));
 		}
 	}
 	
-	public void Display(DialogueNode.NodeType t, List<string> ls)
+	public void DisplayTopicList(List<string> ls) // specifically for topic
 	{
-		// we have to pass type, in case we have choice with one option for some reason
-			// EG. there is only one topic avaliable
+		TextColor = Color.white;
+		
 		DisplayText.Clear();
 		
-		Type = t;
+		Type = DialogueNode.NodeType.Choice;
 		
 		DisplayText.AddRange(ls);
 	}

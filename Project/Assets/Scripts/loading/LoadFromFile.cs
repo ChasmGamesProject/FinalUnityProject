@@ -267,35 +267,68 @@ public class LoadFromFile : MonoBehaviour
             file.Close();
 		}
 	}
-	
-	private void ProcessCharacterFileLine(string[] elements, ref CharacterData charTemp)
-	{
-		elements[0] = elements[0].Trim(); // gets rid of leading whitespace
-										
-		switch(elements[0])
-		{
-		case "name":
-			charTemp.SetName(elements[1]);
-			break;
-		case "bio":
-			charTemp.SetBio(elements[1]);
-			break;
-		case "mood":
-			charTemp.SetMood(int.Parse(elements[1]));
-			break;
-		case "sprite":
-			charTemp.AddSprite((Texture2D)Resources.Load("textures/characters/" + elements[1]));
-			break;
-		case "topic_list":
-			ProcessTopicList(elements[1], ref charTemp);
-			break;
-		case "available_topics":
-			elements = elements[1].Split(',');
-			for(int i = 0; i < elements.Length; i++)
-				charTemp.AddAvaliableTopic(int.Parse(elements[i]));
-			break;
-		}
-	}
+
+    private void ProcessCharacterFileLine(string[] elements, ref CharacterData charTemp)
+    {
+        elements[0] = elements[0].Trim(); // gets rid of leading whitespace
+
+        switch (elements[0])
+        {
+            case "name":
+                charTemp.SetName(elements[1]);
+                break;
+            case "bio":
+                charTemp.SetBio(elements[1]);
+                break;
+            case "mood":
+                charTemp.SetMood(int.Parse(elements[1]));
+                break;
+            case "text_color":
+                charTemp.SetTextColor(ProccessColor(elements[1]));
+                break;
+            case "sprite":
+                charTemp.AddSprite((Texture2D)Resources.Load("textures/characters/" + elements[1]));
+                break;
+            case "topic_list":
+                ProcessTopicList(elements[1], ref charTemp);
+                break;
+            case "available_topics":
+                elements = elements[1].Split(',');
+                for (int i = 0; i < elements.Length; i++)
+                    charTemp.AddAvaliableTopic(int.Parse(elements[i]));
+                break;
+        }
+    }
+
+    private Color ProccessColor(string color)
+    {
+        Color c;
+        switch (color.ToLower())
+        {
+            case "red":
+                c = Color.red; // c.r = 1; c.b = 0; c.g = 0;
+                break;
+            case "blue":
+                c = Color.blue;
+                break;
+            case "yellow":
+                c = Color.yellow;
+                break;
+            case "green":
+                c = Color.green;
+                break;
+            case "magenta":
+                c = Color.magenta;
+                break;
+            case "cyan":
+                c = Color.cyan;
+                break;
+            default:
+                c = Color.white;
+                break;
+        }
+        return c;
+    }
 
     private void ProcessTopicList(string fileName, ref CharacterData charTemp)
     {
