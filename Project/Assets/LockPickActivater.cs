@@ -25,5 +25,6 @@ public class LockPickActivater : MonoBehaviour {
 	public void DeActivateLockPickPuzzle()
 	{
 		LockPickController.EndLockPuzzle();
+		GlobalVars.room_manager.ChangeRoom(2);
 	}
 }

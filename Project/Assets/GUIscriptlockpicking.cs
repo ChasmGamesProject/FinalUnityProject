@@ -17,6 +17,7 @@ public class GUIscriptlockpicking : MonoBehaviour {
 	float TooltipHeight;
 	float TooltipWidth;
 	public bool gamewon;
+	public LockPickActivater activater;
 	
 	void Start()
 	{
@@ -62,7 +63,7 @@ public class GUIscriptlockpicking : MonoBehaviour {
 			GUI.Label(ExitText, "Good work you have unlocked the door, close this window to return to the house and explore the room.");
 			if(GUI.Button (ExitButton, "Exit"))
 			{
-				
+				activater.DeActivateLockPickPuzzle();
 			}
 			
 		}
