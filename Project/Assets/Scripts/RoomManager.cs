@@ -151,7 +151,8 @@ public class RoomManager : MonoBehaviour
 		Pather.targetPosition = room_spawn_points[id];
 		Pather.targetPosition2 = room_spawn_points[id];
 		Pather.yheight = Pather.targetPosition.y;
-		Pather.Scanner();
+		Pather.path = null;
+		//Pather.Scanner();
 		Pather.cam = room_cams[id];
 		
 		if(room_cams[id])

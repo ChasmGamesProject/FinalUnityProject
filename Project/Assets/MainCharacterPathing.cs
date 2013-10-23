@@ -31,7 +31,9 @@ public class MainCharacterPathing : MonoBehaviour {
  
 	void Awake()
 	{
-		animation["Take 001"].speed = 3.0f;
+		targetPosition = transform.position;
+		targetPosition2 = transform.position;
+		animation["Take 001"].speed = 3.2f;
 		GlobalVars.player_transform = gameObject.transform;
 		//this.enabled = false;
 		canmove = true;
@@ -69,7 +71,7 @@ public class MainCharacterPathing : MonoBehaviour {
 		
 		
 
-
+		
 		
 		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
 		if(Time.time - time > 0.5)

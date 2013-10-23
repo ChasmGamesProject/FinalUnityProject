@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>A:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>A:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +111,7 @@
      <Compile Include="Assets\BoxPuzzleLogic.cs" />
      <Compile Include="Assets\GUIscriptlockpicking.cs" />
      <Compile Include="Assets\LockPickActivater.cs" />
+     <Compile Include="Assets\LockStatusChecker.cs" />
      <Compile Include="Assets\MainCharacterPathing.cs" />
      <Compile Include="Assets\PickClickExit.cs" />
      <Compile Include="Assets\PickLogic.cs" />
