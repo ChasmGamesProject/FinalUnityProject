@@ -1,0 +1,39 @@
+info
+{
+	topic_name=Escape
+}
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=0
+	text=The makeshift sundial has been created.
+}
+line
+{
+	speaker_id=4
+	text=Thats great! Lets get to it!
+}
+line
+{
+	speaker_id=0
+	text=Yeah.. well.. I forgot that it is still night time, so i have no idea how I am going to use it.
+}
+line
+{
+	speaker_id=4
+	text=Well, if we were going to go into specifics, I would have to tell you that technically, moonlight IS sunlight.
+}
+line
+{
+	speaker_id=0
+	text=Hmm, that is interesting.
+}
+line
+{
+	speaker_id=0
+	text=Thank you for your help.
+}

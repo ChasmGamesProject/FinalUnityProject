@@ -1,0 +1,80 @@
+info
+{
+	topic_name=Book
+	flag=escape
+}
+sprite
+{
+	character_id=5
+	sprite=thinking
+}
+line
+{
+	speaker_id=0
+	text=Hey, I managed to find a book of this town's fables and Myths.
+}
+line
+{
+	speaker_id=5
+	text=Oh! let me see!
+}
+line
+{
+	speaker_id=5
+	text=....................
+}
+line
+{
+	speaker_id=5
+	text=...........................
+}
+sprite
+{
+	character_id=5
+	sprite=revelation
+}
+line
+{
+	speaker_id=5
+	text=Ah Ha! Now it's coming back! I did hear something that sounded a lot like this situation.
+}
+line
+{
+	speaker_id=5
+	text=Supposedly there was an insane man who was claiming that he had escaped from something like this.
+}
+line
+{
+	speaker_id=5
+	text=I am trying to think of what he said.
+}
+line
+{
+	speaker_id=5
+	text=Oh yeah! Thats right. So apparently, he escaped by creating a sundial made up of certain objects, which, under the sun, pointed to the exact time he was originally trapped.
+}
+line
+{
+	speaker_id=0
+	text=So can you remember what all the items he used were?
+}
+line
+{
+	speaker_id=5
+	text=Yes, apparently he used: A piece of chalk to mark out the sundial, something to mark it on, paper is fine. And something to cause a shadow. Like a pen holder, that would be fine.
+}
+line
+{
+	speaker_id=0
+	text=Hmmm, ok I guess there is no harm in trying, now i need to find this stuff!
+}
+line
+{
+	speaker_id=0
+	text=Thanks for the help!
+}
+line
+{
+	speaker_id=5
+	text=Any time pal!
+}

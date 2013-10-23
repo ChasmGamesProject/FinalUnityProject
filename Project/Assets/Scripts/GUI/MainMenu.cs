@@ -7,8 +7,8 @@ public class MainMenu : MonoBehaviour
 	
 	MainMenu()
 	{
-		int width = Screen.width / 5;
-		button = new Rect(Screen.width / 2 - width / 2, 0, width, Screen.width / 40); // centered, 0, 256, 64
+		int width = Screen.width / 6;
+		button = new Rect(Screen.width / 2 +width/7, 0, width, Screen.width /20); // centered, 0, 256, 64
 	}
 	
 	void Start()
@@ -18,15 +18,15 @@ public class MainMenu : MonoBehaviour
 	
 	void OnGUI()
 	{
-		button.y = (int)(Screen.height * 0.65f);
-		if(GUI.Button(button, "Play"))
-			Application.LoadLevel("room_test");
+		button.y = (int)(Screen.height * 0.35f);
+		if(GUI.Button(button, ""))
+			Application.LoadLevel("Final Scene");
 		
-		button.y += Screen.width / 20;
-		GUI.Button(button, "Options");
+		button.y += Screen.width / 10;
+		GUI.Button(button, "");
 		
-		button.y += Screen.width / 20;
-		if(GUI.Button(button, "Exit"))
+		button.y += Screen.width / 10;
+		if(GUI.Button(button, ""))
 			Application.Quit();
 		
 		// TEMP BUTTON

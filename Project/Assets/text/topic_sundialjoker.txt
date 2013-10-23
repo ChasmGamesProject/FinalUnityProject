@@ -1,0 +1,29 @@
+info
+{
+	topic_name=Escape
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=OK, so here is the sundial! I've managed to put everything together!
+}
+line
+{
+	speaker_id=1
+	text=That's good!
+}
+line
+{
+	speaker_id=1
+	text=But, looking at the time of day, wouldn't you say it's more of a moondial? HAHAHAHAHA
+}
+line
+{
+	speaker_id=0
+	text=Hmmmmm, moondial?
+}

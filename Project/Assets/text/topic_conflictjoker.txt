@@ -1,6 +1,6 @@
 info
 {
-	topic_name=Conflict
+	topic_name=Attempt to mediate argument
 }
 sprite
 {

@@ -1,6 +1,6 @@
 info
 {
-	topic_name=firstroamingstranger
+	topic_name=Question
 }
 sprite
 {

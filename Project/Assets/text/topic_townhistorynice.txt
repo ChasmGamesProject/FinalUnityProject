@@ -1,6 +1,6 @@
 info
 {
-	topic_name=TownHistory
+	topic_name=Town history?
 	flag=key
 }
 sprite

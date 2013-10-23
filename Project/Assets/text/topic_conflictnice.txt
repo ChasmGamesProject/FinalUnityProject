@@ -1,6 +1,6 @@
 info
 {
-	topic_name=Inquire about the argument.
+	topic_name=Inquire about the argument
 	flag=nicelesson
 }
 sprite

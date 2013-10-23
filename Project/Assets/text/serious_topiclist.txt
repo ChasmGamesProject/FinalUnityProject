@@ -5,4 +5,8 @@ plot_marker=conflictresolved
 topic_solvedconflictserious.txt
 plot_marker=book
 topic_bookserious.txt
+plot_marker=sundial
+topic_sundialserious.txt
+plot_marker=escape
+topic_objectsserious.txt
 }

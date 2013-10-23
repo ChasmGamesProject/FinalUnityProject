@@ -15,7 +15,7 @@ public class ObjectHeldUI : MonoBehaviour
 			this.enabled = false;
 		
 		int BoxWidth = Screen.width / 18;
-		Box = new Rect(Screen.width - BoxWidth * 2, Screen.height - BoxWidth * 2, BoxWidth, BoxWidth);
+		Box = new Rect(Screen.width - BoxWidth * 2, Screen.height - BoxWidth * 1.5f, BoxWidth, BoxWidth);
 		
 		int IconWidth = Screen.width / 22;
 		int dif = (BoxWidth - IconWidth) / 2;

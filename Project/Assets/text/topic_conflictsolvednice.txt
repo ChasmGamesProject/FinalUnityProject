@@ -1,6 +1,6 @@
 info
 {
-	topic_name=ConflictSolved
+	topic_name=Check up on
 }
 sprite
 {

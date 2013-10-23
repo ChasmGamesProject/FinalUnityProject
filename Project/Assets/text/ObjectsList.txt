@@ -34,3 +34,21 @@
 	collectable=true
 	icon=lock_pick_icon
 }
+{
+	name=Pen Holder
+	desc=A pen holder
+	collectable=true
+	icon=pen holder
+}
+{
+	name=Pen
+	desc=A trusty pen, maybe it could come in handy later
+	collectable=true
+	icon=pen
+}
+{
+	name=Penned Holder
+	desc=The pen stands tall and true
+	collectable=true
+	icon=pen holder
+}

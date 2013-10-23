@@ -1,0 +1,54 @@
+info
+{
+	topic_name=Sundial
+}
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=0
+	text=Hello, I think i have developed a potential escape strategy.
+}
+line
+{
+	speaker_id=4
+	text=Excellent! What's the plan?
+}
+line
+{
+	speaker_id=0
+	text=I talked with {5} after finding the book in the library and he told me of a story that he heard about where an insane man claimed he escaped from a house because he was trapped.
+}
+line
+{
+	speaker_id=4
+	text=So how did he get free?
+}
+line
+{
+	speaker_id=0
+	text=Apparently he built a sundail with specific materials which pointed to the exact time that he became trapped.
+}
+line
+{
+	speaker_id=4
+	text=Do you know what the materials he used were?
+}
+line
+{
+	speaker_id=0
+	text=Yes, we need: Chalk, paper to mark out the numbers and something to cast a shadow. I beleve a pen holder should suffice.
+}
+line
+{
+	speaker_id=0
+	text=Hmm, most of those can be found in the study upstairs. You can reach there via the lift.
+}
+line
+{
+	speaker_id=0
+	text=OK, thanks for your help
+}

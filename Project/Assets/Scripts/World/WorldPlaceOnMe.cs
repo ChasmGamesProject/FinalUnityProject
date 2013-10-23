@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WorldPlaceOnMe : MonoBehaviour
 {
-	public int ObjectId = 0;
+	public int ObjectId = 8;
 	
 	private InteractMode im;
 	private ActionTextUI aui;
@@ -74,7 +74,7 @@ public class WorldPlaceOnMe : MonoBehaviour
 			if(im.isUseWith())
 			{
 				if(im.GetUseWithObjectId() == ObjectId)
-					DoSomething();
+                    Application.LoadLevel("Menu");
 			}
 		}
 	}

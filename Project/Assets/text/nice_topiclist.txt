@@ -9,4 +9,8 @@ plot_marker=townhistory
 topic_townhistorynice.txt
 plot_marker=book
 topic_booknice.txt
+plot_marker=sundial
+topic_sundialnice.txt
+plot_marker=escape
+topic_objectsnice.txt
 }

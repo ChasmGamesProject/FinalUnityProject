@@ -1,0 +1,49 @@
+info
+{
+	topic_name=EscapePlan
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Guess what! I've got a tentative plan on how we can get out of here!
+}
+line
+{
+	speaker_id=1
+	text=That's the best news i have heard since arriving at this place! What's the plan?
+}
+line
+{
+	speaker_id=0
+	text=Ok, so {5} remebers a story he heard about a man in the same situation as us.
+}
+line
+{
+	speaker_id=0
+	text=apparently, that man escaped by building a sundial which pointed to the exact time that h was originally stuck.
+}
+line
+{
+	speaker_id=0
+	text=All i need now is your help gathering the materials for this sundial.
+}
+line
+{
+	speaker_id=1
+	text=Ah, unfortunately, i don't think i can help you there.. I don't know where anything is really kept in this house..
+}
+line
+{
+	speaker_id=1
+	text=You should try talking to {2} or {4}, they would both know where to get those.
+}
+line
+{
+	speaker_id=0
+	text=Ok, ill go ask them, thanks!
+}

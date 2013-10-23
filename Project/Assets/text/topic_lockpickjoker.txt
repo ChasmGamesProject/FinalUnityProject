@@ -1,6 +1,6 @@
 info
 {
-	topic_name=Lockpick
+	topic_name=Lockpick?
 	flag=key
 }
 sprite

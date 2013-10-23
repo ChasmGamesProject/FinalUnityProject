@@ -1,6 +1,6 @@
 info
 {
-	topic_name=Knowledge
+	topic_name=Ask about supernatural
 	flag=townhistory
 }
 sprite

@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>A:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>A:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +49,6 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_booknice.txt" />
      <None Include="Assets\text\topic_conflictsolvednice.txt" />
-     <None Include="Assets\text\topic_cookies.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_bookjoker.txt" />
      <None Include="Assets\Models\Lamps and textures\lamp.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_firstroamingnice.txt" />
@@ -64,11 +63,11 @@
      <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Stranger\topic_bookstranger.txt" />
      <None Include="Assets\text\topic_knowledgestranger.txt" />
-     <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_escapenice.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Serious\topic_solvedconflictserious.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_sundialjoker.txt" />
      <None Include="Assets\text\topic_booknice.txt" />
+     <None Include="Assets\text\topic_bookstranger.txt" />
      <None Include="Assets\text\topic_conflictnice.txt" />
      <None Include="Assets\text\topic_conflictjoker.txt" />
      <None Include="Assets\text\topic_solvedconflictserious.txt" />
@@ -78,15 +77,19 @@
      <None Include="Assets\text\serious_topiclist.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\text\topic_sundialnice.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Stranger\topic_knowledgestranger.txt" />
      <None Include="Assets\text\ObjectCombinationList.txt" />
+     <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_sundialnice.txt" />
      <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
      <None Include="Assets\text\topic_townhistorynice.txt" />
+     <None Include="Assets\text\topic_sundialjoker.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Stranger\topic_firstroamingstranger.txt" />
      <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_townhistorynice.txt" />
+     <None Include="Assets\text\topic_sundialserious.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Quiet\topic_escapequiet.txt" />
      <None Include="Assets\AstarPathfindingProject\Readme.txt" />
      <None Include="Assets\text\topic_firstroamingstranger.txt" />
@@ -94,30 +97,36 @@
      <None Include="Assets\text\Mitch&apos;s Script\Quiet\topic_sundialquiet.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Quiet\topic_firstroamingquiet.txt" />
      <None Include="Assets\text\quiet_topiclist.txt" />
+     <None Include="Assets\text\topic_escapequiet.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\librarybook.txt" />
      <None Include="Assets\text\topic_bookjoker.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
+     <None Include="Assets\text\topic_objectsnice.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_firstroamingjoker.txt" />
      <None Include="Assets\text\CharacterList.txt" />
+     <None Include="Assets\text\topic_escapejoker.txt" />
+     <None Include="Assets\text\Mitch&apos;s Script\Stranger\topic_sundialstranger.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_conflictnice.txt" />
      <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\text\topic_sundialstranger.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Serious\topic_conflictserious.txt" />
+     <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_escapejoker.txt" />
      <None Include="Assets\text\topic_conflictsolvedjoker.txt" />
      <None Include="Assets\text\ObjectsList.txt" />
-     <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_escapeplan.txt" />
      <None Include="Assets\text\topic_firstroamingnice.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Serious\topic_firstroamingserious.txt" />
      <None Include="Assets\text\PickUpSuccessMessages.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_conflictjoker.txt" />
+     <None Include="Assets\text\topic_sundialquiet.txt" />
      <None Include="Assets\text\UseWithFailMessages.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Serious\topic_escapeserious.txt" />
      <None Include="Assets\text\stranger_topiclist.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_conflictsolvedjoker.txt" />
      <None Include="Assets\text\nice_topiclist.txt" />
-     <None Include="Assets\text\Mitch&apos;s Script\Stranger\topic_escapestranger.txt" />
      <None Include="Assets\AstarPathfindingProject\link.xml" />
      <None Include="Assets\text\Mitch&apos;s Script\Serious\topic_bookserious.txt" />
      <None Include="Assets\text\Mitch&apos;s Script\Joker\topic_lockpickjoker.txt" />
+     <None Include="Assets\text\topic_objectsserious.txt" />
  <Reference Include="Ionic.Zip.Reduced">
  <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
  </Reference>

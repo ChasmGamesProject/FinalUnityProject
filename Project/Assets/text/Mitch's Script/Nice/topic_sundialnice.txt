@@ -1,0 +1,44 @@
+info
+{
+	topic_name=Escape
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=0
+	text=Ok, I've managed to put together the makeshift sundial
+}
+line
+{
+	speaker_id=2
+	text=Yay! Thats great!
+}
+line
+{
+	speaker_id=0
+	text=The only issue now is.. I am not sure how i am meant to use it at night..
+}
+line
+{
+	speaker_id=2
+	text=Oh, You're right..
+}
+line
+{
+	speaker_id=2
+	text=Well.. If it helps, there is a skylight in the study that i use to read by.
+}
+line
+{
+	speaker_id=2
+	text=But I still don't know how that helps you during the night.
+}
+line
+{
+	speaker_id=0
+	text=It's ok, I'll figure something out.
+}

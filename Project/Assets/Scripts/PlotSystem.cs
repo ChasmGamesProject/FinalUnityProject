@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, TownHistory, NiceLesson, ConflictResolved, Key, Book }; //flesh this out with all the plot points
+public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, TownHistory, NiceLesson, ConflictResolved, Key, Book, Escape, Sundial }; //flesh this out with all the plot points
 
 public class PlotSystem : MonoBehaviour {
 
@@ -173,6 +173,8 @@ public class PlotSystem : MonoBehaviour {
         EnumConversion["conflictresolved"] = PlotPointer.ConflictResolved;
         EnumConversion["book"] = PlotPointer.Book;
         EnumConversion["townhistory"] = PlotPointer.TownHistory;
+        EnumConversion["escape"] = PlotPointer.Escape;
+        EnumConversion["sundial"] = PlotPointer.Sundial;
     }
 
     private void InitPlots()
@@ -187,6 +189,8 @@ public class PlotSystem : MonoBehaviour {
         Plots[PlotPointer.NiceLesson] = false;
         Plots[PlotPointer.Book] = false;
         Plots[PlotPointer.TownHistory] = false;
+        Plots[PlotPointer.Escape] = false;
+        Plots[PlotPointer.Sundial] = false;
     }
 
     private void InitDependancies()
@@ -199,38 +203,3 @@ public class PlotSystem : MonoBehaviour {
     }
  
 }
-
-/*
- * 2.0  
- * 
- * Contains a function that allows for horizontal progression of the plot
- * When all horizontal plot points are met, progress the plot to the next major plot point
- * 
- * At startup iterates through all the game objects with the base script plotbehaviour attached, checks and sorts these objects into a map depending on the values stored in their plotpointer
- * When the plot is progressed iterate through the appropriate key value and call the progressplot function of all the stored objects for that key
- * 
- * 
- */
-
-
-/*
- * Plot system
- * 
- * Tracks all the items and conversation points in the game
- * Maps these points to plot points
- * When a plot point is triggered the world changes
- * 
- * Handles the transition between plot points (checks database and adjusts accordingly)
- *
- * Conversations seperated into topics/groups, each group of conversation options are sub to plot progression
- * 
- * Objects and rooms have a locked/unlocked flag. Each of these specifies a different use(or non-use)/action of the object. 
- * 
- * When an item is collected that contains a plot flag it calls a function in the plot system
- * 
- * At compile time it builds up a database of things related to each plot point
- * 
- * Plot points 1 1.1 1.2 1.N -X.N
- * 
- * 
- */

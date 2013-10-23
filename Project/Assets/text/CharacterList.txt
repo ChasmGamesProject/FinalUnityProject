@@ -3,7 +3,7 @@
 }
 {
 	name=Jack
-	bio=Always trying to liven things up with his jokes
+	bio=My good buddy Jack, me and him go way back, he seems to be unaffected.
 	topic_list=joker_topiclist.txt
 	text_color=yellow
 	sprite=joker/happy
@@ -11,7 +11,7 @@
 }
 {
 	name=Jane
-	bio=Your usually happy, childhood friend, she looks a bit worse for the wear 
+	bio=Jane's usually a very happy person, though she looks a little bit frayed around the edges right now.
 	mood=50
 	topic_list=nice_topiclist.txt
 	available_topics=0
@@ -22,14 +22,14 @@
 }
 {
 	name=Catrina
-	bio=Quiet girl, who's even quiter given the present state of affairs
+	bio=She seems to have broken down, she won't respond to anyone.
 	topic_list=quiet_topiclist.txt
 	text_color=green
 	sprite=quiet/neutral
 }
 {
 	name=Michael
-	bio=A realist
+	bio=Michaels always been there for me, he's a reliable friend. He looks quite exhausted.
 	topic_list=serious_topiclist.txt
 	text_color=cyan
 	sprite=serious/neutral
@@ -37,9 +37,9 @@
 }
 {
 	name=Leo
-	bio=A neighbour who was invited to the party, don't really know much about him
+	bio=A stranger, one of my friends must know him. He seems to be muttering strange phrases to himself.
 	topic_list=stranger_topiclist.txt
-	text_color=red
+	text_color=blue
 	sprite=stranger/thinking
 	sprite=stranger/revelation
 }

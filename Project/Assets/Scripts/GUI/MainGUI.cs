@@ -30,6 +30,10 @@ public class MainGUI : MonoBehaviour
 	
 	private int SelectedSlot = -1;
 
+    private Rect Box;
+    private Rect Icon;
+    private int BoxWidth;
+
     void Start()
     {
 		inv = GlobalVars.inventory;
@@ -37,7 +41,14 @@ public class MainGUI : MonoBehaviour
 		im = GlobalVars.interact_mode;
         ps = GlobalVars.plot_system;
 
-        Icon50 = new Rect(0, 0, 50, 50); // Create a default rectangle of 50x50 pixels, simply specify later where to locate it
+        BoxWidth = Screen.width / 18;
+        Box = new Rect(Screen.width - BoxWidth * 2, Screen.height - BoxWidth * 2, BoxWidth, BoxWidth);
+
+        int IconWidth = Screen.width / 22;
+        int dif = (BoxWidth - IconWidth) / 2;
+        Icon = new Rect(Box.x + dif, Box.y + dif, IconWidth, IconWidth);
+
+        Icon50 = new Rect(0, 0, 60, 60); // Create a default rectangle of 50x50 pixels, simply specify later where to locate it
         Icon45 = new Rect(0, 0, 45, 30); //Create a default rectangle of 45x30 pixels
         IconInventoryScalable = new Rect(0, 0, (Screen.width / 14), (Screen.width / 14)); //create an inventory box of scalable size depending on resolution
         LabelInventoryScalable = new Rect(0, 0, Screen.width / 14, Screen.width / 48); //create an inventory label of scalable size depending on resolution 
@@ -55,14 +66,14 @@ public class MainGUI : MonoBehaviour
         {
 			if(im.GetMode() == InteractMode.gMode.GM_WORLD) // Hide the GUI when not in world mode
 			{
-	            Icon50.x = 25;
-	            Icon50.y = Screen.height - 75;
-	            if (GUI.Button(Icon50, Inventoryicon))
+                Box.x = 25;
+                Box.y = Screen.height - BoxWidth*1.5f;
+                if (GUI.Button(Box, Inventoryicon))
 	            {          
 	                EnterMenu(UITypes.InventoryGUI);
 	            }
-	            Icon50.y = 10;
-	            if (GUI.Button(Icon50, "Menu"))
+                Box.y = 10;
+                if (GUI.Button(Box, "Menu"))
 	            {
 	                //Put code here to switch back to the menu view
 	                EnterMenu(UITypes.MenuGUI);
@@ -129,7 +140,8 @@ public class MainGUI : MonoBehaviour
         }
         else if (CurrentUI == UITypes.MenuGUI)
         {
-            MenuButton.x = Screen.width / 2 -100;
+            Application.LoadLevel("Menu");
+           /* MenuButton.x = Screen.width / 2 -100;
             MenuButton.y = (Screen.height / 10) * 5;
             if (GUI.Button(MenuButton, "Play Game"))
             {
@@ -142,7 +154,7 @@ public class MainGUI : MonoBehaviour
                 //Put code here to switch to the menu options view
                 EnterMenu(UITypes.MenuOptionGUI);
             }
-            //Any additional menu options can be added in here
+            //Any additional menu options can be added in here*/
         }
         else if (CurrentUI == UITypes.MenuOptionGUI)
         {

@@ -1,4 +1,6 @@
 {
 plot_marker=firstfreeroam
 topic_firstroamingquiet.txt
+plot_marker=sundial
+topic_sundialquiet.txt
 }

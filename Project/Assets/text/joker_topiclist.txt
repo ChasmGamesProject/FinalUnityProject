@@ -7,4 +7,8 @@ plot_marker=key
 topic_lockpickjoker.txt
 plot_marker=book
 topic_bookjoker.txt
+plot_marker=sundial
+topic_sundialjoker.txt
+plot_marker=escape
+topic_escapejoker.txt
 }
