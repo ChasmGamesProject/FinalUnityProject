@@ -165,6 +165,7 @@ choice
 		text=You should just ignore them.
 		outcome=Mood(1,-25)
 		outcome=Jump(7)
+	}
 }
 
 line
