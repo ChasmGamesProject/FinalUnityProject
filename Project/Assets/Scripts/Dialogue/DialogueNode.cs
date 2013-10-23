@@ -153,23 +153,22 @@ public class DialogueChoice : DialogueNode
 
 public class DialogueAction : DialogueNode
 {
-	private ChoiceOutcome Action;
+	private List<ChoiceOutcome> Actions;
 	
 	public DialogueAction()
 	{
 		Type = DialogueNode.NodeType.Action;
-		Action = null;
+		Actions = new List<ChoiceOutcome>();
 	}
 	
-	public DialogueAction(ChoiceOutcome co)
+	public void AddAction(ChoiceOutcome co)
 	{
-		Type = DialogueNode.NodeType.Action;
-		Action = co;
+		Actions.Add (co);
 	}
 	
-	public ChoiceOutcome GetAction()
+	public List<ChoiceOutcome> GetActions()
 	{
-		return Action;
+		return Actions;
 	}
 }
 

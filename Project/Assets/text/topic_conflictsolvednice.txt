@@ -1,0 +1,19 @@
+info
+{
+	topic_name=ConflictSolved
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=2
+	text=Thank you so much for your advice, I cant believe it, but those two actually listened to me!
+}
+line
+{
+	character_id=0
+	text=Thats great! Now we can completely focus on getting out of here.
+}

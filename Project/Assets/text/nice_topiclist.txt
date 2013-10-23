@@ -3,4 +3,6 @@ plot_marker=firstfreeroam
 topic_firstroamingnice.txt
 plot_marker=argument
 topic_conflictnice.txt
+plot_marker=nicelesson
+topic_conflictsolvednice.txt
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-public class LoadTopic// : MonoBehaviour
+public class LoadTopic //: MonoBehaviour
 {
 	StreamReader File;
 	TopicData Topic;
@@ -81,6 +81,7 @@ public class LoadTopic// : MonoBehaviour
 			Node = ProcessNodeChoice();
 			break;
 		case "action":
+			Node = ProcessNodeAction();
 			break;
 		case "info":
 			ProcessInfo();
@@ -195,6 +196,36 @@ public class LoadTopic// : MonoBehaviour
 			}
 		} while(line != null);
 		return LineNode;
+	}
+	
+	private DialogueAction ProcessNodeAction()
+	{
+		string line;
+		DialogueAction ActionNode = new DialogueAction();
+		
+		do
+		{
+			line = GetValidLine();
+			if(line != null)
+			{
+				if(line[0] == '}')
+					break;
+				else
+				{
+					string[] elements = line.Split('=');
+					switch(elements[0].ToLower())
+					{
+					case "action":
+						ChoiceOutcome co = ProcessChoiceOutcome(elements[1]);
+						if(co != null)
+							ActionNode.AddAction(co);
+						break;
+					}
+				}
+			}
+		} while(line != null);
+		
+		return ActionNode;
 	}
 	
 	private DialogueChoice ProcessNodeChoice()

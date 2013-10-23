@@ -1,6 +1,7 @@
 info
 {
 	topic_name=conflictnice
+	flag=nicelesson
 }
 sprite
 {
@@ -66,6 +67,7 @@ choice
 		text=Apologize
 		outcome=Mood(1,-25)
 		outcome=Jump(3)
+	}
 }
 line
 {

@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, NiceLesson, ConflictResolved, Key, Book }; //flesh this out with all the plot points
+public enum PlotPointer { Begin, Intro, FirstFreeRoam, Argument, TownHistory, NiceLesson, ConflictResolved, Key, Book }; //flesh this out with all the plot points
 
 public class PlotSystem : MonoBehaviour {
 
@@ -148,6 +148,7 @@ public class PlotSystem : MonoBehaviour {
         EnumConversion["nicelesson"] = PlotPointer.NiceLesson;
         EnumConversion["conflictresolved"] = PlotPointer.ConflictResolved;
         EnumConversion["book"] = PlotPointer.Book;
+        EnumConversion["townhistory"] = PlotPointer.Book;
     }
 
     private void InitPlots()
@@ -161,6 +162,7 @@ public class PlotSystem : MonoBehaviour {
         Plots[PlotPointer.ConflictResolved] = false;
         Plots[PlotPointer.NiceLesson] = false;
         Plots[PlotPointer.Book] = false;
+        Plots[PlotPointer.TownHistory] = false;
     }
 
     private void InitDependancies()

@@ -1,4 +1,6 @@
 {
 plot_marker=firstfreeroam
 topic_firstroamingstranger.txt
+plot_marker=argument
+topic_knowledgestranger.txt
 }

@@ -205,18 +205,24 @@ public class DialogueManager : MonoBehaviour
 			}
 		}
 	}
-	
-	private void HandleActionNode()
-	{
-		DialogueAction da = (DialogueAction)NodeCurrent;
-		bool no_jump = da.GetAction().GetType() != ChoiceOutcome.OutcomeType.JumpToNode;
-		DoDialogueAction(da.GetAction());
-		if(no_jump)
-		{
-			NodeCurrentId++;
-			GotoNode();
-		}
-	}
+
+    private void HandleActionNode()
+    {
+        DialogueAction da = (DialogueAction)NodeCurrent;
+        List<ChoiceOutcome> Outcomes = da.GetActions();
+        bool no_jump = true;
+        foreach (ChoiceOutcome o in Outcomes)
+        {
+            if (o.GetType() != ChoiceOutcome.OutcomeType.JumpToNode)
+                no_jump = false;
+            DoDialogueAction(o);
+        }
+        if (no_jump)
+        {
+            NodeCurrentId++;
+            GotoNode();
+        }
+    }
 	
 	private void HandleSpriteNode()
 	{
