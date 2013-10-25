@@ -71,11 +71,16 @@ public class MainCharacterPathing : MonoBehaviour {
 	{
 		
 		
-		
-
-		
-		
-		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
+		Debug.Log(transform.position);
+		//transform.position.y = yheight;
+		if(transform.position.y != yheight)
+		{
+		Vector3 temp = gameObject.transform.position;
+		 
+		temp.y = yheight;
+		gameObject.transform.position = temp;
+		Debug.Log(transform.position);
+		}
 		if(Time.time - time > 0.5)
 		if(canmove)
 		if(Input.GetMouseButton(1))
@@ -165,6 +170,7 @@ public class MainCharacterPathing : MonoBehaviour {
             //We have no path to move after yet
             return;
         }
+		//transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
         
 		//This function makes the object move the final distance to the target postion
         if (currentWaypoint >= path.vectorPath.Count) {
@@ -195,14 +201,16 @@ public class MainCharacterPathing : MonoBehaviour {
         }
         
         //Direction to the next waypoint
+		
         dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
         dir *= speed * Time.fixedDeltaTime;
 		
 		dir = new Vector3(dir.x,0,dir.z);
 		Quaternion rotation = Quaternion.LookRotation(dir);
 		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
-		//transform.Rotate(Vector3.up*270);
 		controller.SimpleMove (dir);
+		//transform.Rotate(Vector3.up*270);
+		
 		if(!audio.isPlaying)
 		{
 			
