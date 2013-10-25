@@ -8,6 +8,8 @@ using System.Collections;
 
 public class WorldDoor : MonoBehaviour
 {
+	public AudioClip DoorOpen;
+	public AudioClip DoorLocked;
 	public LockPickActivater activater;
 	public int room_opens_to = 0;
 	
@@ -92,16 +94,23 @@ public class WorldDoor : MonoBehaviour
 					else
 					{
 						if(GlobalVars.description_ui != null && GlobalVars.database != null)
-							GlobalVars.description_ui.SetText(GlobalVars.database.GetUseWithFailMessage());
+						GlobalVars.description_ui.SetText(GlobalVars.database.GetUseWithFailMessage());
 					}
 				}
 				else if(!locked)
 				{
+					if(DoorOpen != null)
+					AudioSource.PlayClipAtPoint(DoorOpen, transform.position);
 					rm.ChangeRoom(room_opens_to);
 					MouseOut();
 				}
 				else
 				{
+					if(DoorLocked != null)
+						{
+						//	Debug.Log("Playing");
+							AudioSource.PlayClipAtPoint(DoorLocked,transform.position);
+						}
 					GlobalVars.description_ui.SetText("It's Locked");
 				}
 			}

@@ -5,6 +5,7 @@ using System.Collections;
 using Pathfinding;
 public class MainCharacterPathing : MonoBehaviour {
     //The point to move to
+	public AudioClip Walk;
     public Vector3 targetPosition;
 	public Vector3 targetPosition2;
 	public bool canmove;
@@ -31,6 +32,7 @@ public class MainCharacterPathing : MonoBehaviour {
  
 	void Awake()
 	{
+		audio.clip = Walk;
 		targetPosition = transform.position;
 		targetPosition2 = transform.position;
 		animation["Take 001"].speed = 3.2f;
@@ -201,15 +203,31 @@ public class MainCharacterPathing : MonoBehaviour {
 		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
 		//transform.Rotate(Vector3.up*270);
 		controller.SimpleMove (dir);
+		if(!audio.isPlaying)
+		{
+			
+		}
 		if(!animation.IsPlaying("Take 001"))
+		{
 				animation.Play();
+				if(Vector3.Distance(targetPosition,transform.position)>0.5)
+				audio.Play();
+		}
+		if(!animation.IsPlaying("Take 001"))
+		{
+			audio.Stop();
+		}
 		
 		if(Vector3.Distance(LastPos,transform.position)<0.001)
 		{
 			targetPosition = transform.position;
 			targetPosition2 = transform.position;
+			
 			animation.Stop();
+			audio.Stop();
 		}
+		
+		
        
         //Check if we are close enough to the next waypoint
         //If we are, proceed to follow the next waypoint
