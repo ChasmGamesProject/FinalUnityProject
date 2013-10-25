@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class BoxPuzzleLogic : MonoBehaviour {
-	
+	float timepassed;
+	bool playsound;
+	public AudioClip boxshift;
 	Color initialColor;
 	public Transform Player;
 	public AstarAI AI;
@@ -15,6 +17,7 @@ public class BoxPuzzleLogic : MonoBehaviour {
 	string caseSwitch;
 		// Use this for initialization
 	void Start () {
+		playsound = false;
 		target = Vector3.zero;
 		AI.targetPosition2 = new Vector3(146.0f,100.08f,116.0f);
 		AI.targetPosition = new Vector3(146.0f,100.08f,116.0f);
@@ -218,6 +221,16 @@ void OnMouseExit()
 	
 	// Update is called once per frame
 	void Update () {
+		
+		if(playsound)
+		{
+			if(Time.time - timepassed >boxshift.length)
+			{
+				timepassed = Time.time;
+			AudioSource.PlayClipAtPoint(boxshift,transform.position);
+			}
+		}
+		
 		Boxmanage.temp1 =rigidbody.position;
 		if((Vector3.Distance(Boxmanage.temp1, Boxmanage.temp2)<0.05)&&(AI.canmove==false))
 		{
@@ -231,6 +244,7 @@ void OnMouseExit()
 			AI.canmove = true;
 			caseSwitch = "something";
 			AI.rotatingbool = false;
+			playsound = false;
 		}
 		
 		
@@ -238,6 +252,7 @@ void OnMouseExit()
 		{
 		case "left":
 		{
+			playsound = true;
 			float tempx = x;
 			if(tempx>0)
 				tempx*=2;
@@ -268,6 +283,7 @@ void OnMouseExit()
 		}
 		case "right":
 		{
+			playsound = true;
 			float tempx = x;
 			if(tempx>0)
 				tempx*=2;
@@ -297,6 +313,7 @@ void OnMouseExit()
 		}
 		case "up":
 		{
+			playsound = true;
 			target = new Vector3(rigidbody.position.x,rigidbody.position.y,rigidbody.position.z+2);
 			if(Player.position.z>transform.position.z)
 			{
@@ -320,6 +337,7 @@ void OnMouseExit()
 		}
 		case "down":
 		{
+			playsound = true;
 			target = new Vector3(rigidbody.position.x,rigidbody.position.y,rigidbody.position.z-2);
 			if(Player.position.z < transform.position.z)
 			{

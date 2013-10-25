@@ -8,6 +8,8 @@ public class PinLogic : MonoBehaviour {
 	public GUIscriptlockpicking guistatus;
 	public float HeightMax;
 	public float HeightMin;
+	public AudioClip picksound;
+	float timepassed;
 
 	
 	void Start () {
@@ -20,6 +22,14 @@ public class PinLogic : MonoBehaviour {
 	
 	}
 	
+	void OnCollisionEnter()
+	{
+		if(Time.time - timepassed > picksound.length)
+		{
+			timepassed = Time.time;
+			AudioSource.PlayClipAtPoint(picksound,transform.position);
+		}
+	}
 	
 	void Update () {
 		
