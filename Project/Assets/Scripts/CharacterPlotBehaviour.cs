@@ -7,6 +7,7 @@ public class CharacterPlotBehaviour : PlotBehaviour
 
     private int CharacterID;
     private WorldCharacter C;
+    private Inventory inv;
    // private Database db;
     private CharacterData myOwner;
     private List<int> ConversationTopics;
@@ -18,6 +19,7 @@ public class CharacterPlotBehaviour : PlotBehaviour
 
         CharacterID = C.CharacterId;
         db = GlobalVars.database;
+        inv = GlobalVars.inventory;
         myOwner = db.GetCharacter(CharacterID);
         ConversationTopics = new List<int>();
         //myOwner.AddAvaliableTopic(0);
@@ -41,6 +43,17 @@ public class CharacterPlotBehaviour : PlotBehaviour
         {
             myOwner.AddAvaliableTopic(ConversationTopics[i]);
             ConversationTopics.Clear();
+        }
+
+        if (PlotToProgress == PlotPointer.Items)
+        {
+            if (inv == null)
+            {
+                inv = GlobalVars.inventory;
+            }
+            inv.Add(11);
+            inv.Add(12);
+            Debug.Log("Items");
         }
     }
 }

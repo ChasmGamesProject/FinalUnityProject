@@ -50,5 +50,35 @@
 	name=Penned Holder
 	desc=The pen stands tall and true
 	collectable=true
-	icon=pen holder
+	icon=pen_in_holder
+}
+{
+	name=Paper
+	desc=Several sheets of paper
+	collectable=true
+	icon=paper
+}
+{
+	name=Charcoal
+	desc=Some charry coal
+	collectable=true
+	icon=charcoal
+}
+{
+	name=Holder & Paper
+	desc=hmmmm...
+	collectable=true
+	icon=pen_holder_paper
+}
+{
+	name=Incomplete Dial
+	desc=hmmmm...
+	collectable=true
+	icon=pen_holder_paper_circle
+}
+{
+	name=Makeshift Sundial
+	desc=hmmmm...
+	collectable=true
+	icon=pen_holder_paper_circle_numbers
 }

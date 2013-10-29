@@ -70,8 +70,6 @@ public class MainCharacterPathing : MonoBehaviour {
 	void Update()
 	{
 		
-		
-		Debug.Log(transform.position);
 		//transform.position.y = yheight;
 		if(transform.position.y != yheight)
 		{
@@ -79,7 +77,6 @@ public class MainCharacterPathing : MonoBehaviour {
 		 
 		temp.y = yheight;
 		gameObject.transform.position = temp;
-		Debug.Log(transform.position);
 		}
 		if(Time.time - time > 0.5)
 		if(canmove)

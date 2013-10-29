@@ -1,6 +1,7 @@
 info
 {
 	topic_name=Escape
+	flag=items
 }
 sprite
 {

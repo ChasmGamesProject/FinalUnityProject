@@ -309,7 +309,7 @@ public class LoadFromFile : MonoBehaviour
                 c = Color.red; // c.r = 1; c.b = 0; c.g = 0;
                 break;
             case "blue":
-                c = Color.blue;
+                c = new Color(0, 0.5f,1,1).gamma;
                 break;
             case "yellow":
                 c = Color.yellow;
@@ -318,7 +318,7 @@ public class LoadFromFile : MonoBehaviour
                 c = Color.green;
                 break;
             case "magenta":
-                c = Color.magenta;
+                c = new Color (1,0, 0, 1).gamma;
                 break;
             case "cyan":
                 c = Color.cyan;
