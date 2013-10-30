@@ -61,7 +61,8 @@ public class GUIscriptlockpicking : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		
+		GUI.skin.label.fontSize = 15;		
+		GUI.skin.box.fontSize = 15;
 		
 		GUI.Box(TensionBackGround, "");
 		GUI.DrawTexture(TensionBar, Bar);
@@ -71,15 +72,16 @@ public class GUIscriptlockpicking : MonoBehaviour {
 			if(pick.LeapEnabled == true)
 			{
 				pick.LeapEnabled = false;
+				
+			}
+			else
+			{
 				if(haschanged == false)
 				{
 					haschanged = true;
 					Hide2 = false;
 					Hide = true;
 				}
-			}
-			else
-			{
 				pick.LeapEnabled = true;
 			}
 		}
