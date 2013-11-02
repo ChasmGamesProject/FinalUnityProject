@@ -10,7 +10,7 @@ sprite
 line
 {
 	speaker_id=1
-	text=hello, did you manage to find the pick?
+	text=Hello, did you manage to find the pick?
 }
 line
 {
@@ -30,7 +30,7 @@ line
 line
 {
 	speaker_id=0
-	text=There is a passage here that refers to house disaperences.
+	text=There was a brief passage in here about past disappearance
 }
 line
 {

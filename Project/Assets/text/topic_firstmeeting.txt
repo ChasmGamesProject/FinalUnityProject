@@ -1,0 +1,141 @@
+info
+{
+	topic_name=Meeting
+	flag=firstfreeroam
+}
+
+line
+{
+	speaker_id=4
+	text=Oh no no no.. how could this happen!? Why did you close the door?
+}
+line
+{
+	speaker_id=0
+	text=What's the problem? I just thought i would shut the door on the way in..? i can open it again for you would like.
+}
+line
+{
+	speaker_id=4
+	text=No you can't, no one can.. we cannot escape here.. we are trapped..
+}
+line
+{
+	speaker_id=4
+	text=Come, i'll take you too the others and we can tell you about what's going on.
+}
+sprite
+{
+	character_id=1
+	sprite=happy
+}
+line
+{
+	speaker_id=1
+	text=Yo man, welcome to the madhouse, wahahahah!
+}
+sprite
+{
+	character_id=4
+	sprite=angry
+}
+line
+{
+	speaker_id=4
+	text=Be quiet Jack we have had enough of your "humor"
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=2
+	text=Now now, lets just bring Carter up to speed.
+}
+line
+{
+	speaker_id=2
+	text=Ok, so you're probably wondering what's going on.. Well, essentially, we are completely trapped within this house. After we moved in, we could no longer leave, the door wouldn't open and even the windows resist our attempts to break them.
+}
+sprite
+{
+	character_id=4
+	sprite=neutral
+}
+line
+{
+	speaker_id=4
+	text=Yep, the internet and phone lines aren't working either, not even mobiles.. Our plan was to wait for you and then when you opened the door we could go through, but then SOMEONE over here was being difficult and so we missed our only oppertunity!
+}
+sprite
+{
+	character_id=1
+	sprite=angry
+}
+line
+{
+	speaker_id=1
+	text=It takes two to argue big guy!
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=2
+	text=Oh, give it over you two..
+}
+line
+{
+	speaker_id=2
+	text=Anyway, since that was our final plan on how to get out of here.. I'm not really sure what else we can do..
+}
+line
+{
+	speaker_id=0
+	text= I'm sure there has got to be a way out of this.
+}
+sprite
+{
+	character_id=5
+	sprite=thinking
+}
+line
+{
+	speaker_id=5
+	text=I believe that to find the answer, we need to look towards the supernatural!! How exciting is this!!
+}
+line
+{
+	speaker_id=0
+	text=I'm sorry, i don't think we have been introduced. Who are you? And what did you mean about supernatural?
+}
+line
+{
+	speaker_id=5
+	text=Oh, hello, my name is ____, I met your friends in town and they were nice enough to invite me to this party. As for supernatural..A house you can enter but not leave? it doesn't get much more wild then that!
+}
+line
+{
+	speaker_id=5
+	text=I've made a small hobby of researching and understanding these supernatural occurences, so ill be pleased to offer you any assistance you need.
+}
+sprite
+{
+	character_id=2
+	sprite=happy
+}
+line
+{
+	speaker_id=2
+	text=Just so you know, ___ over there hasn't been doing so well, i think her claustrophobia has really kicked in this time.
+}
+line
+{
+	speaker_id=0
+	text=OK, let me have a look around and I'll see if i can find something that you guys missed
+}

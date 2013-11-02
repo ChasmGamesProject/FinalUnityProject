@@ -25,15 +25,20 @@ line
 line
 {
 	speaker_id=2
-	text=Unfortunately, I never got to read it properly, so i know only as much as you.
-}
-line
-{
-	speaker_id=2
-	text=Maybe you should go ask {5} since he seems to know about this sort of stuff.
+	text=Sorry, i was only a few chapters in when the library ended up locked. Did you spot anything useful in it?
 }
 line
 {
 	speaker_id=0
-	text=OK, ill give him a try. Thank you.
+	text=There was a small article about people going missing from the surrounding area, but that was about it.
+}
+line
+{
+	speaker_id=2
+	text=Damn.. that's not as helpful as i was hoping. Maybe someone else knows something more about it.
+}
+line
+{
+	speaker_id=0
+	text=OK, i'll ask around.
 }

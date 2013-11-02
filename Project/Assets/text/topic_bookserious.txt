@@ -10,22 +10,32 @@ sprite
 line
 {
 	speaker_id=0
-	text=Hi
+	text=Hi, i found a short article about people going missing from the surrounding area. Do you know anything about that?
 }
 line
 {
 	speaker_id=4
-	text=Hello, thanks for finally opening the library.
+	text=Oh where'd you see that?
 }
 line
 {
 	speaker_id=0
-	text=No worries, can you shed any light on this book of fables?
+	text=One of Jane's books she left in the library?
 }
 line
 {
 	speaker_id=4
-	text=Sorry, that sort of reading doesn't really interest me. I can't tell you anything new.
+	text=The library? You got the door open? How'd you manage that?
+}
+line
+{
+	speaker_id=0
+	text=Jack helped me. Know anything about the story?
+}
+line
+{
+	speaker_id=4
+	text=Nah, sorry man. 
 }
 line
 {

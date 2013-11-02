@@ -11,7 +11,7 @@ sprite
 line
 {
 	speaker_id=0
-	text=Hey, I managed to find a book of this town's fables and Myths.
+	text=Hey, I found a passage in this book, of some strange occurances from around here.
 }
 line
 {
@@ -21,12 +21,12 @@ line
 line
 {
 	speaker_id=5
-	text=....................
+	text=...
 }
 line
 {
 	speaker_id=5
-	text=...........................
+	text=...
 }
 sprite
 {
@@ -41,32 +41,27 @@ line
 line
 {
 	speaker_id=5
-	text=Supposedly there was an insane man who was claiming that he had escaped from something like this.
+	text=Supposedly there was an insane man who was claimed he was stuck in time.
 }
 line
 {
 	speaker_id=5
-	text=I am trying to think of what he said.
+	text=Ummm, from what i remember.. he made a sundial and aligned it with the sun ...
 }
 line
 {
 	speaker_id=5
-	text=Oh yeah! Thats right. So apparently, he escaped by creating a sundial made up of certain objects, which, under the sun, pointed to the exact time he was originally trapped.
+	text= ... to show the time that he was first trapped.
 }
 line
 {
 	speaker_id=0
-	text=So can you remember what all the items he used were?
-}
-line
-{
-	speaker_id=5
-	text=Yes, apparently he used: A piece of chalk to mark out the sundial, something to mark it on, paper is fine. And something to cause a shadow. Like a pen holder, that would be fine.
+	text=He made a sundial? I guess we could try something similar.
 }
 line
 {
 	speaker_id=0
-	text=Hmmm, ok I guess there is no harm in trying, now i need to find this stuff!
+	text=I guess i should probably start looking for any items that might be able to be combined into a sundial.
 }
 line
 {
