@@ -128,7 +128,11 @@ public class AstarAI : MonoBehaviour {
 	
 	void Update()
 	{
-		
+		if(targetPosition != transform.position)
+		    {
+			if(!animation.IsPlaying("Take 001"))
+				animation.Play();
+			}
 		if(Time.time - time > 0.5)
 		if(canmove)
 		if(Input.GetMouseButton(1))
@@ -217,6 +221,7 @@ public class AstarAI : MonoBehaviour {
     public void FixedUpdate () {
 		if(rotatingbool)
 		{
+			if(Vector3.Distance(transform.position,boxpos)>0.1)
 			rotatetowards(boxpos);
 		}
 		
@@ -264,6 +269,7 @@ public class AstarAI : MonoBehaviour {
 		else	*/
 		dir = new Vector3(dir.x,0,dir.z);
 		Quaternion rotation = Quaternion.LookRotation(dir);
+		//if(Vector3.Distance(transform.position,targetPosition)>0.1)
 		transform.localRotation = Quaternion.Lerp(transform.localRotation, rotation, Time.deltaTime * 10);
 		controller.SimpleMove (dir);
        
@@ -282,6 +288,11 @@ public class AstarAI : MonoBehaviour {
 			targetPosition2 = transform.position;
 			animation.Stop();
 		}
+			if(targetPosition != transform.position)
+		    {
+			if(!animation.IsPlaying("Take 001"))
+				animation.Play();
+			}
 			LastPos = transform.position;
 		transform.position = new Vector3(transform.position.x,yheight,transform.position.z);
     }

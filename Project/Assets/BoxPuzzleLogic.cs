@@ -15,6 +15,7 @@ public class BoxPuzzleLogic : MonoBehaviour {
 	int i;
 	public bool moving;
 	string caseSwitch;
+	public MeshRenderer rend;
 		// Use this for initialization
 	void Start () {
 		playsound = false;
@@ -23,7 +24,8 @@ public class BoxPuzzleLogic : MonoBehaviour {
 		AI.targetPosition = new Vector3(146.0f,100.08f,116.0f);
 		AI.Scanner();
 	moving = false;
-	initialColor = renderer.material.color;
+		
+	initialColor = rend.material.color;
 		caseSwitch = "something";
 	}
 	
@@ -48,10 +50,10 @@ void SetXZ()
 
 void OnMouseOver()
 {
-		renderer.material.color = Color.red;
+		rend.material.color = Color.red;
 		
 		if(Vector2.Distance(new Vector2(Player.position.x,Player.position.z),new Vector2(transform.position.x,transform.position.z))<=2)
-		renderer.material.color = Color.green;
+		rend.material.color = Color.green;
 		if(AI.canmove)
 		{
 		if(Input.GetMouseButtonDown(0))
@@ -66,14 +68,14 @@ void OnMouseOver()
 				//Player is left
 				if((Player.position.x < transform.position.x)&&(Player.position.z >transform.position.z-0.5f)&&(Player.position.z <transform.position.z+0.5f))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(x<4)
 					{
 						if(Boxmanage.Floor[(int)x+1,(int)z] == "NotTaken")
 						{
 							caseSwitch = "right";
 							//transform.localPosition = new Vector3(x*2+2,0,transform.localPosition.z);
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 							//AstarPath.active.Scan();
 						}
 						
@@ -83,14 +85,14 @@ void OnMouseOver()
 				//Player is right
 				else if((Player.position.x > transform.position.x)&&(Player.position.z >transform.position.z-0.5f)&&(Player.position.z <transform.position.z+0.5f))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(x>0)
 					{
 						if(Boxmanage.Floor[(int)x-1,(int)z] == "NotTaken")
 						{
 							caseSwitch = "left";
 								//transform.localPosition = new Vector3(x*2-2,0,transform.localPosition.z);
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 						}
 					}
 					
@@ -99,14 +101,14 @@ void OnMouseOver()
 				//Player is Up
 				else if((Player.position.x >transform.position.x-0.5f)&&(Player.position.x <transform.position.x+0.5f)&&(Player.position.z > transform.position.z))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(z>0)
 					{
 						if(Boxmanage.Floor[(int)x,(int)z-1] == "NotTaken")
 						{
 							caseSwitch = "down";	
 							//transform.localPosition = new Vector3(transform.localPosition.x,0,z*2-2);
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 						}
 					}
 					
@@ -115,7 +117,7 @@ void OnMouseOver()
 				//Player is Down
 				else if((Player.position.z < transform.position.z-0.5)&&(Player.position.x >transform.position.x-0.5f)&&(Player.position.x <transform.position.x+0.5f))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					Debug.Log ("Player is Down");
 					if(z<4)
 					{
@@ -124,7 +126,7 @@ void OnMouseOver()
 						{
 							caseSwitch = "up";
 								//transform.localPosition = new Vector3(transform.localPosition.x,0,z*2+2);
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 							//AstarPath.active.Scan();
 						}
 					}
@@ -132,11 +134,11 @@ void OnMouseOver()
 				}
 				else
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 				}
 			}
 			else
-				renderer.material.color = Color.red;
+				rend.material.color = Color.red;
 		}
 		else if(Input.GetMouseButtonDown(1))
 		{
@@ -149,7 +151,7 @@ void OnMouseOver()
 				//Player is left
 				if((Player.position.x < transform.position.x)&&(Player.position.z >transform.position.z-0.5f)&&(Player.position.z <transform.position.z+0.5f))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(x>1)
 					{
 						Debug.Log ("Player is left");
@@ -157,20 +159,20 @@ void OnMouseOver()
 						{
 							
 							caseSwitch = "left";
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 						}
 					}
 				}
 				//Player is right
 				else if((Player.position.x > transform.position.x)&&(Player.position.z >transform.position.z-0.5f)&&(Player.position.z <transform.position.z+0.5f))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(x<3)
 					{
 						if((Boxmanage.Floor[(int)x+1,(int)z] == "NotTaken")&&(Boxmanage.Floor[(int)x+2,(int)z] == "NotTaken"))
 						{
 							caseSwitch = "right";
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 							//AstarPath.active.Scan();
 						}
 						
@@ -180,14 +182,14 @@ void OnMouseOver()
 				//Player is Up
 				else if((Player.position.x >transform.position.x-0.5f)&&(Player.position.x <transform.position.x+0.5f)&&(Player.position.z > transform.position.z))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(z<3)
 					{
 						Debug.Log(x);
 						if((Boxmanage.Floor[(int)x,(int)z+1] == "NotTaken")&&(Boxmanage.Floor[(int)x,(int)z+2] == "NotTaken"))
 						{
 							caseSwitch = "up";
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 							//AstarPath.active.Scan();
 						}
 					}
@@ -196,13 +198,13 @@ void OnMouseOver()
 				//Player is Down
 				else if((Player.position.z < transform.position.z-0.5)&&(Player.position.x >transform.position.x-0.5f)&&(Player.position.x <transform.position.x+0.5f))
 				{
-					renderer.material.color = Color.red;
+					rend.material.color = Color.red;
 					if(z>1)
 					{
 						if((Boxmanage.Floor[(int)x,(int)z-1] == "NotTaken")&&(Boxmanage.Floor[(int)x,(int)z-2] == "NotTaken"))
 						{
 							caseSwitch = "down";
-							renderer.material.color = Color.green;
+							rend.material.color = Color.green;
 						}
 					}
 					Debug.Log ("Player is Down");
@@ -216,7 +218,7 @@ void OnMouseOver()
 }
 void OnMouseExit()
 {
-   this.renderer.material.color = initialColor;
+   this.rend.material.color = initialColor;
 }
 	
 	// Update is called once per frame
