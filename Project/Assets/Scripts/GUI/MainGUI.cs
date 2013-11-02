@@ -11,7 +11,7 @@ public class MainGUI : MonoBehaviour
 
     private Texture2D Inventoryicon;
 
-    enum UITypes { MainGUI, InventoryGUI, MenuGUI, MenuOptionGUI };
+    enum UITypes { MainGUI, InventoryGUI, MenuGUI, MenuOptionGUI, BookGUI };
 
     UITypes CurrentUI = UITypes.MainGUI;
 
@@ -22,6 +22,9 @@ public class MainGUI : MonoBehaviour
     private Rect Icon45;
     private Rect MenuButton;
     private Rect InventoryBackground;
+
+    private Rect BookBackground;
+    private Texture2D BookTexture;
 
     private Inventory inv;
     private Database db;
@@ -54,7 +57,10 @@ public class MainGUI : MonoBehaviour
         LabelInventoryScalable = new Rect(0, 0, Screen.width / 14, Screen.width / 48); //create an inventory label of scalable size depending on resolution 
         MenuButton = new Rect(0, 0, 200, 50); //Create a default menu button size
         InventoryBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - (Screen.width / 10)*2, Screen.height - (Screen.height / 10)*2);
-		
+        
+        BookBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - (Screen.width / 10) * 2, Screen.height - (Screen.height / 10) * 2);
+        BookTexture = (Texture2D)Resources.Load("textures/GUI/icons/open_bookfin");
+
 		Inventoryicon = (Texture2D)Resources.Load ("textures/GUI/icons/inventory");
         ps.ChangePlotStatus(PlotPointer.FirstFreeRoam);
     }
@@ -166,6 +172,11 @@ public class MainGUI : MonoBehaviour
             //Removed for now, when menu choices are finalised proper size and position of sliders will be determined.
             //vSliderValue = GUI.HorizontalSlider(new Rect(Screen.width / 14 * 3, Screen.height / 10+10, 100, 50), vSliderValue, 10.0f, 0.0f);
             //Fill out the rest of this when we know what options we want to give the players
+        }
+        else if (CurrentUI == UITypes.BookUI)
+        {
+            //GUI.Box(BookBackground,);
+
         }
     }
 	
