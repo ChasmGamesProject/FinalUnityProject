@@ -42,8 +42,10 @@ public class DialogueUI : MonoBehaviour
 		DisplayText = new List<string>();
 		
 		show = false;
-		
-		TextBox = new Rect(0, (Screen.height * 3) / 4, Screen.width, Screen.height / 4);
+
+
+
+        TextBox = new Rect(Screen.width * 0.1f, (Screen.height * 3) / 4, Screen.width * 0.8f, Screen.height / 6);
 		int[] NextBoxSize = {Screen.width / 20, 32};
 		NextBox = new Rect(Screen.width / 2 - NextBoxSize[0] / 2, (Screen.height * 3) / 4 + NextBoxSize[0], NextBoxSize[0], NextBoxSize[1]);
 		int[] ChoiceBoxSize = {Screen.width / 4, Screen.width / 40};
@@ -70,7 +72,9 @@ public class DialogueUI : MonoBehaviour
 				if(Type == DialogueNode.NodeType.Line)
 				{
 					GUI.color = TextColor;
-					GUI.Label (TextBox, DisplayText[0]);
+                    GUI.skin.box.alignment = TextAnchor.UpperCenter;
+                    GUI.skin.box.fontSize = Screen.height / 40;
+					GUI.Box (TextBox, DisplayText[0]);
 					GUI.color = Color.white;
 					if(GUI.Button (NextBox, "Next"))
 					{

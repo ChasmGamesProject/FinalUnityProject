@@ -11,7 +11,9 @@ public class MainGUI : MonoBehaviour
 
     private Texture2D Inventoryicon;
 
-    enum UITypes { MainGUI, InventoryGUI, MenuGUI, MenuOptionGUI, BookGUI };
+    public enum UITypes { MainGUI, InventoryGUI, MenuGUI, MenuOptionGUI, BookGUI };
+
+    private GUIStyle Book = new GUIStyle();
 
     UITypes CurrentUI = UITypes.MainGUI;
 
@@ -37,6 +39,11 @@ public class MainGUI : MonoBehaviour
     private Rect Icon;
     private int BoxWidth;
 
+    void Awake()
+    {
+        GlobalVars.maingui = this;
+    }
+
     void Start()
     {
 		inv = GlobalVars.inventory;
@@ -58,8 +65,10 @@ public class MainGUI : MonoBehaviour
         MenuButton = new Rect(0, 0, 200, 50); //Create a default menu button size
         InventoryBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - (Screen.width / 10)*2, Screen.height - (Screen.height / 10)*2);
         
-        BookBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - (Screen.width / 10) * 2, Screen.height - (Screen.height / 10) * 2);
-        BookTexture = (Texture2D)Resources.Load("textures/GUI/icons/open_bookfin");
+        BookBackground = new Rect(Screen.width / 10, Screen.height / 10, Screen.width - ((Screen.width / 10) * 2), Screen.height - ((Screen.height / 10) * 2));
+        BookTexture = (Texture2D)Resources.Load("textures/GUI/icons/open_bookfin2");
+        Book.stretchHeight = true;
+        Book.stretchWidth = true;
 
 		Inventoryicon = (Texture2D)Resources.Load ("textures/GUI/icons/inventory");
         ps.ChangePlotStatus(PlotPointer.FirstFreeRoam);
@@ -175,9 +184,22 @@ public class MainGUI : MonoBehaviour
         }
         else if (CurrentUI == UITypes.BookGUI)
         {
-            //GUI.Box(BookBackground,);
-
+            GUI.Box(BookBackground, BookTexture, Book);
+            if (GUI.Button(new Rect(Screen.width / 2 - (Screen.width / 15 /2), Screen.height - Screen.height / 10, Screen.width / 15, Screen.height / 20), "Close"))
+            {
+                CurrentUI = UITypes.MainGUI;
+            }
         }
+    }
+
+    public void ChangeUI(UITypes newUI)
+    {
+        CurrentUI = newUI;
+    }
+
+    public UITypes Hack()
+    {
+        return UITypes.BookGUI;
     }
 	
 	private void EnterMenu(UITypes t)

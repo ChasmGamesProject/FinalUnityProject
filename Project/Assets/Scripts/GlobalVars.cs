@@ -20,6 +20,8 @@ public static class GlobalVars //: MonoBehaviour
 	public static RoomManager room_manager = null;
 
     public static PlotSystem plot_system = null;
+
+    public static MainGUI maingui = null;
 	
 	// GUI Scripts
 	public static ActionTextUI action_text_ui = null;

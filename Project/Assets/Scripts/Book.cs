@@ -4,8 +4,12 @@ using System.Collections;
 public class Book : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-	
+
+    private MainGUI mg;
+
+	void Start () 
+    {
+        mg = GlobalVars.maingui;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +22,7 @@ public class Book : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             GlobalVars.plot_system.ChangePlotStatus(PlotPointer.Book);
+            mg.ChangeUI(mg.Hack());
         }
     }
 }
