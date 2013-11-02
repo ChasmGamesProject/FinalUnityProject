@@ -173,7 +173,7 @@ public class MainGUI : MonoBehaviour
             //vSliderValue = GUI.HorizontalSlider(new Rect(Screen.width / 14 * 3, Screen.height / 10+10, 100, 50), vSliderValue, 10.0f, 0.0f);
             //Fill out the rest of this when we know what options we want to give the players
         }
-        else if (CurrentUI == UITypes.BookUI)
+        else if (CurrentUI == UITypes.BookGUI)
         {
             //GUI.Box(BookBackground,);
 
