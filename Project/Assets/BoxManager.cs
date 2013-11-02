@@ -50,7 +50,9 @@ public class BoxManager : MonoBehaviour {
 			
 			Floor[(int)x,(int)z] = "Taken";
 			
+			
 		}
+		Floor[4,4] = "Taken";
 	}
 	// Update is called once per frame
 	void Update () {
