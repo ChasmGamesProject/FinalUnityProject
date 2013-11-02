@@ -5,6 +5,7 @@ public class CutSceneGui : MonoBehaviour {
 	public Texture2D[] Images;
 	public Camera cutscene;
 	public Camera MainRoom;
+	public float x,y;
 	float passed;
 	int iterator;
 	// Use this for initialization
@@ -14,7 +15,7 @@ public class CutSceneGui : MonoBehaviour {
 		MainRoom.enabled = false;
 		cutscene.enabled = true;
 		
-		
+		guiTexture.transform.localScale = new Vector3(x,y,0);
 		//guiTexture.enabled = false;
 		
 		
@@ -27,8 +28,11 @@ public class CutSceneGui : MonoBehaviour {
 		
 		if((iterator == 5)&&(Time.time - passed > 10))
 		{
+			guiTexture.
+				guiTexture.enabled = false;
 				cutscene.enabled = false;
 				MainRoom.enabled = true;
+				this.enabled = false;
 		
 		}
 		else if(Time.time - passed > 10)
