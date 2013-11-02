@@ -11,7 +11,7 @@ public class MainGUI : MonoBehaviour
 
     private Texture2D Inventoryicon;
 
-    public enum UITypes { MainGUI, InventoryGUI, MenuGUI, MenuOptionGUI, BookGUI };
+    public enum UITypes {MainGUI, InventoryGUI, MenuGUI, MenuOptionGUI, BookGUI, StartGUI};
 
     private GUIStyle Book = new GUIStyle();
 
