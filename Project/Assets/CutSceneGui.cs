@@ -26,6 +26,7 @@ public class CutSceneGui : MonoBehaviour {
 	void Update () {
 		
 		
+		
 		if((iterator == 5)&&(Time.time - passed > 10))
 		{
 			guiTexture.
@@ -47,6 +48,14 @@ public class CutSceneGui : MonoBehaviour {
 			MainRoom.enabled = false;
 			cutscene.enabled = true;
 		}
-		Debug.Log(guiTexture.texture.width);
+		
+		if(Input.GetKeyDown(KeyCode.Space))
+		{
+			
+			cutscene.enabled = false;
+			MainRoom.enabled = true;
+			guiTexture.enabled = false;
+			this.enabled = false;
+		}
 	}
 }

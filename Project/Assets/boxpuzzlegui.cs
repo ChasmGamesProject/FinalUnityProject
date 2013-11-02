@@ -3,6 +3,7 @@ using System.Collections;
 
 public class boxpuzzlegui : MonoBehaviour {
 	
+	public bool secondtext;
 	public Texture Bar;
 	Rect Tooltip;
 	Rect TooltipClose;
@@ -40,6 +41,9 @@ public class boxpuzzlegui : MonoBehaviour {
 	
 	void Update()
 	{
+		
+		
+		
 		if(Input.GetMouseButtonDown(1))
 		{
 			//Debug.Log("test");
@@ -55,8 +59,28 @@ public class boxpuzzlegui : MonoBehaviour {
 	}
 	
 	void OnGUI () {
+		
+		
+		
+		
 		GUI.skin.label.fontSize = 15;		
 		GUI.skin.box.fontSize = 15;
+		
+		
+		if(secondtext == true)
+		{
+			GUI.Box(Tooltip, "How to play");
+			GUI.Label(Tooltiptext,"Congratulations, you have resolved the conflicts among your friends and in doing so solved the puzzle of the mysterious house.");
+			if(GUI.Button(TooltipClose, "Close window")) {
+			 Application.LoadLevel("Menu");
+		}
+			
+			
+			
+		}
+		else{
+		
+		
 		if(gamewon)
 		{
 			GUI.Box (ExitScreen, "Well Done!");
@@ -80,11 +104,11 @@ public class boxpuzzlegui : MonoBehaviour {
 
 		// Make the second button.
 			
-		GUI.Label(Tooltiptext,"To complete this puzzle, you must reach the Lock Pick at the opposite corner of the room."
-					+" To do this right click near the box you wish to move and then left click the box to push it or right click the box to pull it.");
+		
 		}
 			
 			//GUI.DrawTexture(TensionBar, Bar);
 		}
 	}
+		}
 }

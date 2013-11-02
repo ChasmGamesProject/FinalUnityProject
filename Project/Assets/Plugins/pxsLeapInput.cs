@@ -251,7 +251,7 @@ public static class pxsLeapInput
 				break;
 			default:
 				// return the axis name from input if hand is null and the special cases above do not apply
-				ret = Input.GetAxis(axisName) ;
+				//ret = Input.GetAxis(axisName) ;
 				break;
 			}
 

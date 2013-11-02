@@ -9,7 +9,7 @@ public class WorldPlaceOnMe : MonoBehaviour
 	private ActionTextUI aui;
 	private CursorUI cui;
 	private Inventory inv;
-	
+ public boxpuzzlegui gui;
 	private bool MouseOver;
 
 	void Start ()
@@ -73,8 +73,13 @@ public class WorldPlaceOnMe : MonoBehaviour
 		{
 			if(im.isUseWith())
 			{
-				if(im.GetUseWithObjectId() == ObjectId)
+                if (im.GetUseWithObjectId() == ObjectId)
+                {
+					gui.secondtext = true;
+					gui.enabled = true;
+					//WaitForSeconds(10);
                     Application.LoadLevel("Menu");
+                }
 			}
 		}
 	}
