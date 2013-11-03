@@ -100,7 +100,7 @@ public class WorldDoor : MonoBehaviour
 				else if(!locked)
 				{
 					if(DoorOpen != null)
-					AudioSource.PlayClipAtPoint(DoorOpen, transform.position);
+					AudioSource.PlayClipAtPoint(DoorOpen, transform.position,0.3f);
 					rm.ChangeRoom(room_opens_to);
 					MouseOut();
 				}
@@ -109,7 +109,7 @@ public class WorldDoor : MonoBehaviour
 					if(DoorLocked != null)
 						{
 						//	Debug.Log("Playing");
-							AudioSource.PlayClipAtPoint(DoorLocked,transform.position);
+							AudioSource.PlayClipAtPoint(DoorLocked,transform.position,0.4f);
 						}
 					GlobalVars.description_ui.SetText("It's Locked");
 				}

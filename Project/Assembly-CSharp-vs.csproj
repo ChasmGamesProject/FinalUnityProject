@@ -156,6 +156,7 @@
      <Compile Include="Assets\Scripts\database\Database.cs" />
      <Compile Include="Assets\Scripts\loading\LoadFromFile.cs" />
      <Compile Include="Assets\Scripts\loading\LoadTopic.cs" />
+     <Compile Include="Assets\Unlocker.cs" />
      <Compile Include="Assets\boxpuzzlegui.cs" />
      <None Include="Assets\text\Mitch&apos;s Script\Nice\topic_booknice.txt" />
      <None Include="Assets\text\topic_conflictsolvednice.txt" />

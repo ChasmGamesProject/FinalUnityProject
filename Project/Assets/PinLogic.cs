@@ -27,7 +27,7 @@ public class PinLogic : MonoBehaviour {
 		if(Time.time - timepassed > picksound.length)
 		{
 			timepassed = Time.time;
-			AudioSource.PlayClipAtPoint(picksound,transform.position);
+			AudioSource.PlayClipAtPoint(picksound,transform.position,0.2f);
 		}
 	}
 	

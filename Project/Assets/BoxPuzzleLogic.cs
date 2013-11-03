@@ -229,7 +229,7 @@ void OnMouseExit()
 			if(Time.time - timepassed >boxshift.length)
 			{
 				timepassed = Time.time;
-			AudioSource.PlayClipAtPoint(boxshift,transform.position);
+			AudioSource.PlayClipAtPoint(boxshift,transform.position,0.4f);
 			}
 		}
 		

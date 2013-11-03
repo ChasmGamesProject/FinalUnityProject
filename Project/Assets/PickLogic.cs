@@ -160,13 +160,13 @@ public class PickLogic : MonoBehaviour {
 			if((hit.point.x < transform.position.x + offset)&&(transform.position.x + offset - hit.point.x > 0.01))
 			{
 				ExtraSpeed = transform.position.x+offset - hit.point.x - 0.01f;
-				ExtraSpeed = ExtraSpeed;
+				ExtraSpeed = ExtraSpeed*4;
 				rigidbody.velocity = new Vector3 (Left.x*speed*Time.deltaTime*ExtraSpeed,rigidbody.velocity.y,0);
 			}
 			if((hit.point.x > transform.position.x+offset)&&(hit.point.x - (transform.position.x+offset)> 0.01))
 			{
 				ExtraSpeed = hit.point.x - (transform.position.x+offset) - 0.01f;
-				ExtraSpeed = ExtraSpeed;
+				ExtraSpeed = ExtraSpeed*4;
 				rigidbody.velocity = new Vector3 (Right.x*speed*Time.deltaTime*ExtraSpeed,rigidbody.velocity.y,0);
 			}
 			if((hit.point.y < transform.position.y + offsety)&&(transform.position.y + offsety - hit.point.y > 0.01))
@@ -190,12 +190,12 @@ public class PickLogic : MonoBehaviour {
 				rigidbody.velocity = Vector3.zero;
 				if(Leapx > 20.0f)
 				{
-					rigidbody.velocity = new Vector3(0.2f,rigidbody.velocity.y,0);
+					rigidbody.velocity = new Vector3(0.4f,rigidbody.velocity.y,0);
 				}
 					
 				if(Leapx < -20.0f)
 				{
-					rigidbody.velocity = new Vector3(-0.2f,rigidbody.velocity.y,0);
+					rigidbody.velocity = new Vector3(-0.4f,rigidbody.velocity.y,0);
 				}
 					
 				if(Leapy > 160.0f)

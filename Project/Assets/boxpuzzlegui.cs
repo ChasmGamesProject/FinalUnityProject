@@ -103,7 +103,8 @@ public class boxpuzzlegui : MonoBehaviour {
 		}
 
 		// Make the second button.
-			
+			GUI.Label(Tooltiptext,"To complete this puzzle, you must reach the Lock Pick at the opposite corner of the room."
+					+" To do this right click near the box you wish to move and then left click the box to push it or right click the box to pull it.");
 		
 		}
 			

@@ -32,7 +32,9 @@ public class MainCharacterPathing : MonoBehaviour {
  
 	void Awake()
 	{
+		audio.volume = 0.3f;
 		audio.clip = Walk;
+	    
 		targetPosition = transform.position;
 		targetPosition2 = transform.position;
 		animation["Take 001"].speed = 3.2f;
